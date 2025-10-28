@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../BATCH-1-PUBLIC-PAGES/includes/init.php';
+require_once __DIR__ . '/../../BATCH-1-PUBLIC-PAGES/includes/init.php';
 require_once __DIR__ . '/../includes/data/faq-data.php';
 
 $page_title = 'FAQ - Pertanyaan Yang Sering Ditanya - ' . APP_NAME;
@@ -9,12 +9,12 @@ $breadcrumb_items = [['name' => 'FAQ']];
 <!DOCTYPE html>
 <html lang="<?= get_language() ?>">
 <head>
-    <?php include __DIR__ . '/../BATCH-1-PUBLIC-PAGES/components/layout/head.php'; ?>
+    <?php include __DIR__ . '/../../BATCH-1-PUBLIC-PAGES/components/layout/head.php'; ?>
     <link rel="stylesheet" href="<?= APP_URL ?>/BATCH-2-PUBLIC-PAGES/assets/css/pages.css">
 </head>
 <body>
-    <?php include __DIR__ . '/../BATCH-1-PUBLIC-PAGES/components/layout/navbar.php'; ?>
-    <?php include __DIR__ . '/../BATCH-2-PUBLIC-PAGES/components/breadcrumb.php'; ?>
+    <?php include __DIR__ . '/../../BATCH-1-PUBLIC-PAGES/components/layout/navbar.php'; ?>
+    <?php include __DIR__ . '/../components/breadcrumb.php'; ?>
     
     <section class="about-section">
         <div class="container">
@@ -88,8 +88,8 @@ $breadcrumb_items = [['name' => 'FAQ']];
         </div>
     </section>
 
-    <?php include __DIR__ . '/../BATCH-1-PUBLIC-PAGES/components/layout/footer.php'; ?>
-    <?php include __DIR__ . '/../BATCH-1-PUBLIC-PAGES/components/layout/scripts.php'; ?>
+    <?php include __DIR__ . '/../../BATCH-1-PUBLIC-PAGES/components/layout/footer.php'; ?>
+    <?php include __DIR__ . '/../../BATCH-1-PUBLIC-PAGES/components/layout/scripts.php'; ?>
     
     <script>
     // FAQ Tabs

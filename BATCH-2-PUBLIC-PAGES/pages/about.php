@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../BATCH-1-PUBLIC-PAGES/includes/init.php';
+require_once __DIR__ . '/../../BATCH-1-PUBLIC-PAGES/includes/init.php';
 
 $page_title = 'Tentang Kami - ' . APP_NAME;
 $page_description = 'PT SITUNEO DIGITAL adalah perusahaan digital agency resmi dengan NIB 20250926145704515453. Kami menyediakan 8 divisi layanan lengkap untuk bisnis digital Anda.';
@@ -8,12 +8,12 @@ $breadcrumb_items = [['name' => 'Tentang Kami']];
 <!DOCTYPE html>
 <html lang="<?= get_language() ?>">
 <head>
-    <?php include __DIR__ . '/../BATCH-1-PUBLIC-PAGES/components/layout/head.php'; ?>
+    <?php include __DIR__ . '/../../BATCH-1-PUBLIC-PAGES/components/layout/head.php'; ?>
     <link rel="stylesheet" href="<?= APP_URL ?>/BATCH-2-PUBLIC-PAGES/assets/css/pages.css">
 </head>
 <body>
-    <?php include __DIR__ . '/../BATCH-1-PUBLIC-PAGES/components/layout/navbar.php'; ?>
-    <?php include __DIR__ . '/../BATCH-2-PUBLIC-PAGES/components/breadcrumb.php'; ?>
+    <?php include __DIR__ . '/../../BATCH-1-PUBLIC-PAGES/components/layout/navbar.php'; ?>
+    <?php include __DIR__ . '/../components/breadcrumb.php'; ?>
     
     <!-- About Hero -->
     <section class="about-hero">
@@ -186,7 +186,7 @@ $breadcrumb_items = [['name' => 'Tentang Kami']];
         </div>
     </section>
 
-    <?php include __DIR__ . '/../BATCH-1-PUBLIC-PAGES/components/layout/footer.php'; ?>
-    <?php include __DIR__ . '/../BATCH-1-PUBLIC-PAGES/components/layout/scripts.php'; ?>
+    <?php include __DIR__ . '/../../BATCH-1-PUBLIC-PAGES/components/layout/footer.php'; ?>
+    <?php include __DIR__ . '/../../BATCH-1-PUBLIC-PAGES/components/layout/scripts.php'; ?>
 </body>
 </html>
