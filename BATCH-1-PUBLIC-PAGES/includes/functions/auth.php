@@ -10,8 +10,9 @@
 /**
  * Get current user data dari database
  * Return: array user data atau null
+ * NOTE: Renamed dari get_current_user() karena PHP sudah punya built-in function dengan nama itu
  */
-function get_current_user() {
+function get_logged_in_user() {
     global $conn;
 
     if (!is_logged_in()) {
