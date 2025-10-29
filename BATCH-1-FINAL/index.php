@@ -1,20 +1,140 @@
 <?php
 /**
  * SITUNEO DIGITAL - Homepage
- * FINAL VERSION - Tested & Working
+ * BATCH-1.1 - With Error Resilience
  */
+
+// Prevent timeout on slow servers
 set_time_limit(30);
+
+// Start output buffering (prevent "headers already sent" errors)
 ob_start();
-require_once __DIR__ . '/includes/init.php';
-$page_title = APP_NAME . " - " . APP_TAGLINE;
+
+// Error reporting (show errors during development, hide in production)
+error_reporting(E_ALL);
+ini_set('display_errors', 1); // Set to 0 for production
+
+// Try to load initialization file
+try {
+    if (!file_exists(__DIR__ . '/includes/init.php')) {
+        throw new Exception('Core initialization file (includes/init.php) not found. Please re-upload all files.');
+    }
+
+    require_once __DIR__ . '/includes/init.php';
+
+    // Verify critical constants are defined
+    if (!defined('APP_NAME') || !defined('APP_URL')) {
+        throw new Exception('Critical constants not defined. Check config/constants.php');
+    }
+
+    $page_title = APP_NAME . " - " . APP_TAGLINE;
+
+} catch (Exception $e) {
+    // Display user-friendly error page
+    ob_end_clean(); // Clear any previous output
+    ?>
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Initialization Error - SITUNEO DIGITAL</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                color: white;
+                margin: 0;
+                padding: 20px;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .error-box {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+                border: 2px solid rgba(255, 68, 68, 0.5);
+                border-radius: 16px;
+                padding: 40px;
+                max-width: 600px;
+                text-align: center;
+            }
+            .error-icon {
+                font-size: 64px;
+                margin-bottom: 20px;
+            }
+            h1 {
+                color: #ff4444;
+                margin-bottom: 20px;
+            }
+            .error-message {
+                background: rgba(255, 68, 68, 0.1);
+                border-radius: 8px;
+                padding: 20px;
+                margin: 20px 0;
+                font-family: monospace;
+                text-align: left;
+            }
+            .btn {
+                display: inline-block;
+                padding: 12px 30px;
+                background: #FFB400;
+                color: #1a1a2e;
+                text-decoration: none;
+                border-radius: 8px;
+                margin: 10px 5px;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="error-box">
+            <div class="error-icon">❌</div>
+            <h1>Initialization Error</h1>
+            <p>Website gagal dimuat karena ada masalah dengan file core.</p>
+            <div class="error-message">
+                <?= htmlspecialchars($e->getMessage()) ?>
+            </div>
+            <p><strong>Solusi:</strong></p>
+            <ul style="text-align: left; padding-left: 40px;">
+                <li>Pastikan semua file sudah terupload dengan lengkap</li>
+                <li>Jalankan <strong>system-check.php</strong> untuk diagnostic</li>
+                <li>Baca <strong>INSTALL.md</strong> untuk panduan instalasi</li>
+                <li>Check file permissions (should be 644 for files, 755 for folders)</li>
+            </ul>
+            <a href="system-check.php" class="btn">🔍 Run System Check</a>
+            <a href="INSTALL.md" class="btn" style="background: rgba(255,255,255,0.1);">📖 Read Docs</a>
+        </div>
+    </body>
+    </html>
+    <?php
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?= get_language() ?>">
 <head>
-    <?php include __DIR__ . '/components/layout/head.php'; ?>
+    <?php
+    // Safe include for head component
+    if (!@include __DIR__ . '/components/layout/head.php') {
+        // Fallback minimal head
+        echo '<meta charset="UTF-8">';
+        echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+        echo '<title>' . htmlspecialchars($page_title ?? 'SITUNEO DIGITAL') . '</title>';
+        echo '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">';
+        echo '<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">';
+        echo '<div style="background:#ff4444;color:white;padding:10px;text-align:center;">⚠️ Component head.php missing - using fallback</div>';
+    }
+    ?>
 </head>
 <body>
-    <?php include __DIR__ . '/components/layout/navbar.php'; ?>
+    <?php
+    // Safe include for navbar
+    if (!@include __DIR__ . '/components/layout/navbar.php') {
+        echo '<div style="background:#FFB400;color:#1a1a2e;padding:15px;text-align:center;font-weight:600;">⚠️ Navigation component missing</div>';
+    }
+    ?>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -149,8 +269,26 @@ $page_title = APP_NAME . " - " . APP_TAGLINE;
         </div>
     </section>
 
-    <?php include __DIR__ . '/components/layout/footer.php'; ?>
-    <?php include __DIR__ . '/components/layout/scripts.php'; ?>
+    <?php
+    // Safe include for footer
+    if (!@include __DIR__ . '/components/layout/footer.php') {
+        echo '<footer style="background:#1a1a2e;color:white;padding:20px;text-align:center;border-top:2px solid #FFB400;">';
+        echo '<p>&copy; ' . date('Y') . ' SITUNEO DIGITAL - All Rights Reserved</p>';
+        echo '<small style="color:#ff4444;">⚠️ Footer component missing</small>';
+        echo '</footer>';
+    }
+    ?>
+
+    <?php
+    // Safe include for scripts
+    if (!@include __DIR__ . '/components/layout/scripts.php') {
+        // Fallback essential scripts
+        echo '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>';
+        echo '<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>';
+        echo '<script>if(typeof AOS !== "undefined") AOS.init();</script>';
+        echo '<div style="position:fixed;bottom:10px;right:10px;background:#ff4444;color:white;padding:10px;border-radius:8px;font-size:12px;z-index:9999;">⚠️ Scripts component missing - using fallback</div>';
+    }
+    ?>
 </body>
 </html>
 <?php ob_end_flush(); ?>
