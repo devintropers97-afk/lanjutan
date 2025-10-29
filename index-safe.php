@@ -1,18 +1,26 @@
 <?php
 /**
  * ================================================
- * SITUNEO DIGITAL - Homepage
+ * SITUNEO DIGITAL - Homepage (SAFE VERSION)
  * ================================================
- * Website utama untuk SITUNEO DIGITAL
- * 26+ Layanan Digital Profesional
- * NIB: 20250926145704515453
+ * Version with error handling and output buffering
  */
 
 // Start output buffering to prevent "headers already sent" errors
 ob_start();
 
-// Include initialization file
-require_once 'includes/init.php';
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Try to include initialization file
+try {
+    require_once __DIR__ . '/includes/init.php';
+} catch (Exception $e) {
+    // If init fails, show error
+    ob_end_clean();
+    die('<h1>Initialization Error</h1><p>' . $e->getMessage() . '</p><p>Please check your configuration files.</p>');
+}
 
 // Set page meta
 $page_title = APP_NAME . " - " . APP_TAGLINE;
@@ -20,10 +28,10 @@ $page_description = "Solusi digital terlengkap untuk mengembangkan bisnis Anda. 
 $page_keywords = "jasa website, toko online, SEO, digital marketing, web development, chatbot AI, SITUNEO DIGITAL";
 
 // Include head
-include 'components/layout/head.php';
+include __DIR__ . '/components/layout/head.php';
 
 // Include navbar
-include 'components/layout/navbar.php';
+include __DIR__ . '/components/layout/navbar.php';
 ?>
 
 <!-- Hero Section -->
@@ -200,10 +208,10 @@ include 'components/layout/navbar.php';
 
 <?php
 // Include footer
-include 'components/layout/footer.php';
+include __DIR__ . '/components/layout/footer.php';
 
 // Include scripts
-include 'components/layout/scripts.php';
+include __DIR__ . '/components/layout/scripts.php';
 
 // Flush output buffer
 ob_end_flush();
