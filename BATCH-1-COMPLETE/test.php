@@ -1,3 +1,12 @@
+<?php
+/**
+ * SITUNEO DIGITAL - System Test
+ * Version: 2.0 (Fixed session warnings)
+ */
+
+// Start output buffering to prevent "headers already sent" warning
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -285,7 +294,14 @@
             <p>📞 Need help? WhatsApp: <strong>083173868915</strong></p>
             <p>📧 Email: <strong>vins@situneo.my.id</strong></p>
             <p>🏢 NIB: <strong>20250926145704515453</strong></p>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #666;">
+                Test Version 2.0 - Session warnings fixed with output buffering
+            </p>
         </div>
     </div>
 </body>
 </html>
+<?php
+// Flush output buffer
+ob_end_flush();
+?>

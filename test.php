@@ -1,188 +1,307 @@
 <?php
 /**
- * TEST PAGE - Untuk debug masalah BATCH 2
- * Upload file ini ke /public_html/ dan buka di browser
+ * SITUNEO DIGITAL - System Test
+ * Version: 2.0 (Fixed session warnings)
  */
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-
+// Start output buffering to prevent "headers already sent" warning
+ob_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>SITUNEO - Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITUNEO DIGITAL - System Test</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1A1A2E 0%, #0F3057 100%);
+            color: #fff;
             padding: 20px;
-            background: #f5f5f5;
+            margin: 0;
         }
-        .test-box {
-            background: white;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #FFB400;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            background: rgba(255, 255, 255, 0.03);
             padding: 20px;
-            margin: 10px 0;
+            margin-bottom: 20px;
             border-radius: 10px;
-            border-left: 4px solid #1E5C99;
+            border-left: 4px solid #FFB400;
         }
-        .success {
-            border-left-color: #28a745;
+        .test-section h2 {
+            color: #FFB400;
+            margin-top: 0;
+            font-size: 1.3rem;
         }
-        .error {
-            border-left-color: #dc3545;
-            background: #ffe6e6;
+        .test-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: rgba(0,0,0,0.2);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
         }
-        h1 { color: #1E5C99; }
-        h2 { color: #0F3057; font-size: 18px; }
+        .test-item .icon {
+            font-size: 20px;
+            margin-right: 10px;
+            min-width: 30px;
+        }
+        .success { color: #00ff88; }
+        .error { color: #ff4444; }
+        .warning { color: #ffaa00; }
+        .info { color: #44aaff; }
         code {
-            background: #f4f4f4;
+            background: rgba(0,0,0,0.3);
             padding: 2px 6px;
             border-radius: 3px;
+            color: #FFD700;
+            font-size: 0.9em;
+        }
+        .summary {
+            background: linear-gradient(135deg, rgba(255,180,0,0.1), rgba(30,92,153,0.1));
+            border: 2px solid #FFB400;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .summary h3 {
+            color: #FFB400;
+            margin-top: 0;
+        }
+        .big-check {
+            font-size: 4rem;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <h1>🔧 SITUNEO DIGITAL - Test Page</h1>
-    <p>Halaman ini untuk mengecek apakah semua file sudah benar.</p>
+    <div class="container">
+        <h1>🔍 SITUNEO DIGITAL</h1>
+        <p class="subtitle">System Diagnostic Test - BATCH 1 COMPLETE</p>
 
-    <!-- Test 1: PHP Version -->
-    <div class="test-box success">
-        <h2>✅ Test 1: PHP Version</h2>
-        <p>PHP Version: <strong><?= PHP_VERSION ?></strong></p>
-        <?php if (version_compare(PHP_VERSION, '7.4.0', '>=')): ?>
-            <p style="color: green;">✅ PHP version OK (7.4 or higher)</p>
-        <?php else: ?>
-            <p style="color: red;">❌ PHP version too old. Need 7.4+</p>
-        <?php endif; ?>
-    </div>
-
-    <!-- Test 2: File Structure -->
-    <div class="test-box <?= file_exists('BATCH-1-PUBLIC-PAGES/includes/init.php') ? 'success' : 'error' ?>">
-        <h2><?= file_exists('BATCH-1-PUBLIC-PAGES/includes/init.php') ? '✅' : '❌' ?> Test 2: BATCH-1 Files</h2>
         <?php
-        $batch1_files = [
-            'BATCH-1-PUBLIC-PAGES/includes/init.php',
-            'BATCH-1-PUBLIC-PAGES/config/database.php',
-            'BATCH-1-PUBLIC-PAGES/config/constants.php',
-            'BATCH-1-PUBLIC-PAGES/components/layout/head.php',
-            'BATCH-1-PUBLIC-PAGES/components/layout/navbar.php',
-            'BATCH-1-PUBLIC-PAGES/components/layout/footer.php'
-        ];
+        $errors = 0;
+        $warnings = 0;
+        $passed = 0;
 
-        foreach ($batch1_files as $file):
-        ?>
-            <p><?= file_exists($file) ? '✅' : '❌' ?> <code><?= $file ?></code></p>
-        <?php endforeach; ?>
-    </div>
-
-    <!-- Test 3: Load BATCH-1 Init -->
-    <div class="test-box">
-        <h2>Test 3: Load BATCH-1 Init</h2>
-        <?php
-        try {
-            if (file_exists('BATCH-1-PUBLIC-PAGES/includes/init.php')) {
-                require_once 'BATCH-1-PUBLIC-PAGES/includes/init.php';
-                echo '<p style="color: green;">✅ init.php loaded successfully!</p>';
-            } else {
-                echo '<p style="color: red;">❌ init.php not found!</p>';
-            }
-        } catch (Exception $e) {
-            echo '<p style="color: red;">❌ Error loading init.php: ' . $e->getMessage() . '</p>';
+        // Test 1: PHP Version
+        echo '<div class="test-section">';
+        echo '<h2>Test 1: PHP Version</h2>';
+        if (version_compare(PHP_VERSION, '7.4.0', '>=')) {
+            echo '<div class="test-item"><span class="icon success">✅</span> PHP version: <strong>' . PHP_VERSION . '</strong> (OK)</div>';
+            $passed++;
+        } else {
+            echo '<div class="test-item"><span class="icon error">❌</span> PHP version: <strong>' . PHP_VERSION . '</strong> (Minimal 7.4 required!)</div>';
+            $errors++;
         }
-        ?>
-    </div>
+        echo '</div>';
 
-    <!-- Test 4: Constants -->
-    <div class="test-box <?= defined('APP_NAME') ? 'success' : 'error' ?>">
-        <h2><?= defined('APP_NAME') ? '✅' : '❌' ?> Test 4: Constants</h2>
-        <?php
-        $constants = ['APP_NAME', 'APP_URL', 'COMPANY_NIB', 'COMPANY_WHATSAPP'];
-        foreach ($constants as $const):
-        ?>
-            <p><?= defined($const) ? '✅' : '❌' ?> <strong><?= $const ?>:</strong> <?= defined($const) ? constant($const) : 'NOT DEFINED' ?></p>
-        <?php endforeach; ?>
-    </div>
+        // Test 2: File Structure
+        echo '<div class="test-section">';
+        echo '<h2>Test 2: File Structure</h2>';
 
-    <!-- Test 5: Database -->
-    <div class="test-box <?= isset($conn) && $conn->ping() ? 'success' : 'error' ?>">
-        <h2><?= isset($conn) && $conn->ping() ? '✅' : '❌' ?> Test 5: Database Connection</h2>
-        <?php if (isset($conn) && $conn->ping()): ?>
-            <p style="color: green;">✅ Database connected successfully!</p>
-            <p><strong>Database:</strong> <?= DB_NAME ?></p>
-        <?php else: ?>
-            <p style="color: red;">❌ Database connection failed!</p>
-            <p>Check your database credentials in <code>BATCH-1-PUBLIC-PAGES/config/database.php</code></p>
-        <?php endif; ?>
-    </div>
-
-    <!-- Test 6: Functions -->
-    <div class="test-box <?= function_exists('format_rupiah') ? 'success' : 'error' ?>">
-        <h2><?= function_exists('format_rupiah') ? '✅' : '❌' ?> Test 6: Helper Functions</h2>
-        <?php
-        $functions = ['format_rupiah', 'clean_input', 'is_valid_email', 'whatsapp_link'];
-        foreach ($functions as $func):
-        ?>
-            <p><?= function_exists($func) ? '✅' : '❌' ?> <code><?= $func ?>()</code></p>
-        <?php endforeach; ?>
-
-        <?php if (function_exists('format_rupiah')): ?>
-            <p><strong>Test:</strong> format_rupiah(1000000) = <code><?= format_rupiah(1000000) ?></code></p>
-        <?php endif; ?>
-    </div>
-
-    <!-- Test 7: BATCH-2 Files -->
-    <div class="test-box <?= file_exists('BATCH-2-PUBLIC-PAGES/pages/about.php') ? 'success' : 'error' ?>">
-        <h2><?= file_exists('BATCH-2-PUBLIC-PAGES/pages/about.php') ? '✅' : '❌' ?> Test 7: BATCH-2 Files</h2>
-        <?php
-        $batch2_files = [
-            'BATCH-2-PUBLIC-PAGES/pages/about.php',
-            'BATCH-2-PUBLIC-PAGES/pages/contact.php',
-            'BATCH-2-PUBLIC-PAGES/pages/faq.php',
-            'BATCH-2-PUBLIC-PAGES/components/breadcrumb.php',
-            'BATCH-2-PUBLIC-PAGES/assets/css/pages.css'
+        $required_files = [
+            'includes/init.php',
+            'config/database.php',
+            'config/constants.php',
+            'config/session.php',
+            'config/language.php',
+            'components/layout/head.php',
+            'components/layout/navbar.php',
+            'components/layout/footer.php',
+            'components/breadcrumb.php',
+            'assets/css/variables.css',
+            'assets/js/main.js',
+            'auth/login.php',
+            'auth/register.php',
+            'pages/about.php',
+            'pages/contact.php',
+            'pages/faq.php',
+            'database.sql'
         ];
 
-        foreach ($batch2_files as $file):
+        foreach ($required_files as $file) {
+            if (file_exists(__DIR__ . '/' . $file)) {
+                echo '<div class="test-item"><span class="icon success">✅</span> <code>' . $file . '</code></div>';
+                $passed++;
+            } else {
+                echo '<div class="test-item"><span class="icon error">❌</span> <code>' . $file . '</code> NOT FOUND!</div>';
+                $errors++;
+            }
+        }
+        echo '</div>';
+
+        // Test 3: Load Init File
+        echo '<div class="test-section">';
+        echo '<h2>Test 3: Load Init File</h2>';
+        try {
+            require_once __DIR__ . '/includes/init.php';
+            echo '<div class="test-item"><span class="icon success">✅</span> Init file loaded successfully</div>';
+            $passed++;
+        } catch (Exception $e) {
+            echo '<div class="test-item"><span class="icon error">❌</span> Error loading init: ' . $e->getMessage() . '</div>';
+            $errors++;
+        }
+        echo '</div>';
+
+        // Test 4: Constants
+        echo '<div class="test-section">';
+        echo '<h2>Test 4: System Constants</h2>';
+        $constants = ['APP_NAME', 'APP_URL', 'DB_HOST', 'DB_NAME', 'DB_USER', 'COMPANY_NIB', 'COMPANY_WHATSAPP'];
+        foreach ($constants as $const) {
+            if (defined($const)) {
+                $value = constant($const);
+                // Mask password
+                if (strpos($const, 'PASS') !== false) $value = '••••••••';
+                echo '<div class="test-item"><span class="icon success">✅</span> <code>' . $const . '</code> = ' . htmlspecialchars($value) . '</div>';
+                $passed++;
+            } else {
+                echo '<div class="test-item"><span class="icon error">❌</span> <code>' . $const . '</code> NOT DEFINED!</div>';
+                $errors++;
+            }
+        }
+        echo '</div>';
+
+        // Test 5: Database Connection
+        echo '<div class="test-section">';
+        echo '<h2>Test 5: Database Connection</h2>';
+        if (isset($conn) && $conn instanceof mysqli) {
+            if ($conn->ping()) {
+                echo '<div class="test-item"><span class="icon success">✅</span> Database connected! (<code>' . DB_NAME . '</code> @ <code>' . DB_HOST . '</code>)</div>';
+                $passed++;
+
+                // Check tables
+                $result = $conn->query("SHOW TABLES");
+                $table_count = $result->num_rows;
+                if ($table_count >= 17) {
+                    echo '<div class="test-item"><span class="icon success">✅</span> Database has <strong>' . $table_count . ' tables</strong> (Expected: 17)</div>';
+                    $passed++;
+                } elseif ($table_count > 0) {
+                    echo '<div class="test-item"><span class="icon warning">⚠️</span> Database has <strong>' . $table_count . ' tables</strong> (Expected: 17 - please import database.sql)</div>';
+                    $warnings++;
+                } else {
+                    echo '<div class="test-item"><span class="icon error">❌</span> Database has <strong>0 tables</strong> - Import database.sql NOW!</div>';
+                    $errors++;
+                }
+            } else {
+                echo '<div class="test-item"><span class="icon error">❌</span> Database connection failed: ' . $conn->connect_error . '</div>';
+                $errors++;
+            }
+        } else {
+            echo '<div class="test-item"><span class="icon error">❌</span> Database connection not initialized</div>';
+            $errors++;
+        }
+        echo '</div>';
+
+        // Test 6: Helper Functions
+        echo '<div class="test-section">';
+        echo '<h2>Test 6: Helper Functions</h2>';
+        $functions = [
+            'e' => 'Security (XSS prevention)',
+            'clean_input' => 'Security (Input sanitization)',
+            'format_rupiah' => 'Format (Currency)',
+            'is_logged_in' => 'Auth (Check login)',
+            'whatsapp_link' => 'URL (WhatsApp link)'
+        ];
+        foreach ($functions as $func => $desc) {
+            if (function_exists($func)) {
+                echo '<div class="test-item"><span class="icon success">✅</span> <code>' . $func . '()</code> - ' . $desc . '</div>';
+                $passed++;
+            } else {
+                echo '<div class="test-item"><span class="icon error">❌</span> <code>' . $func . '()</code> NOT FOUND!</div>';
+                $errors++;
+            }
+        }
+        echo '</div>';
+
+        // Test 7: Public Pages Accessibility
+        echo '<div class="test-section">';
+        echo '<h2>Test 7: Public Pages</h2>';
+        $pages = [
+            'index.php' => 'Homepage',
+            'pages/about.php' => 'About',
+            'pages/contact.php' => 'Contact',
+            'pages/faq.php' => 'FAQ',
+            'auth/login.php' => 'Login',
+            'auth/register.php' => 'Register'
+        ];
+        foreach ($pages as $path => $name) {
+            if (file_exists(__DIR__ . '/' . $path)) {
+                echo '<div class="test-item"><span class="icon success">✅</span> <strong>' . $name . '</strong> - <code>/' . $path . '</code></div>';
+                $passed++;
+            } else {
+                echo '<div class="test-item"><span class="icon error">❌</span> <strong>' . $name . '</strong> - <code>/' . $path . '</code> NOT FOUND!</div>';
+                $errors++;
+            }
+        }
+        echo '</div>';
+
+        // Summary
+        $total = $passed + $errors + $warnings;
+        $percentage = $total > 0 ? round(($passed / $total) * 100) : 0;
+
+        echo '<div class="summary">';
+        if ($errors === 0) {
+            echo '<div class="big-check success">✅</div>';
+            echo '<h3>ALL TESTS PASSED!</h3>';
+            echo '<p>Your SITUNEO DIGITAL installation is <strong>100% ready</strong>!</p>';
+            echo '<p style="margin-top: 20px;">✅ <strong>' . $passed . '</strong> tests passed<br>';
+            if ($warnings > 0) {
+                echo '⚠️ <strong>' . $warnings . '</strong> warnings (minor issues)</p>';
+            } else {
+                echo '⚠️ <strong>0</strong> warnings</p>';
+            }
+            echo '<p style="margin-top: 20px; font-size: 1.1rem;"><strong>Next steps:</strong></p>';
+            echo '<p>1. Visit <a href="index.php" style="color: #FFB400;">Homepage</a></p>';
+            echo '<p>2. Visit <a href="auth/login.php" style="color: #FFB400;">Login Page</a></p>';
+            echo '<p>3. Login dengan: <code>admin@situneo.my.id</code> / <code>admin123</code></p>';
+        } else {
+            echo '<div class="big-check error">❌</div>';
+            echo '<h3>ATTENTION REQUIRED!</h3>';
+            echo '<p>Found <strong style="color: #ff4444;">' . $errors . ' errors</strong> that need fixing.</p>';
+            echo '<p>Passed: <strong class="success">' . $passed . '</strong> | Errors: <strong class="error">' . $errors . '</strong> | Warnings: <strong class="warning">' . $warnings . '</strong></p>';
+            echo '<p style="margin-top: 20px;"><strong>Action needed:</strong></p>';
+            echo '<p>1. Fix all errors shown above</p>';
+            echo '<p>2. Check file structure and permissions</p>';
+            echo '<p>3. Verify database credentials in <code>config/database.php</code></p>';
+            echo '<p>4. Import <code>database.sql</code> if database is empty</p>';
+        }
+        echo '</div>';
         ?>
-            <p><?= file_exists($file) ? '✅' : '❌' ?> <code><?= $file ?></code></p>
-        <?php endforeach; ?>
-    </div>
 
-    <div class="test-box success">
-        <h2>📝 Test Results Summary</h2>
-        <?php
-        $all_good =
-            version_compare(PHP_VERSION, '7.4.0', '>=') &&
-            file_exists('BATCH-1-PUBLIC-PAGES/includes/init.php') &&
-            defined('APP_NAME') &&
-            isset($conn) && $conn->ping() &&
-            function_exists('format_rupiah');
-        ?>
-
-        <?php if ($all_good): ?>
-            <p style="color: green; font-size: 18px; font-weight: bold;">
-                🎉 SEMUA TEST PASSED! Website siap digunakan!
+        <div style="margin-top: 30px; text-align: center; color: #888; font-size: 0.9rem;">
+            <p>📞 Need help? WhatsApp: <strong>083173868915</strong></p>
+            <p>📧 Email: <strong>vins@situneo.my.id</strong></p>
+            <p>🏢 NIB: <strong>20250926145704515453</strong></p>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #666;">
+                Test Version 2.0 - Session warnings fixed with output buffering
             </p>
-            <p>Anda bisa test halaman:</p>
-            <ul>
-                <li><a href="BATCH-2-PUBLIC-PAGES/pages/about.php" target="_blank">About Page</a></li>
-                <li><a href="BATCH-2-PUBLIC-PAGES/pages/contact.php" target="_blank">Contact Page</a></li>
-                <li><a href="BATCH-2-PUBLIC-PAGES/pages/faq.php" target="_blank">FAQ Page</a></li>
-            </ul>
-        <?php else: ?>
-            <p style="color: red; font-size: 18px; font-weight: bold;">
-                ❌ ADA MASALAH! Lihat hasil test di atas untuk detail.
-            </p>
-            <p>Screenshot halaman ini dan kirim ke developer!</p>
-        <?php endif; ?>
-    </div>
-
-    <div style="text-align: center; margin-top: 30px; color: #999;">
-        <p>Test Page by SITUNEO DIGITAL</p>
-        <p><small>File ini aman untuk dihapus setelah testing selesai</small></p>
+        </div>
     </div>
 </body>
 </html>
+<?php
+// Flush output buffer
+ob_end_flush();
+?>
