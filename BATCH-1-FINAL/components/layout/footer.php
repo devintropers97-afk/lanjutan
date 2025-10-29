@@ -20,11 +20,12 @@
             <!-- Column 1: Brand Info & NIB -->
             <div class="col-lg-4 col-md-6">
                 <div class="d-flex align-items-center mb-3">
-                    <img src="<?= APP_URL ?>/assets/images/logo/logo.png"
+                    <!-- BATCH-1.2 FIX: SVG logo with fallback -->
+                    <img src="<?= APP_URL ?>/assets/images/logo/logo.svg"
                          alt="<?= APP_NAME ?>"
                          width="60"
                          height="60"
-                         onerror="this.src='https://ui-avatars.com/api/?name=SITUNEO&size=60&background=FFB400&color=0F3057&bold=true'"
+                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=SITUNEO&size=60&background=FFB400&color=0F3057&bold=true';"
                          style="border-radius: 15px; margin-right: 15px;">
                     <div>
                         <h4 style="color: var(--gold); margin: 0; font-weight: 800; font-family: 'Plus Jakarta Sans', sans-serif;">SITUNEO DIGITAL</h4>

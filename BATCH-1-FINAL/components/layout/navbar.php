@@ -18,11 +18,12 @@
     <div class="container">
         <!-- Logo & Brand -->
         <a class="navbar-brand d-flex align-items-center" href="<?= APP_URL ?>" style="text-decoration: none;">
-            <img src="<?= APP_URL ?>/assets/images/logo/logo.png"
+            <!-- BATCH-1.2 FIX: SVG logo with fallback -->
+            <img src="<?= APP_URL ?>/assets/images/logo/logo.svg"
                  alt="<?= APP_NAME ?>"
                  width="50"
                  height="50"
-                 onerror="this.src='https://ui-avatars.com/api/?name=SITUNEO&size=50&background=FFB400&color=0F3057&bold=true'"
+                 onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=SITUNEO&size=50&background=FFB400&color=0F3057&bold=true';"
                  style="margin-right: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(255,180,0,0.4);">
             <div>
                 <span style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--gold);">SITUNEO</span>

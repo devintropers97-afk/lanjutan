@@ -4,12 +4,14 @@
  * SITUNEO DIGITAL - Session Management
  * ================================================
  * File ini untuk manage session (login, logout, dll)
+ *
+ * BATCH-1.2 FIX:
+ * - Session sudah di-start di init.php (TIDAK di sini!)
+ * - File ini HANYA berisi session functions
  */
 
-// Start session kalau belum ada
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+// Session sudah di-start di init.php, jangan start lagi di sini!
+// Kalau start 2x akan error "headers already sent"
 
 // Set session timeout (2 jam)
 if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > SESSION_TIMEOUT)) {
