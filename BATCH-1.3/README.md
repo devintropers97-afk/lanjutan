@@ -391,6 +391,17 @@ define('COMPANY_NIB', 'YOUR NIB NUMBER');
 
 ## 📝 CHANGELOG
 
+### Version 1.3.2 (2025-10-29) - Complete Pricing System Update
+- ✅ Updated hero.php: Changed focus to monthly pricing "Mulai dari Rp 150rb/bulan"
+- ✅ Updated services.php: Display BOTH setup_fee + monthly_price clearly
+- ✅ Added "SEWA BULANAN" badge for recurring services
+- ✅ Updated packages.php: Show setup_fee + monthly_subscription separately
+- ✅ Created partner-info.php: Complete partner commission system showcase
+- ✅ Added 5-tier commission display (Bronze 15% → Diamond 50%)
+- ✅ Added earnings calculator example
+- ✅ Added comprehensive CSS for pricing and partner sections
+- ✅ Synced with pricing-data.php structure (setup + monthly model)
+
 ### Version 1.3 (2025-01-29)
 - ✅ Created modular structure
 - ✅ Added commercial design (glassmorphism)

@@ -22,6 +22,8 @@ $page_title = 'SITUNEO DIGITAL - Bikin Website Profesional Cuma Rp 350rb/Halaman
 
 <?php include __DIR__ . '/includes/components/packages.php'; ?>
 
+<?php include __DIR__ . '/includes/components/partner-info.php'; ?>
+
 <?php include __DIR__ . '/includes/components/testimonials.php'; ?>
 
 <?php include __DIR__ . '/includes/components/footer.php'; ?>

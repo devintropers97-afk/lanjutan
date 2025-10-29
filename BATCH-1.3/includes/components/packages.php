@@ -5,92 +5,96 @@
 
 $bundling_packages = [
     [
-        'name' => 'STARTER',
-        'name_en' => 'STARTER',
-        'tagline' => 'Cocok untuk UMKM & Freelancer',
-        'tagline_en' => 'Perfect for SMEs & Freelancers',
-        'price_original' => 3500000,
-        'price_promo' => 2500000,
+        'name' => 'Startup Go Digital',
+        'name_en' => 'Startup Go Digital',
+        'tagline' => 'Mulai bisnis digital dengan budget terjangkau',
+        'tagline_en' => 'Start your digital business affordably',
+        'setup_fee' => 350000,
+        'monthly_price' => 200000,
         'popular' => false,
         'features' => [
             'Website Landing Page (1 halaman)',
             'Domain .com (1 tahun)',
-            'Hosting + SSL',
+            'Hosting Basic + SSL',
             'SEO Dasar',
             'WhatsApp Integration',
-            'Maintenance 3 bulan',
-            'FREE Revisi 2x'
+            'Email Bisnis (1 akun)',
+            'Maintenance bulanan',
+            'Support via WhatsApp'
         ],
         'features_en' => [
             'Landing Page Website (1 page)',
             'Domain .com (1 year)',
-            'Hosting + SSL',
+            'Basic Hosting + SSL',
             'Basic SEO',
             'WhatsApp Integration',
-            '3 months maintenance',
-            'FREE 2x Revision'
+            'Business Email (1 account)',
+            'Monthly maintenance',
+            'WhatsApp support'
         ]
     ],
     [
-        'name' => 'BUSINESS',
-        'name_en' => 'BUSINESS',
-        'tagline' => 'Paket Paling Laku untuk Bisnis Lokal',
-        'tagline_en' => 'Best Seller for Local Business',
-        'price_original' => 6000000,
-        'price_promo' => 4000000,
+        'name' => 'Bisnis Naik Level',
+        'name_en' => 'Business Level Up',
+        'tagline' => 'Paket TERLARIS untuk Bisnis Lokal',
+        'tagline_en' => 'BEST SELLER for Local Business',
+        'setup_fee' => 750000,
+        'monthly_price' => 400000,
         'popular' => true,
         'features' => [
             'Website Multi-Page (4-6 halaman)',
-            'Domain + Hosting Premium + SSL',
-            'SEO Optimasi',
-            'Meta Ads Management (1 bulan)',
+            'Domain + Hosting + SSL',
+            'SEO Optimasi (Basic)',
+            'Copywriting (5 artikel/bulan)',
+            'Meta Ads Management',
             'Email Bisnis (3 akun)',
             'Google Analytics Setup',
-            'Maintenance 6 bulan',
-            'FREE Revisi 3x'
+            'Laporan Bulanan',
+            'Maintenance & Support'
         ],
         'features_en' => [
             'Multi-Page Website (4-6 pages)',
-            'Premium Domain + Hosting + SSL',
-            'SEO Optimization',
-            'Meta Ads Management (1 month)',
+            'Domain + Hosting + SSL',
+            'SEO Optimization (Basic)',
+            'Copywriting (5 articles/month)',
+            'Meta Ads Management',
             'Business Email (3 accounts)',
             'Google Analytics Setup',
-            '6 months maintenance',
-            'FREE 3x Revision'
+            'Monthly Reports',
+            'Maintenance & Support'
         ]
     ],
     [
-        'name' => 'PREMIUM',
-        'name_en' => 'PREMIUM',
-        'tagline' => 'Solusi Lengkap E-Commerce & Automation',
-        'tagline_en' => 'Complete E-Commerce & Automation Solution',
-        'price_original' => 9500000,
-        'price_promo' => 6500000,
-        'popular' => false,
+        'name' => 'Pertumbuhan E-Commerce',
+        'name_en' => 'E-Commerce Growth',
+        'tagline' => 'Lengkap untuk bisnis online shop',
+        'tagline_en' => 'Complete for online shop business',
+        'setup_fee' => 1500000,
+        'monthly_price' => 500000,
+        'popular' => true,
         'features' => [
-            'E-Commerce Website Lengkap',
+            'Website Toko Online (E-Commerce)',
+            'Katalog Produk Unlimited',
             'Payment Gateway Integration',
             'Domain + Cloud Hosting + SSL',
             'SEO E-Commerce',
-            'Meta Ads + Google Ads (2 bulan)',
-            'Chatbot AI Basic',
+            'Meta Ads + Google Ads',
+            '30 Deskripsi Produk/bulan',
             'Email Bisnis (5 akun)',
             'WhatsApp Blast',
-            'Maintenance 12 bulan',
-            'FREE Revisi Unlimited'
+            'Maintenance & Support Priority'
         ],
         'features_en' => [
-            'Complete E-Commerce Website',
+            'E-Commerce Website',
+            'Unlimited Product Catalog',
             'Payment Gateway Integration',
             'Domain + Cloud Hosting + SSL',
             'E-Commerce SEO',
-            'Meta Ads + Google Ads (2 months)',
-            'Basic AI Chatbot',
+            'Meta Ads + Google Ads',
+            '30 Product Descriptions/month',
             'Business Email (5 accounts)',
             'WhatsApp Blast',
-            '12 months maintenance',
-            'FREE Unlimited Revision'
+            'Priority Maintenance & Support'
         ]
     ]
 ];
@@ -111,12 +115,35 @@ $bundling_packages = [
         <div class="packages-grid">
             <?php foreach ($bundling_packages as $index => $package): ?>
                 <div class="package-card <?= $package['popular'] ? 'popular' : '' ?>" data-aos="zoom-in" data-aos-delay="<?= $index * 100 ?>">
-                    <h3 class="package-name"><?= $lang === 'en' ? $package['name_en'] : $package['name'] ?></h3>
-                    <p class="text-muted"><?= $lang === 'en' ? $package['tagline_en'] : $package['tagline'] ?></p>
+                    <?php if ($package['popular']): ?>
+                        <div class="popular-badge">
+                            <i class="bi bi-star-fill"></i>
+                            <?= $lang === 'id' ? 'TERLARIS' : 'BEST SELLER' ?>
+                        </div>
+                    <?php endif; ?>
 
-                    <div class="package-price">
-                        <div class="price-original"><?= format_rupiah($package['price_original']) ?></div>
-                        <div class="price-promo"><?= format_rupiah($package['price_promo']) ?></div>
+                    <h3 class="package-name"><?= $lang === 'en' ? $package['name_en'] : $package['name'] ?></h3>
+                    <p class="package-tagline"><?= $lang === 'en' ? $package['tagline_en'] : $package['tagline'] ?></p>
+
+                    <div class="package-pricing">
+                        <div class="pricing-item">
+                            <div class="pricing-label">
+                                <i class="bi bi-tools"></i>
+                                <?= $lang === 'id' ? 'Setup Fee (Sekali)' : 'Setup Fee (One-time)' ?>
+                            </div>
+                            <div class="pricing-value"><?= format_rupiah($package['setup_fee']) ?></div>
+                        </div>
+                        <div class="pricing-divider">+</div>
+                        <div class="pricing-item pricing-highlight">
+                            <div class="pricing-label">
+                                <i class="bi bi-arrow-repeat"></i>
+                                <?= $lang === 'id' ? 'Sewa Bulanan' : 'Monthly Rental' ?>
+                            </div>
+                            <div class="pricing-value pricing-monthly">
+                                <?= format_rupiah($package['monthly_price']) ?>
+                                <small>/<?= $lang === 'id' ? 'bulan' : 'month' ?></small>
+                            </div>
+                        </div>
                     </div>
 
                     <ul class="package-features">

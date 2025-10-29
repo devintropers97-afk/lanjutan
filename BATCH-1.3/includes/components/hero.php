@@ -18,17 +18,19 @@
 
                     <h1>
                         <?php if ($lang === 'id'): ?>
-                            Bikin Website Profesional <span class="highlight">Cuma Rp 350rb/Halaman</span>
+                            Bikin Website Profesional <span class="highlight">Mulai dari Rp 150rb/bulan</span>
                         <?php else: ?>
-                            Build Professional Website <span class="highlight">Only Rp 350k/Page</span>
+                            Build Professional Website <span class="highlight">Starting from Rp 150k/month</span>
                         <?php endif; ?>
                     </h1>
 
-                    <p>
+                    <p class="hero-subtitle">
                         <?php if ($lang === 'id'): ?>
-                            <strong>FREE DEMO 24 JAM</strong> - Lihat Dulu Hasilnya, Bayar Kalau Cocok! 🚀
+                            <strong>💎 SISTEM SEWA BULANAN</strong> - Bayar Setup Fee Sekali, Maintenance Bulanan Hemat!<br>
+                            <strong>🎁 FREE DEMO 24 JAM</strong> - Lihat Dulu Hasilnya, Bayar Kalau Cocok!
                         <?php else: ?>
-                            <strong>FREE 24 HOUR DEMO</strong> - See The Result First, Pay If You Like It! 🚀
+                            <strong>💎 MONTHLY RENTAL SYSTEM</strong> - One-Time Setup Fee, Affordable Monthly Maintenance!<br>
+                            <strong>🎁 FREE 24 HOUR DEMO</strong> - See The Result First, Pay If You Like It!
                         <?php endif; ?>
                     </p>
 
