@@ -145,21 +145,37 @@ foreach ($writable_dirs as $dir => $description) {
 // ===================================
 // 6. CHECK DATABASE CONFIG
 // ===================================
+// BATCH-1.2-FINAL FIX: Don't check for specific username strings!
+// Instead, check if constants are DEFINED and NOT EMPTY
+// This prevents false positives when user legitimately has same username
 if (file_exists(__DIR__ . '/config/database.php')) {
-    // Check if still using default config
     $db_content = file_get_contents(__DIR__ . '/config/database.php');
-    $is_default = (strpos($db_content, 'nrrskfvk_user_situneo_digital') !== false);
+
+    // Check if DB constants are defined and not empty
+    $has_host = (strpos($db_content, "define('DB_HOST'") !== false &&
+                 strpos($db_content, "define('DB_HOST', '')") === false &&
+                 strpos($db_content, 'define("DB_HOST", "")') === false);
+
+    $has_user = (strpos($db_content, "define('DB_USER'") !== false &&
+                 strpos($db_content, "define('DB_USER', '')") === false &&
+                 strpos($db_content, 'define("DB_USER", "")') === false);
+
+    $has_name = (strpos($db_content, "define('DB_NAME'") !== false &&
+                 strpos($db_content, "define('DB_NAME', '')") === false &&
+                 strpos($db_content, 'define("DB_NAME", "")') === false);
+
+    $has_config = $has_host && $has_user && $has_name;
 
     $checks[] = [
         'category' => 'Database Configuration',
         'name' => 'Database credentials',
-        'status' => !$is_default,
-        'current' => $is_default ? 'Using default' : 'Customized',
-        'required' => 'Must be customized',
-        'message' => $is_default ? 'Masih menggunakan config default! Edit config/database.php dengan credential Anda' : 'Database configuration sudah dikustomisasi'
+        'status' => $has_config,
+        'current' => $has_config ? 'Configured' : 'Missing or empty',
+        'required' => 'DB_HOST, DB_USER, DB_NAME must be set and not empty',
+        'message' => $has_config ? 'Database configuration OK - constants are defined and not empty' : 'Database configuration tidak lengkap - ada constants yang kosong atau tidak terdefinisi'
     ];
 
-    if ($is_default) $all_passed = false;
+    if (!$has_config) $all_passed = false;
 }
 
 // ===================================

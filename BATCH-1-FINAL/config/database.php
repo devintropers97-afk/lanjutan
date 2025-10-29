@@ -21,18 +21,13 @@ define('DB_NAME', 'nrrskfvk_situneo_digital');      // Nama database
 // ===================================
 // VALIDASI KONFIGURASI DATABASE
 // ===================================
+// BATCH-1.2-FINAL FIX: Only check if values are EMPTY
+// DON'T check for specific strings (causes false positives!)
+// A user might legitimately have the same username as our template!
+
 $db_config_errors = [];
 
-// Check untuk default config (tapi skip check kalau memang itu config yang bener)
-// Cuma warn kalau SEMUA values masih default
-if (DB_HOST === 'localhost' &&
-    DB_USER === 'nrrskfvk_user_situneo_digital' &&
-    DB_PASS === 'Devin1922$' &&
-    DB_NAME === 'nrrskfvk_situneo_digital') {
-    $db_config_errors[] = "⚠️ Anda masih menggunakan database CONFIG DEFAULT! Edit config/database.php dengan credential Anda.";
-}
-
-// Check untuk empty values
+// Check untuk empty values (this is the ONLY check we need!)
 if (empty(DB_HOST) || empty(DB_USER) || empty(DB_NAME)) {
     $db_config_errors[] = "❌ Database configuration tidak lengkap! DB_HOST, DB_USER, dan DB_NAME harus diisi.";
 }
