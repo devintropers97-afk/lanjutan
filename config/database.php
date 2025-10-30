@@ -217,8 +217,9 @@ class Database {
      * Close database connection
      */
     public function close() {
-        if ($this->conn) {
+        if ($this->conn && $this->conn instanceof mysqli) {
             $this->conn->close();
+            $this->conn = null;
         }
     }
 

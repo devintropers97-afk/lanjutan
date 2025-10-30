@@ -30,9 +30,7 @@ function evaluateFreelancerTier($freelancerId) {
     $monthlyOrders = $freelancer['total_orders_this_month'];
 
     // Determine new tier
-    $newTier = determineT
-
-ierByOrders($monthlyOrders);
+    $newTier = determineTierByOrders($monthlyOrders);
 
     // No change
     if ($currentTier === $newTier) {
