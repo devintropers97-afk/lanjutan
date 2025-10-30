@@ -1,0 +1,19 @@
+# robots.txt for SITUNEO DIGITAL
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Disallow admin and sensitive directories
+Disallow: /includes/
+Disallow: /auth/
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Allow assets for page rendering
+Allow: /assets/*.css$
+Allow: /assets/*.js$
+Allow: /assets/images/
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://situneo.com/sitemap.xml
