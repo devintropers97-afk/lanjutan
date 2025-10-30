@@ -5,85 +5,172 @@
 ?>
 
 <!-- Footer -->
-<footer class="footer">
+<footer style="background: linear-gradient(180deg, #0F3057 0%, #1E5C99 100%); color: white; padding: 60px 0 0;">
     <div class="container">
-        <div class="footer-content">
-            <!-- Brand -->
-            <div class="footer-brand">
-                <h3>SITUNEO DIGITAL</h3>
-                <p><?= SITE_TAGLINE ?></p>
-                <p style="font-size: 14px; margin-top: 15px;">
-                    <strong>NIB:</strong> <?= COMPANY_NIB ?><br>
-                    <strong>NPWP:</strong> <?= COMPANY_NPWP ?>
+        <div class="row g-4 mb-5">
+            <!-- Brand Column -->
+            <div class="col-lg-4">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                    <img src="https://situneo.my.id/logo" alt="SITUNEO Logo" style="height: 45px;">
+                    <h3 style="font-weight: 900; font-size: 1.8rem; margin: 0; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SITUNEO</h3>
+                </div>
+                <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 20px;">
+                    <?= SITE_TAGLINE ?>
                 </p>
+                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 15px; margin-bottom: 20px;">
+                    <div style="font-size: 0.85rem; margin-bottom: 8px;">
+                        <i class="bi bi-shield-check" style="color: var(--gold);"></i>
+                        <strong>NIB:</strong> <?= COMPANY_NIB ?>
+                    </div>
+                    <div style="font-size: 0.85rem;">
+                        <i class="bi bi-file-text" style="color: var(--gold);"></i>
+                        <strong>NPWP:</strong> <?= COMPANY_NPWP ?>
+                    </div>
+                </div>
+                <!-- Social Media -->
+                <div style="display: flex; gap: 12px;">
+                    <a href="<?= SOCIAL_INSTAGRAM ?>" target="_blank" style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s ease;">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="<?= SOCIAL_FACEBOOK ?>" target="_blank" style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s ease;">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="<?= SOCIAL_LINKEDIN ?>" target="_blank" style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s ease;">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="<?= SOCIAL_TIKTOK ?>" target="_blank" style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s ease;">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                    <a href="<?= SOCIAL_YOUTUBE ?>" target="_blank" style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s ease;">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
             </div>
 
             <!-- Quick Links -->
-            <div class="footer-links">
-                <h4><?= $lang === 'id' ? 'Tautan Cepat' : 'Quick Links' ?></h4>
-                <ul>
-                    <li><a href="index.php"><?= t('home') ?></a></li>
-                    <li><a href="pages/about.php"><?= t('about') ?></a></li>
-                    <li><a href="pages/services.php"><?= t('services') ?></a></li>
-                    <li><a href="pages/portfolio.php"><?= t('portfolio') ?></a></li>
-                    <li><a href="pages/pricing.php"><?= t('pricing') ?></a></li>
+            <div class="col-lg-2 col-md-4">
+                <h4 style="font-weight: 700; margin-bottom: 20px; color: var(--gold); font-size: 1.1rem;">
+                    <?= $lang === 'id' ? 'Tautan Cepat' : 'Quick Links' ?>
+                </h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;">
+                        <a href="/" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                            <span><?= $lang === 'id' ? 'Beranda' : 'Home' ?></span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="#about" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                            <span><?= $lang === 'id' ? 'Tentang Kami' : 'About Us' ?></span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="#services" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                            <span><?= $lang === 'id' ? 'Layanan' : 'Services' ?></span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="#portfolio" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="pages/pricing.php" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                            <span><?= $lang === 'id' ? 'Harga' : 'Pricing' ?></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <!-- Services -->
-            <div class="footer-links">
-                <h4><?= $lang === 'id' ? 'Layanan Kami' : 'Our Services' ?></h4>
-                <ul>
-                    <li><a href="pages/services.php">Website & Development</a></li>
-                    <li><a href="pages/services.php">Digital Marketing</a></li>
-                    <li><a href="pages/services.php">AI & Automation</a></li>
-                    <li><a href="pages/services.php">Branding & Creative</a></li>
-                    <li><a href="pages/services.php">Content & Copywriting</a></li>
+            <div class="col-lg-3 col-md-4">
+                <h4 style="font-weight: 700; margin-bottom: 20px; color: var(--gold); font-size: 1.1rem;">
+                    <?= $lang === 'id' ? 'Layanan Kami' : 'Our Services' ?>
+                </h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 10px;">
+                        <a href="pages/services.php" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                            <span>Website & Development</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="pages/services.php" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                            <span>Digital Marketing</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="pages/services.php" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                            <span>AI & Automation</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="pages/services.php" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                            <span>Branding & Creative</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="pages/services.php" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i>
+                            <span>Content & Copywriting</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
-            <!-- Contact -->
-            <div class="footer-contact">
-                <h4><?= t('contact_us') ?></h4>
-                <p>
-                    <i class="bi bi-whatsapp"></i>
-                    <a href="<?= whatsapp_link('Halo SITUNEO!') ?>"><?= SITE_PHONE ?></a>
-                </p>
-                <p>
-                    <i class="bi bi-envelope"></i>
-                    <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a>
-                </p>
-                <p>
-                    <i class="bi bi-envelope"></i>
-                    <a href="mailto:support@situneo.my.id">support@situneo.my.id</a>
-                </p>
-
-                <!-- Social Media -->
-                <div class="social-links">
-                    <a href="<?= SOCIAL_INSTAGRAM ?>" target="_blank" aria-label="Instagram">
-                        <i class="bi bi-instagram"></i>
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-4">
+                <h4 style="font-weight: 700; margin-bottom: 20px; color: var(--gold); font-size: 1.1rem;">
+                    <?= $lang === 'id' ? 'Hubungi Kami' : 'Contact Us' ?>
+                </h4>
+                <div style="margin-bottom: 15px;">
+                    <a href="<?= whatsapp_link('Halo SITUNEO!') ?>" style="color: rgba(255, 255, 255, 0.9); text-decoration: none; display: flex; align-items: center; gap: 10px; transition: all 0.3s ease;">
+                        <i class="bi bi-whatsapp" style="font-size: 1.3rem; color: #25D366;"></i>
+                        <span><?= COMPANY_WHATSAPP ?></span>
                     </a>
-                    <a href="<?= SOCIAL_FACEBOOK ?>" target="_blank" aria-label="Facebook">
-                        <i class="bi bi-facebook"></i>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <a href="mailto:<?= COMPANY_EMAIL ?>" style="color: rgba(255, 255, 255, 0.9); text-decoration: none; display: flex; align-items: center; gap: 10px; transition: all 0.3s ease;">
+                        <i class="bi bi-envelope" style="font-size: 1.2rem; color: var(--gold);"></i>
+                        <span><?= COMPANY_EMAIL ?></span>
                     </a>
-                    <a href="<?= SOCIAL_LINKEDIN ?>" target="_blank" aria-label="LinkedIn">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a href="<?= SOCIAL_TWITTER ?>" target="_blank" aria-label="Twitter">
-                        <i class="bi bi-twitter"></i>
-                    </a>
+                </div>
+                <div style="color: rgba(255, 255, 255, 0.8); display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem;">
+                    <i class="bi bi-geo-alt-fill" style="font-size: 1.2rem; color: var(--gold); margin-top: 2px;"></i>
+                    <span><?= COMPANY_ADDRESS ?></span>
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; <?= date('Y') ?> SITUNEO DIGITAL. All Rights Reserved.</p>
-            <p style="font-size: 12px; margin-top: 10px;">
-                <?= $lang === 'id' ? 'Perusahaan Digital Agency Resmi Terdaftar' : 'Officially Registered Digital Agency Company' ?>
+        <!-- Footer Bottom -->
+        <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding: 25px 0; text-align: center;">
+            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 8px; font-size: 0.95rem;">
+                &copy; <?= date('Y') ?> <strong style="color: var(--gold);">SITUNEO DIGITAL</strong>. <?= $lang === 'id' ? 'Semua Hak Dilindungi.' : 'All Rights Reserved.' ?>
+            </p>
+            <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; margin: 0;">
+                <?= $lang === 'id' ? 'Perusahaan Digital Agency Resmi Terdaftar dan Terpercaya' : 'Officially Registered and Trusted Digital Agency Company' ?>
             </p>
         </div>
     </div>
 </footer>
+
+<!-- Floating Widgets -->
+<!-- WhatsApp Float Button -->
+<a href="<?= whatsapp_link('Halo! Saya ingin konsultasi') ?>" id="whatsappFloat" style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); z-index: 998; text-decoration: none; animation: pulse 2s ease-in-out infinite;">
+    <i class="bi bi-whatsapp" style="font-size: 2rem; color: white;"></i>
+</a>
+
+<!-- Back to Top Button -->
+<button id="backToTop" style="position: fixed; bottom: 105px; right: 30px; width: 50px; height: 50px; background: var(--gradient-gold); border: none; border-radius: 50%; display: none; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(255, 180, 0, 0.4); cursor: pointer; z-index: 998; transition: all 0.3s ease;">
+    <i class="bi bi-arrow-up" style="font-size: 1.5rem; color: var(--dark-blue); font-weight: 900;"></i>
+</button>
 
 <!-- Order Notification -->
 <div id="orderNotification" class="order-notification">

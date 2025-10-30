@@ -3,29 +3,23 @@
  * ================================================
  * SITUNEO DIGITAL - Register Page
  * ================================================
- * BATCH 1.3 - Split Layout with Password Strength
+ * BATCH 1.3 - Dual Registration: Client / Partner
+ * Client = Simple form | Partner = Application form with commission info
  */
 
 // Load configuration
 require_once __DIR__ . '/../includes/config/config.php';
 
+// Get registration type from URL parameter
+$register_type = $_GET['type'] ?? '';
+
 // Handle registration form
 $error = '';
 $success = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $whatsapp = $_POST['whatsapp'] ?? '';
-    $password = $_POST['password'] ?? '';
-    $confirm_password = $_POST['confirm_password'] ?? '';
-
+    $type = $_POST['type'] ?? '';
     // TODO: Add actual registration logic here
     // This is a placeholder
-    if (empty($name) || empty($email) || empty($password)) {
-        $error = $lang === 'id' ? 'Semua field harus diisi!' : 'All fields are required!';
-    } elseif ($password !== $confirm_password) {
-        $error = $lang === 'id' ? 'Password dan konfirmasi password tidak cocok!' : 'Password and confirm password do not match!';
-    }
 }
 
 $page_title = 'Register - SITUNEO DIGITAL';
@@ -80,14 +74,14 @@ $page_title = 'Register - SITUNEO DIGITAL';
             border-radius: 30px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: hidden;
-            max-width: 1000px;
+            max-width: 1100px;
             width: 100%;
         }
 
         .auth-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            min-height: 650px;
+            min-height: 700px;
         }
 
         .auth-left {
@@ -120,13 +114,13 @@ $page_title = 'Register - SITUNEO DIGITAL';
         .auth-left p {
             font-size: 16px;
             opacity: 0.9;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .auth-left .features {
             text-align: left;
             width: 100%;
-            max-width: 300px;
+            max-width: 350px;
         }
 
         .auth-left .features li {
@@ -134,132 +128,143 @@ $page_title = 'Register - SITUNEO DIGITAL';
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 14px;
         }
 
         .auth-left .features i {
             color: var(--gold);
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .auth-right {
-            padding: 60px 40px;
+            padding: 50px 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            max-height: 700px;
+            overflow-y: auto;
+        }
+
+        .auth-right::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .auth-right::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .auth-right::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
         }
 
         .auth-right h3 {
             font-family: var(--font-heading);
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 900;
             color: var(--dark-blue);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
-        .auth-right p {
+        .auth-right > p {
             color: #666;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .type-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
             margin-bottom: 30px;
         }
 
+        .type-card {
+            border: 2px solid rgba(30, 92, 153, 0.2);
+            border-radius: 15px;
+            padding: 25px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .type-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(255, 180, 0, 0.3);
+        }
+
+        .type-card.active {
+            border-color: var(--gold);
+            background: linear-gradient(135deg, rgba(255, 180, 0, 0.1), rgba(255, 180, 0, 0.05));
+        }
+
+        .type-card i {
+            font-size: 36px;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .type-card.active i {
+            color: var(--gold);
+        }
+
+        .type-card h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 5px;
+        }
+
+        .type-card p {
+            font-size: 12px;
+            color: #666;
+            margin: 0;
+        }
+
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
             font-weight: 600;
             color: var(--dark-blue);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: block;
+            font-size: 14px;
         }
 
-        .form-control {
+        .form-control, .form-select {
             border: 2px solid rgba(30, 92, 153, 0.2);
             border-radius: 10px;
-            padding: 12px 15px;
-            font-size: 15px;
+            padding: 10px 14px;
+            font-size: 14px;
         }
 
-        .form-control:focus {
+        .form-control:focus, .form-select:focus {
             border-color: var(--gold);
             box-shadow: 0 0 0 0.2rem rgba(255, 180, 0, 0.25);
         }
 
-        .password-toggle {
-            position: relative;
-        }
-
-        .password-toggle input {
-            padding-right: 45px;
-        }
-
-        .password-toggle .toggle-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            color: #999;
-        }
-
         .password-strength {
-            margin-top: 10px;
-            display: none;
-        }
-
-        .password-strength.active {
-            display: block;
-        }
-
-        .strength-bar {
-            height: 5px;
-            background: #ddd;
-            border-radius: 5px;
+            margin-top: 8px;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 4px;
             overflow: hidden;
-            margin-bottom: 5px;
         }
 
-        .strength-bar-fill {
+        .password-strength-bar {
             height: 100%;
             transition: all 0.3s ease;
-            width: 0%;
+            width: 0;
         }
 
-        .strength-weak .strength-bar-fill {
-            width: 33%;
-            background: #DC3545;
-        }
-
-        .strength-medium .strength-bar-fill {
-            width: 66%;
-            background: #FFC107;
-        }
-
-        .strength-strong .strength-bar-fill {
-            width: 100%;
-            background: #28A745;
-        }
-
-        .strength-text {
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .strength-weak .strength-text {
-            color: #DC3545;
-        }
-
-        .strength-medium .strength-text {
-            color: #FFC107;
-        }
-
-        .strength-strong .strength-text {
-            color: #28A745;
-        }
-
-        .form-check-input:checked {
-            background-color: var(--gold);
-            border-color: var(--gold);
-        }
+        .strength-weak { background: #ff4444; width: 33%; }
+        .strength-medium { background: #ffbb33; width: 66%; }
+        .strength-strong { background: #00C851; width: 100%; }
 
         .btn-gold {
             background: linear-gradient(135deg, #FFB400 0%, #FFA000 100%);
@@ -279,68 +284,41 @@ $page_title = 'Register - SITUNEO DIGITAL';
             box-shadow: 0 5px 20px rgba(255, 180, 0, 0.4);
         }
 
-        .divider {
-            text-align: center;
-            margin: 20px 0;
-            position: relative;
+        .commission-info {
+            background: linear-gradient(135deg, rgba(30, 92, 153, 0.1), rgba(255, 180, 0, 0.1));
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
 
-        .divider::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            width: 40%;
-            height: 1px;
-            background: #ddd;
+        .commission-info h5 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
         }
 
-        .divider::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 50%;
-            width: 40%;
-            height: 1px;
-            background: #ddd;
-        }
-
-        .social-login {
+        .tier-item {
             display: flex;
-            gap: 15px;
-        }
-
-        .btn-social {
-            flex: 1;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            background: white;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-weight: 600;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(30, 92, 153, 0.1);
         }
 
-        .btn-social:hover {
-            border-color: var(--primary-blue);
-            background: rgba(30, 92, 153, 0.05);
+        .tier-item:last-child {
+            border-bottom: none;
         }
 
-        .btn-google { color: #DB4437; }
-        .btn-facebook { color: #4267B2; }
-
-        .text-link {
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 600;
+        .tier-label {
+            font-size: 13px;
+            color: #666;
         }
 
-        .text-link:hover {
+        .tier-value {
+            font-weight: 700;
             color: var(--gold);
+            font-size: 15px;
         }
 
         .back-home {
@@ -365,6 +343,11 @@ $page_title = 'Register - SITUNEO DIGITAL';
         .alert {
             border-radius: 10px;
             margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .hidden {
+            display: none;
         }
 
         @media (max-width: 768px) {
@@ -374,6 +357,10 @@ $page_title = 'Register - SITUNEO DIGITAL';
 
             .auth-left {
                 display: none;
+            }
+
+            .type-selector {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -388,25 +375,25 @@ $page_title = 'Register - SITUNEO DIGITAL';
 <!-- Auth Container -->
 <div class="auth-container">
     <div class="auth-row">
-        <!-- Left Side - Brand Info -->
-        <div class="auth-left">
+        <!-- Left Side - Dynamic Content -->
+        <div class="auth-left" id="authLeft">
             <div class="logo">
                 <img src="https://situneo.my.id/logo" alt="SITUNEO Logo" width="120">
             </div>
             <h2>SITUNEO DIGITAL</h2>
-            <p><?= $lang === 'id' ? 'Daftar sekarang dan dapatkan akses ke 107+ layanan digital profesional!' : 'Register now and get access to 107+ professional digital services!' ?></p>
-            <ul class="features">
-                <li><i class="bi bi-check-circle-fill"></i> <?= $lang === 'id' ? 'Akses 107 Layanan' : 'Access 107 Services' ?></li>
-                <li><i class="bi bi-check-circle-fill"></i> <?= $lang === 'id' ? 'Dashboard Personal' : 'Personal Dashboard' ?></li>
-                <li><i class="bi bi-check-circle-fill"></i> <?= $lang === 'id' ? 'Tracking Real-time' : 'Real-time Tracking' ?></li>
-                <li><i class="bi bi-check-circle-fill"></i> <?= $lang === 'id' ? 'Support Prioritas' : 'Priority Support' ?></li>
+            <p id="leftDescription"><?= $lang === 'id' ? 'Bergabunglah dengan kami! Pilih jenis akun yang sesuai kebutuhan Anda.' : 'Join us! Choose the account type that suits your needs.' ?></p>
+            <ul class="features" id="leftFeatures">
+                <li><i class="bi bi-check-circle-fill"></i> <?= $lang === 'id' ? 'Registrasi Cepat & Mudah' : 'Fast & Easy Registration' ?></li>
+                <li><i class="bi bi-check-circle-fill"></i> <?= $lang === 'id' ? 'Dashboard Profesional' : 'Professional Dashboard' ?></li>
+                <li><i class="bi bi-check-circle-fill"></i> <?= $lang === 'id' ? 'Support 24/7' : '24/7 Support' ?></li>
+                <li><i class="bi bi-check-circle-fill"></i> <?= $lang === 'id' ? 'Keamanan Terjamin' : 'Guaranteed Security' ?></li>
             </ul>
         </div>
 
-        <!-- Right Side - Register Form -->
+        <!-- Right Side - Registration Form -->
         <div class="auth-right">
             <h3><?= $lang === 'id' ? 'Buat Akun Baru' : 'Create New Account' ?></h3>
-            <p><?= $lang === 'id' ? 'Sudah punya akun?' : 'Already have an account?' ?> <a href="login.php" class="text-link"><?= t('login') ?></a></p>
+            <p><?= $lang === 'id' ? 'Sudah punya akun?' : 'Already have an account?' ?> <a href="login.php" style="color: var(--primary-blue); font-weight: 600;"><?= $lang === 'id' ? 'Login di sini' : 'Login here' ?></a></p>
 
             <?php if ($error): ?>
                 <div class="alert alert-danger">
@@ -414,161 +401,261 @@ $page_title = 'Register - SITUNEO DIGITAL';
                 </div>
             <?php endif; ?>
 
-            <?php if ($success): ?>
-                <div class="alert alert-success">
-                    <i class="bi bi-check-circle-fill"></i> <?= $success ?>
+            <!-- Step 1: Type Selection -->
+            <div id="typeSelection" class="<?= $register_type ? 'hidden' : '' ?>">
+                <div class="type-selector">
+                    <div class="type-card" onclick="selectType('client')">
+                        <i class="bi bi-person-circle"></i>
+                        <h4><?= $lang === 'id' ? 'CLIENT' : 'CLIENT' ?></h4>
+                        <p><?= $lang === 'id' ? 'Pesan layanan digital' : 'Order digital services' ?></p>
+                    </div>
+                    <div class="type-card" onclick="selectType('partner')">
+                        <i class="bi bi-briefcase-fill"></i>
+                        <h4><?= $lang === 'id' ? 'PARTNER' : 'PARTNER' ?></h4>
+                        <p><?= $lang === 'id' ? 'Jadi reseller & dapat komisi' : 'Become reseller & earn commission' ?></p>
+                    </div>
                 </div>
-            <?php endif; ?>
+            </div>
 
-            <form method="POST" action="" id="registerForm">
+            <!-- Step 2: Client Form -->
+            <form id="clientForm" class="hidden" method="POST" action="">
+                <input type="hidden" name="type" value="client">
+
                 <div class="form-group">
-                    <label><?= $lang === 'id' ? 'Nama Lengkap' : 'Full Name' ?></label>
-                    <input type="text" name="name" class="form-control" placeholder="<?= $lang === 'id' ? 'Nama lengkap Anda' : 'Your full name' ?>" required>
+                    <label><i class="bi bi-person"></i> <?= $lang === 'id' ? 'Nama Lengkap' : 'Full Name' ?> *</label>
+                    <input type="text" name="name" class="form-control" placeholder="<?= $lang === 'id' ? 'Masukkan nama lengkap' : 'Enter full name' ?>" required>
                 </div>
 
                 <div class="form-group">
-                    <label><?= $lang === 'id' ? 'Alamat Email' : 'Email Address' ?></label>
+                    <label><i class="bi bi-envelope"></i> Email *</label>
                     <input type="email" name="email" class="form-control" placeholder="nama@email.com" required>
                 </div>
 
                 <div class="form-group">
-                    <label><?= $lang === 'id' ? 'Nomor WhatsApp' : 'WhatsApp Number' ?></label>
-                    <input type="tel" name="whatsapp" class="form-control" placeholder="08XXXXXXXXXX" required>
+                    <label><i class="bi bi-whatsapp"></i> <?= $lang === 'id' ? 'No. WhatsApp' : 'WhatsApp Number' ?> *</label>
+                    <input type="tel" name="whatsapp" class="form-control" placeholder="08xx-xxxx-xxxx" required>
                 </div>
 
                 <div class="form-group">
-                    <label><?= $lang === 'id' ? 'Password' : 'Password' ?></label>
-                    <div class="password-toggle">
-                        <input type="password" name="password" id="password" class="form-control" placeholder="••••••••" required>
-                        <i class="bi bi-eye toggle-icon" id="togglePassword"></i>
-                    </div>
-                    <div class="password-strength" id="passwordStrength">
-                        <div class="strength-bar">
-                            <div class="strength-bar-fill"></div>
-                        </div>
-                        <div class="strength-text">
-                            <?= $lang === 'id' ? 'Kekuatan password: Lemah' : 'Password strength: Weak' ?>
-                        </div>
+                    <label><i class="bi bi-lock"></i> Password *</label>
+                    <input type="password" name="password" id="clientPassword" class="form-control" placeholder="Min. 8 karakter" required>
+                    <div class="password-strength">
+                        <div class="password-strength-bar" id="clientStrengthBar"></div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label><?= $lang === 'id' ? 'Konfirmasi Password' : 'Confirm Password' ?></label>
-                    <div class="password-toggle">
-                        <input type="password" name="confirm_password" id="confirmPassword" class="form-control" placeholder="••••••••" required>
-                        <i class="bi bi-eye toggle-icon" id="toggleConfirmPassword"></i>
+                    <label><i class="bi bi-check-circle"></i> <?= $lang === 'id' ? 'Konfirmasi Password' : 'Confirm Password' ?> *</label>
+                    <input type="password" name="confirm_password" class="form-control" placeholder="<?= $lang === 'id' ? 'Ulangi password' : 'Repeat password' ?>" required>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="clientTerms" required>
+                    <label class="form-check-label" for="clientTerms" style="font-size: 13px;">
+                        <?= $lang === 'id' ? 'Saya setuju dengan' : 'I agree to the' ?> <a href="#" style="color: var(--primary-blue);"><?= $lang === 'id' ? 'Syarat & Ketentuan' : 'Terms & Conditions' ?></a>
+                    </label>
+                </div>
+
+                <button type="button" onclick="showTypeSelection()" class="btn btn-outline-secondary w-100 mb-2" style="border-radius: 10px; padding: 10px;">
+                    <i class="bi bi-arrow-left"></i> <?= $lang === 'id' ? 'Kembali' : 'Back' ?>
+                </button>
+
+                <button type="submit" class="btn-gold">
+                    <i class="bi bi-person-plus"></i> <?= $lang === 'id' ? 'Daftar sebagai Client' : 'Register as Client' ?>
+                </button>
+            </form>
+
+            <!-- Step 3: Partner Form -->
+            <form id="partnerForm" class="hidden" method="POST" action="">
+                <input type="hidden" name="type" value="partner">
+
+                <!-- Commission Info -->
+                <div class="commission-info">
+                    <h5><i class="bi bi-trophy"></i> <?= $lang === 'id' ? 'Skema Komisi Partner' : 'Partner Commission Scheme' ?></h5>
+                    <div class="tier-item">
+                        <span class="tier-label">Tier 1 (0-10 order/bulan)</span>
+                        <span class="tier-value">30%</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-label">Tier 2 (10-25 order/bulan)</span>
+                        <span class="tier-value">40%</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-label">Tier 3 (50+ order/bulan)</span>
+                        <span class="tier-value">50%</span>
+                    </div>
+                    <div class="tier-item">
+                        <span class="tier-label">Tier MAX (75+ order/bulan)</span>
+                        <span class="tier-value">55% 🔥</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label><i class="bi bi-person"></i> <?= $lang === 'id' ? 'Nama Lengkap' : 'Full Name' ?> *</label>
+                        <input type="text" name="name" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label><i class="bi bi-envelope"></i> Email *</label>
+                        <input type="email" name="email" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label><i class="bi bi-whatsapp"></i> WhatsApp *</label>
+                        <input type="tel" name="whatsapp" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label><i class="bi bi-geo-alt"></i> <?= $lang === 'id' ? 'Kota' : 'City' ?> *</label>
+                        <input type="text" name="city" class="form-control" required>
+                    </div>
+
+                    <div class="col-12 form-group">
+                        <label><i class="bi bi-briefcase"></i> <?= $lang === 'id' ? 'Pengalaman' : 'Experience' ?> *</label>
+                        <select name="experience" class="form-select" required>
+                            <option value=""><?= $lang === 'id' ? '-- Pilih --' : '-- Select --' ?></option>
+                            <option value="none"><?= $lang === 'id' ? 'Belum Ada (Pemula)' : 'None (Beginner)' ?></option>
+                            <option value="1-6"><?= $lang === 'id' ? '1-6 bulan' : '1-6 months' ?></option>
+                            <option value="6-12"><?= $lang === 'id' ? '6-12 bulan' : '6-12 months' ?></option>
+                            <option value="1-2"><?= $lang === 'id' ? '1-2 tahun' : '1-2 years' ?></option>
+                            <option value="2+"><?= $lang === 'id' ? '2+ tahun' : '2+ years' ?></option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 form-group">
+                        <label><i class="bi bi-link-45deg"></i> <?= $lang === 'id' ? 'Link Portfolio / Social Media' : 'Portfolio / Social Media Link' ?></label>
+                        <input type="url" name="portfolio" class="form-control" placeholder="https://">
+                    </div>
+
+                    <div class="col-12 form-group">
+                        <label><i class="bi bi-chat-quote"></i> <?= $lang === 'id' ? 'Kenapa ingin jadi Partner?' : 'Why do you want to become a Partner?' ?> *</label>
+                        <textarea name="why_join" class="form-control" rows="3" required></textarea>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label><i class="bi bi-lock"></i> Password *</label>
+                        <input type="password" name="password" id="partnerPassword" class="form-control" required>
+                        <div class="password-strength">
+                            <div class="password-strength-bar" id="partnerStrengthBar"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label><i class="bi bi-check-circle"></i> <?= $lang === 'id' ? 'Konfirmasi Password' : 'Confirm Password' ?> *</label>
+                        <input type="password" name="confirm_password" class="form-control" required>
                     </div>
                 </div>
 
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" id="terms" required>
-                    <label class="form-check-label" for="terms">
-                        <?= $lang === 'id' ? 'Saya setuju dengan' : 'I agree to the' ?>
-                        <a href="#" class="text-link"><?= $lang === 'id' ? 'Syarat & Ketentuan' : 'Terms & Conditions' ?></a>
+                    <input class="form-check-input" type="checkbox" id="partnerTerms" required>
+                    <label class="form-check-label" for="partnerTerms" style="font-size: 13px;">
+                        <?= $lang === 'id' ? 'Saya setuju dengan' : 'I agree to the' ?> <a href="#" style="color: var(--primary-blue);"><?= $lang === 'id' ? 'Syarat & Ketentuan Partner' : 'Partner Terms & Conditions' ?></a>
                     </label>
                 </div>
 
+                <button type="button" onclick="showTypeSelection()" class="btn btn-outline-secondary w-100 mb-2" style="border-radius: 10px; padding: 10px;">
+                    <i class="bi bi-arrow-left"></i> <?= $lang === 'id' ? 'Kembali' : 'Back' ?>
+                </button>
+
                 <button type="submit" class="btn-gold">
-                    <i class="bi bi-person-plus"></i> <?= $lang === 'id' ? 'Daftar Sekarang' : 'Register Now' ?>
+                    <i class="bi bi-briefcase"></i> <?= $lang === 'id' ? 'Daftar sebagai Partner' : 'Register as Partner' ?>
                 </button>
             </form>
-
-            <div class="divider">
-                <span><?= $lang === 'id' ? 'atau daftar dengan' : 'or register with' ?></span>
-            </div>
-
-            <div class="social-login">
-                <button class="btn-social btn-google" onclick="alert('Google register akan segera tersedia!')">
-                    <i class="bi bi-google"></i> Google
-                </button>
-                <button class="btn-social btn-facebook" onclick="alert('Facebook register akan segera tersedia!')">
-                    <i class="bi bi-facebook"></i> Facebook
-                </button>
-            </div>
         </div>
     </div>
 </div>
 
 <script>
-// Toggle Password Visibility
-document.getElementById('togglePassword').addEventListener('click', function() {
-    const password = document.getElementById('password');
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    this.classList.toggle('bi-eye');
-    this.classList.toggle('bi-eye-slash');
-});
+// Type selection
+function selectType(type) {
+    document.getElementById('typeSelection').classList.add('hidden');
 
-document.getElementById('toggleConfirmPassword').addEventListener('click', function() {
-    const confirmPassword = document.getElementById('confirmPassword');
-    const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
-    confirmPassword.setAttribute('type', type);
-    this.classList.toggle('bi-eye');
-    this.classList.toggle('bi-eye-slash');
-});
+    if (type === 'client') {
+        document.getElementById('clientForm').classList.remove('hidden');
+        updateLeftSide('client');
+    } else {
+        document.getElementById('partnerForm').classList.remove('hidden');
+        updateLeftSide('partner');
+    }
+}
 
-// Password Strength Checker
-document.getElementById('password').addEventListener('input', function() {
-    const password = this.value;
-    const strengthElement = document.getElementById('passwordStrength');
-    const strengthText = strengthElement.querySelector('.strength-text');
+function showTypeSelection() {
+    document.getElementById('typeSelection').classList.remove('hidden');
+    document.getElementById('clientForm').classList.add('hidden');
+    document.getElementById('partnerForm').classList.add('hidden');
+    updateLeftSide('default');
+}
+
+// Update left side content based on selection
+function updateLeftSide(type) {
+    const description = document.getElementById('leftDescription');
+    const features = document.getElementById('leftFeatures');
+
+    if (type === 'client') {
+        description.innerHTML = '<?= $lang === "id" ? "Daftar sebagai Client untuk memesan layanan digital kami!" : "Register as a Client to order our digital services!" ?>';
+        features.innerHTML = `
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Akses Dashboard Client" : "Access Client Dashboard" ?></li>
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Track Order Real-time" : "Real-time Order Tracking" ?></li>
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "FREE DEMO 24 Jam" : "24 Hour FREE DEMO" ?></li>
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Invoice & Laporan" : "Invoices & Reports" ?></li>
+        `;
+    } else if (type === 'partner') {
+        description.innerHTML = '<?= $lang === "id" ? "Bergabung sebagai Partner dan raih komisi hingga 55%!" : "Join as a Partner and earn up to 55% commission!" ?>';
+        features.innerHTML = `
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Komisi 30% - 55%" : "30% - 55% Commission" ?></li>
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Dashboard Partner Lengkap" : "Complete Partner Dashboard" ?></li>
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Training & Support GRATIS" : "FREE Training & Support" ?></li>
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Marketing Tools Siap Pakai" : "Ready-to-Use Marketing Tools" ?></li>
+        `;
+    } else {
+        description.innerHTML = '<?= $lang === "id" ? "Bergabunglah dengan kami! Pilih jenis akun yang sesuai kebutuhan Anda." : "Join us! Choose the account type that suits your needs." ?>';
+        features.innerHTML = `
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Registrasi Cepat & Mudah" : "Fast & Easy Registration" ?></li>
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Dashboard Profesional" : "Professional Dashboard" ?></li>
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Support 24/7" : "24/7 Support" ?></li>
+            <li><i class="bi bi-check-circle-fill"></i> <?= $lang === "id" ? "Keamanan Terjamin" : "Guaranteed Security" ?></li>
+        `;
+    }
+}
+
+// Password strength checker
+function checkPasswordStrength(password, barId) {
+    const bar = document.getElementById(barId);
+    bar.className = 'password-strength-bar';
 
     if (password.length === 0) {
-        strengthElement.classList.remove('active');
+        bar.style.width = '0';
         return;
     }
 
-    strengthElement.classList.add('active');
-
     let strength = 0;
-
-    // Check length
     if (password.length >= 8) strength++;
-
-    // Check lowercase
-    if (password.match(/[a-z]+/)) strength++;
-
-    // Check uppercase
-    if (password.match(/[A-Z]+/)) strength++;
-
-    // Check numbers
-    if (password.match(/[0-9]+/)) strength++;
-
-    // Check special characters
-    if (password.match(/[$@#&!]+/)) strength++;
-
-    // Remove all strength classes
-    strengthElement.classList.remove('strength-weak', 'strength-medium', 'strength-strong');
+    if (/[a-z]/.test(password) && /[A-Z]/.test(password)) strength++;
+    if (/\d/.test(password)) strength++;
+    if (/[^a-zA-Z\d]/.test(password)) strength++;
 
     if (strength <= 2) {
-        strengthElement.classList.add('strength-weak');
-        strengthText.textContent = '<?= $lang === "id" ? "Kekuatan password: Lemah" : "Password strength: Weak" ?>';
-    } else if (strength <= 4) {
-        strengthElement.classList.add('strength-medium');
-        strengthText.textContent = '<?= $lang === "id" ? "Kekuatan password: Sedang" : "Password strength: Medium" ?>';
+        bar.classList.add('strength-weak');
+    } else if (strength === 3) {
+        bar.classList.add('strength-medium');
     } else {
-        strengthElement.classList.add('strength-strong');
-        strengthText.textContent = '<?= $lang === "id" ? "Kekuatan password: Kuat" : "Password strength: Strong" ?>';
+        bar.classList.add('strength-strong');
     }
+}
+
+document.getElementById('clientPassword')?.addEventListener('input', function() {
+    checkPasswordStrength(this.value, 'clientStrengthBar');
 });
 
-// Form validation
-document.getElementById('registerForm').addEventListener('submit', function(e) {
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-
-    if (password !== confirmPassword) {
-        e.preventDefault();
-        alert('<?= $lang === "id" ? "Password dan konfirmasi password tidak cocok!" : "Password and confirm password do not match!" ?>');
-        return false;
-    }
-
-    if (password.length < 8) {
-        e.preventDefault();
-        alert('<?= $lang === "id" ? "Password minimal 8 karakter!" : "Password must be at least 8 characters!" ?>');
-        return false;
-    }
+document.getElementById('partnerPassword')?.addEventListener('input', function() {
+    checkPasswordStrength(this.value, 'partnerStrengthBar');
 });
+
+// Auto-select type if provided in URL
+<?php if ($register_type === 'partner' || $register_type === 'client'): ?>
+    selectType('<?= $register_type ?>');
+<?php endif; ?>
 </script>
 
 </body>

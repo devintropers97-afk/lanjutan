@@ -44,38 +44,78 @@
 <!-- Network Canvas Background -->
 <canvas id="network-canvas"></canvas>
 
-<!-- Navbar -->
-<nav class="navbar">
+<!-- Navbar with Glassmorphism -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
     <div class="container">
-        <a href="index.php" class="navbar-brand">
-            <img src="https://situneo.my.id/logo" alt="SITUNEO Logo">
-            <span>SITUNEO</span>
+        <!-- Brand Logo -->
+        <a href="/" class="navbar-brand d-flex align-items-center">
+            <img src="https://situneo.my.id/logo" alt="SITUNEO Logo" style="height: 40px; margin-right: 10px;">
+            <span style="font-weight: 900; font-size: 1.4rem; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SITUNEO</span>
         </a>
 
-        <ul class="navbar-menu">
-            <li><a href="index.php"><?= t('home') ?></a></li>
-            <li><a href="pages/about.php"><?= t('about') ?></a></li>
-            <li><a href="pages/services.php"><?= t('services') ?></a></li>
-            <li><a href="pages/portfolio.php"><?= t('portfolio') ?></a></li>
-            <li><a href="pages/pricing.php"><?= t('pricing') ?></a></li>
-            <li><a href="pages/contact.php"><?= t('contact') ?></a></li>
-            <li><a href="pages/faq.php"><?= t('FAQ') ?></a></li>
-        </ul>
+        <!-- Mobile Menu Toggle -->
+        <button class="navbar-toggler border-0" type="button" id="mobileMenuToggle" aria-label="Toggle navigation">
+            <i class="bi bi-list" style="font-size: 1.8rem; color: var(--gold);"></i>
+        </button>
 
-        <div class="navbar-cta">
-            <a href="auth/login.php" class="btn btn-outline"><?= t('login') ?></a>
-            <a href="auth/register.php" class="btn btn-primary"><?= t('register') ?></a>
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">
+                        <i class="bi bi-house-door"></i> <?= $t['nav_home'] ?>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        <i class="bi bi-info-circle"></i> <?= $t['nav_about'] ?>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">
+                        <i class="bi bi-grid"></i> <?= $t['nav_services'] ?>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#packages">
+                        <i class="bi bi-box-seam"></i> <?= $t['nav_packages'] ?>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">
+                        <i class="bi bi-easel"></i> <?= $t['nav_portfolio'] ?>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/pricing.php">
+                        <i class="bi bi-tag"></i> <?= $t['nav_pricing'] ?>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">
+                        <i class="bi bi-question-circle"></i> FAQ
+                    </a>
+                </li>
+            </ul>
 
-            <!-- Language Switcher -->
-            <div class="lang-switch">
-                <button class="lang-btn <?= $lang === 'id' ? 'active' : '' ?>" data-lang="id">ID</button>
-                <button class="lang-btn <?= $lang === 'en' ? 'active' : '' ?>" data-lang="en">EN</button>
+            <!-- Right Side - CTA & Language -->
+            <div class="d-flex align-items-center gap-3">
+                <!-- Language Switcher -->
+                <div class="btn-group" role="group">
+                    <a href="?lang=id" class="btn btn-sm <?= $lang === 'id' ? 'btn-warning' : 'btn-outline-warning' ?>" style="border-radius: 20px 0 0 20px; font-weight: 600;">ID</a>
+                    <a href="?lang=en" class="btn btn-sm <?= $lang === 'en' ? 'btn-warning' : 'btn-outline-warning' ?>" style="border-radius: 0 20px 20px 0; font-weight: 600;">EN</a>
+                </div>
+
+                <!-- Login Button -->
+                <a href="auth/login.php" class="btn btn-outline-warning btn-sm d-none d-lg-inline-block" style="border-radius: 20px; padding: 8px 20px; font-weight: 600;">
+                    <i class="bi bi-box-arrow-in-right"></i> <?= $t['nav_login'] ?>
+                </a>
+
+                <!-- Register Button -->
+                <a href="auth/register.php" class="btn btn-warning btn-sm d-none d-lg-inline-block" style="border-radius: 20px; padding: 8px 20px; font-weight: 700; box-shadow: 0 4px 15px rgba(255, 180, 0, 0.4);">
+                    <i class="bi bi-person-plus"></i> <?= $t['nav_register'] ?>
+                </a>
             </div>
         </div>
-
-        <!-- Mobile Menu Toggle -->
-        <button class="btn d-lg-none" id="mobileMenuToggle">
-            <i class="bi bi-list"></i>
-        </button>
     </div>
 </nav>
