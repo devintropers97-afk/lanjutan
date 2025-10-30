@@ -10,6 +10,38 @@
 session_start();
 date_default_timezone_set('Asia/Jakarta');
 
+// ========================================
+// CONSTANTS
+// ========================================
+define('COMPANY_NIB', '20250-9261-4570-4515-5453');
+define('COMPANY_NPWP', '99.999.999.9-999.999');
+define('COMPANY_NAME', 'SITUNEO DIGITAL');
+define('COMPANY_PHONE', '+62 812-3456-7890');
+define('COMPANY_WHATSAPP', '+62 812-3456-7890');
+define('COMPANY_EMAIL', 'info@situneo.my.id');
+define('COMPANY_ADDRESS', 'Jakarta, Indonesia');
+define('SITE_TAGLINE', 'Menyelaraskan Ide Menjadi Solusi Digital Modern');
+
+// Social Media
+define('SOCIAL_INSTAGRAM', 'https://instagram.com/situneo');
+define('SOCIAL_FACEBOOK', 'https://facebook.com/situneo');
+define('SOCIAL_TIKTOK', 'https://tiktok.com/@situneo');
+define('SOCIAL_LINKEDIN', 'https://linkedin.com/company/situneo');
+define('SOCIAL_YOUTUBE', 'https://youtube.com/@situneo');
+define('SOCIAL_TWITTER', 'https://twitter.com/situneo');
+
+// ========================================
+// HELPER FUNCTIONS
+// ========================================
+function whatsapp_link($message = 'Halo SITUNEO!') {
+    $phone = str_replace(['+', '-', ' '], '', COMPANY_WHATSAPP);
+    return 'https://wa.me/' . $phone . '?text=' . urlencode($message);
+}
+
+function format_rupiah($number) {
+    return 'Rp ' . number_format($number, 0, ',', '.');
+}
+
 $lang = $_GET['lang'] ?? $_SESSION['lang'] ?? 'id';
 $_SESSION['lang'] = $lang;
 
@@ -20,14 +52,22 @@ $text = [
         'hero_tagline' => 'Menyelaraskan Ide Menjadi Solusi Digital Modern',
         'hero_subtitle' => 'FREE DEMO 24 JAM - Lihat Dulu Hasilnya, Bayar Kalau Cocok!',
         'hero_desc' => 'Partner digital terpercaya sejak 2020. Sudah bantu 500+ bisnis sukses online!',
+        'hero_feature_1' => 'FREE DEMO 24 Jam - Lihat hasilnya dulu!',
+        'hero_feature_2' => 'Harga TERMURAH se-Indonesia, dijamin!',
+        'hero_feature_3' => 'Support 24/7 - Fast response < 5 menit',
+        'hero_whatsapp_text' => 'Halo! Saya mau FREE DEMO 24 JAM untuk website saya!',
+        'hero_cta_demo' => 'Pesan FREE DEMO Sekarang',
+        'hero_cta_packages' => 'Lihat Paket Harga',
         'nav_home' => 'Beranda',
         'nav_about' => 'Tentang Kami',
         'nav_services' => 'Layanan',
-        'nav_portfolio' => 'Lihat Demo',
-        'nav_pricing' => 'Harga Paket',
+        'nav_packages' => 'Paket',
+        'nav_portfolio' => 'Portfolio',
+        'nav_pricing' => 'Harga',
         'nav_contact' => 'Hubungi',
         'nav_calculator' => 'Hitung Harga',
         'nav_login' => 'Masuk',
+        'nav_register' => 'Daftar',
         'btn_demo' => 'COBA DEMO GRATIS',
         'btn_calculator' => 'HITUNG BERAPA BIAYANYA',
         'btn_whatsapp' => 'CHAT WHATSAPP SEKARANG',
@@ -45,14 +85,22 @@ $text = [
         'hero_tagline' => 'Digital Harmony for a Modern World',
         'hero_subtitle' => 'FREE 24H DEMO - See First, Pay If You Like!',
         'hero_desc' => 'Trusted digital partner since 2020. Helped 500+ businesses succeed online!',
+        'hero_feature_1' => 'FREE 24H DEMO - See the result first!',
+        'hero_feature_2' => 'CHEAPEST price in Indonesia, guaranteed!',
+        'hero_feature_3' => '24/7 Support - Fast response < 5 minutes',
+        'hero_whatsapp_text' => 'Hello! I want a FREE 24H DEMO for my website!',
+        'hero_cta_demo' => 'Order FREE DEMO Now',
+        'hero_cta_packages' => 'View Pricing Packages',
         'nav_home' => 'Home',
         'nav_about' => 'About',
         'nav_services' => 'Services',
-        'nav_portfolio' => 'Demo',
+        'nav_packages' => 'Packages',
+        'nav_portfolio' => 'Portfolio',
         'nav_pricing' => 'Pricing',
         'nav_contact' => 'Contact',
         'nav_calculator' => 'Calculator',
         'nav_login' => 'Login',
+        'nav_register' => 'Register',
         'btn_demo' => 'TRY FREE DEMO',
         'btn_calculator' => 'CALCULATE PRICE',
         'btn_whatsapp' => 'CHAT WHATSAPP NOW',
