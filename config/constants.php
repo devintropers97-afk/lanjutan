@@ -116,23 +116,32 @@ define('TIER_1_NAME', 'Tier 1 - Starter');
 define('TIER_1_MIN_ORDERS', 0);
 define('TIER_1_MAX_ORDERS', 10);
 define('TIER_1_COMMISSION', 30);
+define('TIER_1_ICON', 'fa-seedling');
+define('TIER_1_COLOR', '#1E5C99');
 
 // Tier 2: 10-25 orders/month = 40%
 define('TIER_2_NAME', 'Tier 2 - Professional');
 define('TIER_2_MIN_ORDERS', 10);
 define('TIER_2_MAX_ORDERS', 25);
 define('TIER_2_COMMISSION', 40);
+define('TIER_2_ICON', 'fa-trophy');
+define('TIER_2_COLOR', '#0F3057');
 
-// Tier 3: 25-50 orders/month = 50%
+// Tier 3: 25-75 orders/month = 50%
 define('TIER_3_NAME', 'Tier 3 - Expert');
 define('TIER_3_MIN_ORDERS', 25);
-define('TIER_3_MAX_ORDERS', 50);
+define('TIER_3_MAX_ORDERS', 75);
 define('TIER_3_COMMISSION', 50);
+define('TIER_3_ICON', 'fa-star');
+define('TIER_3_COLOR', '#FFB400');
 
 // Tier MAX: 75+ orders/month = 55%
 define('TIER_MAX_NAME', 'Tier MAX - Elite');
 define('TIER_MAX_MIN_ORDERS', 75);
+define('TIER_MAX_MAX_ORDERS', 9999);
 define('TIER_MAX_COMMISSION', 55);
+define('TIER_MAX_ICON', 'fa-crown');
+define('TIER_MAX_COLOR', '#FFD700');
 
 // Withdrawal settings
 define('WITHDRAWAL_MIN_AMOUNT', 50000); // Minimum Rp 50K

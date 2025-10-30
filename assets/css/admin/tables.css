@@ -1,0 +1,92 @@
+/**
+ * SITUNEO DIGITAL - Admin Tables
+ */
+
+.table-wrapper {
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.table-header {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.table-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background: var(--color-bg-light);
+}
+
+.table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table tbody tr {
+    transition: var(--transition-colors);
+}
+
+.table tbody tr:hover {
+    background: var(--color-bg-light);
+}
+
+.table-status {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+}
+
+.table-status.success { background: var(--color-success); color: var(--color-white); }
+.table-status.pending { background: var(--color-warning); color: var(--color-white); }
+.table-status.danger { background: var(--color-danger); color: var(--color-white); }
+.table-status.info { background: var(--color-info); color: var(--color-white); }
+
+.table-actions-cell {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.table-pagination {
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .table-wrapper {
+        overflow-x: auto;
+    }
+}

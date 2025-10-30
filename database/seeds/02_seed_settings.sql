@@ -44,18 +44,22 @@ INSERT INTO `settings` (`key`, `value`, `type`, `group`, `label`, `description`,
 ('commission_release_days', '7', 'number', 'freelancer', 'Release Days', 'Hari sampai komisi bisa ditarik', 0),
 
 -- Tier Settings
-('tier_1_name', 'Tier 1', 'string', 'tier', 'Nama Tier 1', 'Nama untuk tier 1', 0),
+('tier_1_name', 'Tier 1 - Starter', 'string', 'tier', 'Nama Tier 1', 'Nama untuk tier 1', 0),
 ('tier_1_commission', '30', 'number', 'tier', 'Komisi Tier 1 (%)', 'Persentase komisi tier 1', 0),
 ('tier_1_min_orders', '0', 'number', 'tier', 'Min Order Tier 1', 'Min order untuk tier 1', 0),
+('tier_1_max_orders', '10', 'number', 'tier', 'Max Order Tier 1', 'Max order untuk tier 1', 0),
 
-('tier_2_name', 'Tier 2', 'string', 'tier', 'Nama Tier 2', 'Nama untuk tier 2', 0),
+('tier_2_name', 'Tier 2 - Professional', 'string', 'tier', 'Nama Tier 2', 'Nama untuk tier 2', 0),
 ('tier_2_commission', '40', 'number', 'tier', 'Komisi Tier 2 (%)', 'Persentase komisi tier 2', 0),
 ('tier_2_min_orders', '10', 'number', 'tier', 'Min Order Tier 2', 'Min order untuk tier 2', 0),
+('tier_2_max_orders', '25', 'number', 'tier', 'Max Order Tier 2', 'Max order untuk tier 2', 0),
 
-('tier_3_name', 'Tier 3', 'string', 'tier', 'Nama Tier 3', 'Nama untuk tier 3', 0),
+('tier_3_name', 'Tier 3 - Expert', 'string', 'tier', 'Nama Tier 3', 'Nama untuk tier 3', 0),
 ('tier_3_commission', '50', 'number', 'tier', 'Komisi Tier 3 (%)', 'Persentase komisi tier 3', 0),
 ('tier_3_min_orders', '25', 'number', 'tier', 'Min Order Tier 3', 'Min order untuk tier 3', 0),
+('tier_3_max_orders', '75', 'number', 'tier', 'Max Order Tier 3', 'Max order untuk tier 3', 0),
 
-('tier_max_name', 'Tier MAX', 'string', 'tier', 'Nama Tier MAX', 'Nama untuk tier max', 0),
+('tier_max_name', 'Tier MAX - Elite', 'string', 'tier', 'Nama Tier MAX', 'Nama untuk tier max', 0),
 ('tier_max_commission', '55', 'number', 'tier', 'Komisi Tier MAX (%)', 'Persentase komisi tier max', 0),
-('tier_max_min_orders', '50', 'number', 'tier', 'Min Order Tier MAX', 'Min order untuk tier max', 0);
+('tier_max_min_orders', '75', 'number', 'tier', 'Min Order Tier MAX', 'Min order untuk tier max', 0),
+('tier_max_max_orders', '9999', 'number', 'tier', 'Max Order Tier MAX', 'Max order untuk tier max (unlimited)', 0);
