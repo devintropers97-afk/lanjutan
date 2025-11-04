@@ -2284,6 +2284,207 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             </div>
         </div>
 
+        <!-- DIVISI 9: EDUKASI & PELATIHAN BISNIS -->
+        <div class="divisi-section" id="divisi-9" data-divisi="divisi-9">
+            <div class="divisi-header">
+                <h2 class="divisi-title">
+                    <span>📚 DIVISI 9: EDUKASI & PELATIHAN BISNIS</span>
+                    <span class="divisi-count">19 Layanan</span>
+                </h2>
+                <p class="divisi-subtitle">Workshop, training, sertifikasi, mentoring, dan pengembangan skill digital</p>
+            </div>
+
+            <!-- Kategori 1: Workshop & Training -->
+            <div class="service-category">
+                <h3 class="category-title">🎓 Workshop & Training (7 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Digital Marketing 101 Training</strong><br><small>Pelatihan dasar digital marketing untuk pemula</small></td>
+                                <td class="price-col">Rp 350rb</td>
+                                <td><span class="badge-sistem badge-sekali">/sesi</span></td>
+                                <td>SEO, Ads, Social Media basics</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Tools & Business Automation Workshop</strong><br><small>Workshop tentang AI tools untuk automasi bisnis</small></td>
+                                <td class="price-col">Rp 500rb</td>
+                                <td><span class="badge-sistem badge-sekali">/sesi</span></td>
+                                <td>ChatGPT, automation tools, AI integration</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Website & CMS Management Training</strong><br><small>Training cara mengelola website dan CMS (WordPress)</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-sekali">/sesi</span></td>
+                                <td>WordPress, content management</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Digital Business Growth Strategy (UMKM & Startup)</strong><br><small>Strategi pertumbuhan bisnis digital untuk UMKM dan startup</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-sekali">/sesi</span></td>
+                                <td>Growth strategy & scaling</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data & Analytics Basic Training</strong><br><small>Pelatihan dasar data analytics untuk business</small></td>
+                                <td class="price-col">Rp 350rb</td>
+                                <td><span class="badge-sistem badge-sekali">/sesi</span></td>
+                                <td>Google Analytics, data interpretation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Internal Team / Corporate Training</strong><br><small>Pelatihan internal untuk team atau corporate</small></td>
+                                <td class="price-col">Rp 1jt-2,5jt</td>
+                                <td><span class="badge-sistem badge-sekali">/sesi</span></td>
+                                <td>Customized corporate training</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Online Self-Paced Course (E-Learning Platform)</strong><br><small>Kursus online yang bisa dipelajari sesuai waktu sendiri</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-sekali">/course</span></td>
+                                <td>Lifetime access to course materials</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 2: Sertifikasi & Mentoring -->
+            <div class="service-category">
+                <h3 class="category-title">🏆 Sertifikasi & Mentoring (4 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Digital Marketing Professional Certification</strong><br><small>Sertifikasi profesional di bidang digital marketing</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Recognized certificate</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Automation Specialist Certification</strong><br><small>Sertifikasi spesialis otomasi dan AI</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>AI tools mastery certification</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data & Analytics Practitioner</strong><br><small>Sertifikasi praktisi data dan analytics</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Data analysis certification</td>
+                            </tr>
+                            <tr>
+                                <td><strong>30-Day Business Mentoring Program</strong><br><small>Program mentoring bisnis intensif selama 30 hari</small></td>
+                                <td class="price-col">Rp 1jt-1,5jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Personal business mentor</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Add-On -->
+            <div class="service-category">
+                <h3 class="category-title">⚙️ Add-On (4 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Custom Video Tutorial (Untuk Klien)</strong><br><small>Video tutorial khusus sesuai kebutuhan client</small></td>
+                                <td class="price-col">Rp 200rb-400rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Personalized video guides</td>
+                            </tr>
+                            <tr>
+                                <td><strong>1-on-1 Private Coaching (Zoom)</strong><br><small>Private coaching session via Zoom</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">/jam</span></td>
+                                <td>Individual coaching session</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Custom Training Module (Branded Company)</strong><br><small>Modul training khusus dengan branding perusahaan</small></td>
+                                <td class="price-col">Rp 500rb-1jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>White-label training materials</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Recorded Materials & E-Certificate Automation</strong><br><small>Materi rekaman dan otomasi e-certificate</small></td>
+                                <td class="price-col">Rp 100rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Digital certificate system</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 4: Paket Pembelajaran -->
+            <div class="service-category">
+                <h3 class="category-title">📦 Paket Pembelajaran (4 Paket)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Paket</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Paket Basic Learning</strong><br><small>2 Workshop + 1 Self-Paced Course + Materials</small></td>
+                                <td class="price-col">Rp 500rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Starter learning package</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Business Pro Learning</strong><br><small>3 Workshop + 1 Certification + 2 Coaching Sessions</small></td>
+                                <td class="price-col">Rp 900rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Professional development package</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket AI Productivity</strong><br><small>AI Tools Workshop + Automation Training + Custom Tutorial</small></td>
+                                <td class="price-col">Rp 1,2jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>AI mastery package</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Corporate Digital Training</strong><br><small>Full team training dengan custom module dan certification</small></td>
+                                <td class="price-col">Rp 2,5jt-3,5jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Complete corporate training</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Info Box -->
         <div style="background: var(--gradient-primary); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem;">
             <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem;">💬 Butuh Konsultasi?</h3>
