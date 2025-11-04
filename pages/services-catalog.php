@@ -1846,6 +1846,237 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             </div>
         </div>
 
+        <!-- DIVISI 7: LEGALITAS, DOMAIN & INFRASTRUKTUR -->
+        <div class="divisi-section" id="divisi-7" data-divisi="divisi-7">
+            <div class="divisi-header">
+                <h2 class="divisi-title">
+                    <span>🏛️ DIVISI 7: LEGALITAS, DOMAIN & INFRASTRUKTUR</span>
+                    <span class="divisi-count">24 Layanan</span>
+                </h2>
+                <p class="divisi-subtitle">Domain, hosting, security, legalitas bisnis, dan infrastruktur digital</p>
+            </div>
+
+            <!-- Kategori 1: Domain & Hosting -->
+            <div class="service-category">
+                <h3 class="category-title">🌐 Domain & Hosting (8 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Domain Registration (.com/.id/.net)</strong><br><small>Registrasi domain untuk website bisnis Anda</small></td>
+                                <td class="price-col">Rp 150rb-300rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/tahun</span></td>
+                                <td>Various TLD options</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Web Hosting (Shared/Cloud/VPS)</strong><br><small>Hosting website dengan performa optimal</small></td>
+                                <td class="price-col">Rp 150rb-500rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/tahun</span></td>
+                                <td>99.9% uptime guarantee</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SSL Certificate Setup (HTTPS)</strong><br><small>Sertifikat SSL untuk keamanan website</small></td>
+                                <td class="price-col">Rp 100rb-250rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/tahun</span></td>
+                                <td>Secure connection & SEO boost</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Server Management & Optimization</strong><br><small>Manajemen dan optimasi server untuk performa maksimal</small></td>
+                                <td class="price-col">Rp 300rb-800rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Speed optimization & monitoring</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cloud Deployment (AWS/GCP/DO)</strong><br><small>Deploy website ke cloud platform enterprise</small></td>
+                                <td class="price-col">Rp 700rb-1,2jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Scalable cloud infrastructure</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data Backup & Recovery System</strong><br><small>Sistem backup otomatis untuk keamanan data</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Daily automated backup</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Business Email (nama@domain.com)</strong><br><small>Email profesional dengan domain sendiri</small></td>
+                                <td class="price-col">Rp 100rb-200rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/akun/tahun</span></td>
+                                <td>Professional email hosting</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Website Migration</strong><br><small>Pindahkan website dari hosting lama ke hosting baru</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Zero downtime migration</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 2: Security & Protection -->
+            <div class="service-category">
+                <h3 class="category-title">🔒 Security & Protection (5 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Firewall & Anti-DDoS Setup</strong><br><small>Proteksi website dari serangan DDoS dan hacker</small></td>
+                                <td class="price-col">Rp 300rb-600rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Enterprise-grade protection</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Security Monitoring (24 jam)</strong><br><small>Monitoring keamanan website 24/7 real-time</small></td>
+                                <td class="price-col">Rp 200rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>24/7 security alerts</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Malware & Virus Cleaning</strong><br><small>Pembersihan malware dan virus dari website</small></td>
+                                <td class="price-col">Rp 250rb-500rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Complete malware removal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Login & Brute Force Protection</strong><br><small>Proteksi login dari serangan brute force</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Enhanced login security</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Security Audit & Hardening</strong><br><small>Audit keamanan lengkap dan penguatan sistem</small></td>
+                                <td class="price-col">Rp 400rb-800rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Comprehensive security assessment</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Legalitas Bisnis Digital -->
+            <div class="service-category">
+                <h3 class="category-title">⚖️ Legalitas Bisnis Digital (6 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>NIB (Nomor Induk Berusaha)</strong><br><small>Pengurusan NIB untuk legalitas bisnis online</small></td>
+                                <td class="price-col">Rp 350rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Legal business registration</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Legal Online Business (E-Commerce/Freelancer)</strong><br><small>Konsultasi dan pengurusan legalitas bisnis online</small></td>
+                                <td class="price-col">Rp 500rb-1jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Complete business legality</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Privacy Policy & Terms Generator</strong><br><small>Generate privacy policy dan terms of service</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>GDPR compliant documents</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Trademark Registration (konsultasi)</strong><br><small>Konsultasi dan pengurusan trademark brand</small></td>
+                                <td class="price-col">Rp 1jt-2,5jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Brand protection & registration</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kontrak Kerja Sama / Vendor / Reseller</strong><br><small>Pembuatan kontrak bisnis yang legal dan binding</small></td>
+                                <td class="price-col">Rp 300rb-800rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Legally binding agreements</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PT / CV / Yayasan Digital Setup</strong><br><small>Pendirian badan usaha PT, CV, atau Yayasan</small></td>
+                                <td class="price-col">Rp 1,5jt-3jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Complete business entity setup</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 4: Paket Domain/Hosting/Security -->
+            <div class="service-category">
+                <h3 class="category-title">📦 Paket Domain/Hosting/Security (5 Paket)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Paket</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Paket Web Starter</strong><br><small>Domain + Hosting Shared + SSL Basic</small></td>
+                                <td class="price-col">Rp 350rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/tahun</span></td>
+                                <td>Perfect untuk startup</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Secure Web</strong><br><small>Domain + Hosting + SSL + Firewall + Backup</small></td>
+                                <td class="price-col">Rp 550rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/tahun</span></td>
+                                <td>Enhanced security package</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Cloud Business</strong><br><small>Domain + Cloud Hosting + SSL Premium + Security Monitoring</small></td>
+                                <td class="price-col">Rp 900rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/tahun</span></td>
+                                <td>Cloud-based infrastructure</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Pro Security</strong><br><small>Firewall + DDoS Protection + Security Monitoring + Backup</small></td>
+                                <td class="price-col">Rp 600rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/tahun</span></td>
+                                <td>Maximum security protection</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Full Infra + Legal</strong><br><small>Domain + Hosting + Security + NIB + Privacy Policy</small></td>
+                                <td class="price-col">Rp 1jt-1,5jt</td>
+                                <td><span class="badge-sistem badge-bulanan">/tahun</span></td>
+                                <td>Complete infrastructure & legality</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Info Box -->
         <div style="background: var(--gradient-primary); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem;">
             <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem;">💬 Butuh Konsultasi?</h3>
