@@ -988,6 +988,219 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             </div>
         </div>
 
+        <!-- DIVISI 3: OTOMASI & SISTEM AI -->
+        <div class="divisi-section" id="divisi-3" data-divisi="divisi-3">
+            <div class="divisi-header">
+                <h2 class="divisi-title">
+                    <span>🤖 DIVISI 3: OTOMASI & SISTEM AI</span>
+                    <span class="divisi-count">21 Layanan</span>
+                </h2>
+                <p class="divisi-subtitle">Chatbot AI, CRM, otomasi bisnis, dan integrasi sistem cerdas</p>
+            </div>
+
+            <!-- Kategori 1: Layanan AI & Chatbot -->
+            <div class="service-category">
+                <h3 class="category-title">🤖 Layanan AI & Chatbot (4 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Chatbot AI (Basic)</strong><br><small>Chatbot AI dasar dengan respons otomatis untuk FAQ</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Auto reply, FAQ bot</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Chatbot AI (Premium)</strong><br><small>Chatbot AI canggih dengan natural language processing</small></td>
+                                <td class="price-col">Rp 600rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>AI learning, smart response</td>
+                            </tr>
+                            <tr>
+                                <td><strong>WhatsApp Blast Otomatis</strong><br><small>Kirim pesan broadcast otomatis ke database customer</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Unlimited messages</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email Automation System</strong><br><small>Sistem email otomatis untuk follow-up dan promo</small></td>
+                                <td class="price-col">Rp 200rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Auto follow-up, drip campaign</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 2: CRM & Business Tools -->
+            <div class="service-category">
+                <h3 class="category-title">💼 CRM & Business Tools (6 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>CRM System (Basic)</strong><br><small>Sistem manajemen customer relationship dasar</small></td>
+                                <td class="price-col">Rp 500rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Contact management, basic pipeline</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CRM System (Custom)</strong><br><small>CRM custom sesuai kebutuhan bisnis Anda</small></td>
+                                <td class="price-col">Rp 1jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Full customization, advanced features</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Business Dashboard</strong><br><small>Dashboard bisnis dengan AI analytics dan insights</small></td>
+                                <td class="price-col">Rp 500rb-1jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Real-time data, AI predictions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Website + CRM + Chatbot Integration</strong><br><small>Integrasi lengkap website, CRM, dan chatbot AI</small></td>
+                                <td class="price-col">Rp 800rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Full integration package</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Auto Follow-up System</strong><br><small>Sistem follow-up otomatis untuk leads dan customers</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Automated reminders, smart scheduling</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Booking/Appointment Automation</strong><br><small>Sistem booking dan janji temu otomatis</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Online booking, calendar sync</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Add-On & Custom -->
+            <div class="service-category">
+                <h3 class="category-title">⚙️ Add-On & Custom (6 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>AI Assistant Training</strong><br><small>Training AI assistant sesuai bisnis Anda</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Custom AI knowledge base</td>
+                            </tr>
+                            <tr>
+                                <td><strong>API Integration</strong><br><small>Integrasi API pihak ketiga ke sistem Anda</small></td>
+                                <td class="price-col">Rp 300rb-800rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Payment gateway, shipping, etc</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Sales Forecasting</strong><br><small>Prediksi penjualan menggunakan AI dan machine learning</small></td>
+                                <td class="price-col">Rp 500rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Sales prediction, trend analysis</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Auto Lead Distribution</strong><br><small>Distribusi leads otomatis ke tim sales</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Smart lead routing, team management</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Multi-Agent Chat Dashboard</strong><br><small>Dashboard untuk multiple chat agents dan channels</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>WhatsApp, IG, FB unified</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Security & Data Backup Automation</strong><br><small>Backup otomatis dan security monitoring 24/7</small></td>
+                                <td class="price-col">Rp 200rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Daily backup, security alerts</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 4: Paket Kombinasi -->
+            <div class="service-category">
+                <h3 class="category-title">📦 Paket Kombinasi (5 Paket)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Paket</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Paket Automation Starter</strong><br><small>Chatbot AI + WhatsApp Blast + Email Automation</small></td>
+                                <td class="price-col">Rp 700rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Perfect untuk UMKM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket AI Smart Business</strong><br><small>CRM + Chatbot Premium + Dashboard AI + Follow-up System</small></td>
+                                <td class="price-col">Rp 1,2jt</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Complete business automation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Sales Booster</strong><br><small>Auto Follow-up + Lead Distribution + Sales Forecasting</small></td>
+                                <td class="price-col">Rp 900rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Boost your sales performance</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket E-Commerce Automation</strong><br><small>CRM + WhatsApp Blast + Email + Booking System</small></td>
+                                <td class="price-col">Rp 1jt</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>For online shops & e-commerce</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Enterprise Automation</strong><br><small>Full automation package dengan semua fitur premium</small></td>
+                                <td class="price-col">Rp 2jt</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Enterprise-grade solution</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Info Box -->
         <div style="background: var(--gradient-primary); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem;">
             <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem;">💬 Butuh Konsultasi?</h3>
