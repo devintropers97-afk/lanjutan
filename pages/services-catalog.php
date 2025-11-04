@@ -780,7 +780,7 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             <div class="divisi-header">
                 <h2 class="divisi-title">
                     <span>🎯 DIVISI 2: DIGITAL MARKETING & TRAFFIC GROWTH</span>
-                    <span class="divisi-count">19 Layanan</span>
+                    <span class="divisi-count">28 Layanan</span>
                 </h2>
                 <p class="divisi-subtitle">Iklan online, SEO, traffic generation, dan strategi digital marketing</p>
             </div>
@@ -986,6 +986,79 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
                     </table>
                 </div>
             </div>
+
+            <!-- Kategori 4: Advanced Digital Marketing -->
+            <div class="service-category">
+                <h3 class="category-title">🚀 Advanced Digital Marketing (9 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>YouTube Ads Management</strong><br><small>Manajemen iklan di YouTube untuk reach maksimal</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Video ads optimization</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LinkedIn Ads Management</strong><br><small>Iklan profesional di LinkedIn untuk B2B marketing</small></td>
+                                <td class="price-col">Rp 450rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>B2B targeting & lead generation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Twitter/X Ads Management</strong><br><small>Kampanye iklan di platform Twitter/X</small></td>
+                                <td class="price-col">Rp 350rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Trend-based marketing</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pinterest Marketing</strong><br><small>Marketing visual di Pinterest untuk brand awareness</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Visual discovery marketing</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Influencer Marketing Campaign</strong><br><small>Kampanye marketing dengan influencer</small></td>
+                                <td class="price-col">Rp 1jt-3jt</td>
+                                <td><span class="badge-sistem badge-sekali">/campaign</span></td>
+                                <td>Influencer coordination & management</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Video Marketing Strategy</strong><br><small>Strategi pemasaran berbasis video content</small></td>
+                                <td class="price-col">Rp 500rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Video content strategy & distribution</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Podcast Marketing</strong><br><small>Promosi bisnis melalui podcast & audio content</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Audio content marketing</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Voice Search Optimization</strong><br><small>Optimasi untuk pencarian suara (Alexa, Google Assistant)</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Voice SEO optimization</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Local SEO & Google Maps Optimization</strong><br><small>SEO lokal dan optimasi Google Maps untuk bisnis lokal</small></td>
+                                <td class="price-col">Rp 350rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Local business visibility</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
         <!-- DIVISI 3: OTOMASI & SISTEM AI -->
@@ -993,7 +1066,7 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             <div class="divisi-header">
                 <h2 class="divisi-title">
                     <span>🤖 DIVISI 3: OTOMASI & SISTEM AI</span>
-                    <span class="divisi-count">21 Layanan</span>
+                    <span class="divisi-count">24 Layanan</span>
                 </h2>
                 <p class="divisi-subtitle">Chatbot AI, CRM, otomasi bisnis, dan integrasi sistem cerdas</p>
             </div>
@@ -1199,6 +1272,43 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
                     </table>
                 </div>
             </div>
+
+            <!-- Kategori 5: Advanced AI Services -->
+            <div class="service-category">
+                <h3 class="category-title">🌟 Advanced AI Services (3 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Voice AI Bot (Chatbot Suara)</strong><br><small>Chatbot dengan kemampuan voice interaction</small></td>
+                                <td class="price-col">Rp 800rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Voice-enabled AI assistant</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Document Processing & OCR</strong><br><small>Otomasi pemrosesan dokumen dengan AI dan OCR</small></td>
+                                <td class="price-col">Rp 600rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Automatic data extraction</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Smart Workflow Automation</strong><br><small>Otomasi workflow bisnis end-to-end dengan AI</small></td>
+                                <td class="price-col">Rp 1jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Custom workflow optimization</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
         <!-- DIVISI 4: BRANDING & DESAIN KREATIF -->
@@ -1206,7 +1316,7 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             <div class="divisi-header">
                 <h2 class="divisi-title">
                     <span>🎨 DIVISI 4: BRANDING & DESAIN KREATIF</span>
-                    <span class="divisi-count">23 Layanan</span>
+                    <span class="divisi-count">26 Layanan</span>
                 </h2>
                 <p class="divisi-subtitle">Logo, desain grafis, branding, packaging, dan identitas visual bisnis</p>
             </div>
@@ -1443,6 +1553,43 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
                     </table>
                 </div>
             </div>
+
+            <!-- Kategori 6: Advanced Branding Services -->
+            <div class="service-category">
+                <h3 class="category-title">🌟 Advanced Branding Services (3 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>3D Product Visualization</strong><br><small>Visualisasi produk 3D untuk presentasi dan marketing</small></td>
+                                <td class="price-col">Rp 500rb-1jt</td>
+                                <td><span class="badge-sistem badge-sekali">/product</span></td>
+                                <td>Photorealistic 3D rendering</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Augmented Reality (AR) Brand Experience</strong><br><small>Pengalaman brand interaktif dengan teknologi AR</small></td>
+                                <td class="price-col">Rp 2jt-4jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Interactive AR marketing</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Motion Graphics & Animation</strong><br><small>Animasi motion graphics untuk branding dinamis</small></td>
+                                <td class="price-col">Rp 800rb-1,5jt</td>
+                                <td><span class="badge-sistem badge-sekali">/project</span></td>
+                                <td>Animated brand elements</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
         <!-- DIVISI 5: KONTEN & COPYWRITING -->
@@ -1644,7 +1791,7 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             <div class="divisi-header">
                 <h2 class="divisi-title">
                     <span>📊 DIVISI 6: DATA, ANALITIK & OPTIMASI</span>
-                    <span class="divisi-count">20 Layanan</span>
+                    <span class="divisi-count">22 Layanan</span>
                 </h2>
                 <p class="divisi-subtitle">Analytics, data insights, conversion optimization, dan strategi berbasis data</p>
             </div>
@@ -1844,6 +1991,37 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
                     </table>
                 </div>
             </div>
+
+            <!-- Kategori 5: Advanced Analytics -->
+            <div class="service-category">
+                <h3 class="category-title">🌟 Advanced Analytics (2 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Machine Learning Model Development</strong><br><small>Pengembangan model ML custom untuk prediksi bisnis</small></td>
+                                <td class="price-col">Rp 3jt-5jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Custom ML solutions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Business Intelligence Dashboard (Advanced)</strong><br><small>BI dashboard advanced dengan AI-powered insights</small></td>
+                                <td class="price-col">Rp 1,5jt-2,5jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Enterprise BI solution</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
         <!-- DIVISI 7: LEGALITAS, DOMAIN & INFRASTRUKTUR -->
@@ -1851,7 +2029,7 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             <div class="divisi-header">
                 <h2 class="divisi-title">
                     <span>🏛️ DIVISI 7: LEGALITAS, DOMAIN & INFRASTRUKTUR</span>
-                    <span class="divisi-count">24 Layanan</span>
+                    <span class="divisi-count">25 Layanan</span>
                 </h2>
                 <p class="divisi-subtitle">Domain, hosting, security, legalitas bisnis, dan infrastruktur digital</p>
             </div>
@@ -2070,6 +2248,31 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
                                 <td class="price-col">Rp 1jt-1,5jt</td>
                                 <td><span class="badge-sistem badge-bulanan">/tahun</span></td>
                                 <td>Complete infrastructure & legality</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 5: Additional Services -->
+            <div class="service-category">
+                <h3 class="category-title">🌟 Additional Services (1 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>GDPR Compliance Audit</strong><br><small>Audit kepatuhan GDPR untuk perlindungan data pribadi</small></td>
+                                <td class="price-col">Rp 800rb-1,5jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Data privacy compliance check</td>
                             </tr>
                         </tbody>
                     </table>
@@ -2490,7 +2693,7 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             <div class="divisi-header">
                 <h2 class="divisi-title">
                     <span>🤝 DIVISI 10: KEMITRAAN, LISENSI & RESELLER</span>
-                    <span class="divisi-count">11 Layanan</span>
+                    <span class="divisi-count">12 Layanan</span>
                 </h2>
                 <p class="divisi-subtitle">Program reseller, affiliate, white label, dan kemitraan bisnis</p>
             </div>
@@ -2593,6 +2796,31 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
                                 <td class="price-col">Rp 500rb-1jt</td>
                                 <td><span class="badge-sistem badge-sekali">Sekali</span></td>
                                 <td>Custom branded platform setup</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Additional Partnership -->
+            <div class="service-category">
+                <h3 class="category-title">🌟 Additional Partnership (1 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Master Franchise Program</strong><br><small>Program master franchise untuk pengembangan bisnis skala besar</small></td>
+                                <td class="price-col">Rp 15jt-30jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Exclusive master franchise rights</td>
                             </tr>
                         </tbody>
                     </table>
