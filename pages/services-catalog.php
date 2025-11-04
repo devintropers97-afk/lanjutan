@@ -2485,6 +2485,121 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             </div>
         </div>
 
+        <!-- DIVISI 10: KEMITRAAN, LISENSI & RESELLER -->
+        <div class="divisi-section" id="divisi-10" data-divisi="divisi-10">
+            <div class="divisi-header">
+                <h2 class="divisi-title">
+                    <span>🤝 DIVISI 10: KEMITRAAN, LISENSI & RESELLER</span>
+                    <span class="divisi-count">11 Layanan</span>
+                </h2>
+                <p class="divisi-subtitle">Program reseller, affiliate, white label, dan kemitraan bisnis</p>
+            </div>
+
+            <!-- Kategori 1: Program Kemitraan -->
+            <div class="service-category">
+                <h3 class="category-title">🤝 Program Kemitraan (6 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Reseller Website Program</strong><br><small>Program reseller untuk menjual website dan layanan digital</small></td>
+                                <td class="price-col">Rp 500rb</td>
+                                <td><span class="badge-sistem badge-sekali">Registrasi awal</span></td>
+                                <td>Reseller discount & support</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Affiliate Program Digital (komisi 10-25%)</strong><br><small>Program affiliate dengan komisi untuk setiap penjualan</small></td>
+                                <td class="price-col">Gratis</td>
+                                <td><span class="badge-sistem badge-bulanan">Komisi per sale</span></td>
+                                <td>10-25% commission per transaction</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SITUNEO Digital Product License</strong><br><small>Lisensi produk digital SITUNEO untuk dijual kembali</small></td>
+                                <td class="price-col">Rp 1jt-3jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Licensed product resale rights</td>
+                            </tr>
+                            <tr>
+                                <td><strong>White Label Partnership</strong><br><small>Kemitraan white label dengan branding sendiri</small></td>
+                                <td class="price-col">Rp 2jt-5jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Full white label solution</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Consultant / Regional Area Partner</strong><br><small>Kemitraan sebagai konsultan atau partner regional</small></td>
+                                <td class="price-col">Rp 5jt-10jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Exclusive regional partnership</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Corporate / Institution Partnership</strong><br><small>Kemitraan dengan korporasi atau institusi</small></td>
+                                <td class="price-col">Negosiasi</td>
+                                <td><span class="badge-sistem badge-sekali">Custom</span></td>
+                                <td>Custom corporate partnership</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 2: Add-On & Support Mitra -->
+            <div class="service-category">
+                <h3 class="category-title">⚙️ Add-On & Support Mitra (5 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Digital Reseller Catalog & Media Kit</strong><br><small>Katalog digital dan media kit untuk reseller</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Professional marketing materials</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Online Reseller Dashboard</strong><br><small>Dashboard online untuk manage order dan komisi</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Real-time order & commission tracking</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reseller Training / Partner Orientation</strong><br><small>Pelatihan untuk reseller dan orientasi partner</small></td>
+                                <td class="price-col">Rp 200rb</td>
+                                <td><span class="badge-sistem badge-sekali">/sesi</span></td>
+                                <td>Sales training & product knowledge</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Promo Template Access (Canva / AI Copy)</strong><br><small>Akses template promosi dan AI copywriting</small></td>
+                                <td class="price-col">Rp 100rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Ready-to-use marketing templates</td>
+                            </tr>
+                            <tr>
+                                <td><strong>White Label System Setup (reselling rebrand)</strong><br><small>Setup sistem white label dengan branding custom</small></td>
+                                <td class="price-col">Rp 500rb-1jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Custom branded platform setup</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Info Box -->
         <div style="background: var(--gradient-primary); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem;">
             <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem;">💬 Butuh Konsultasi?</h3>
