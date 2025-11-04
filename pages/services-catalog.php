@@ -775,6 +775,219 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             </div>
         </div>
 
+        <!-- DIVISI 2: DIGITAL MARKETING & TRAFFIC GROWTH -->
+        <div class="divisi-section" id="divisi-2" data-divisi="divisi-2">
+            <div class="divisi-header">
+                <h2 class="divisi-title">
+                    <span>🎯 DIVISI 2: DIGITAL MARKETING & TRAFFIC GROWTH</span>
+                    <span class="divisi-count">19 Layanan</span>
+                </h2>
+                <p class="divisi-subtitle">Iklan online, SEO, traffic generation, dan strategi digital marketing</p>
+            </div>
+
+            <!-- Layanan Utama -->
+            <div class="service-category">
+                <h3 class="category-title">
+                    <i class="bi bi-megaphone"></i>
+                    Layanan Utama (9 Services)
+                </h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 5%">No</th>
+                                <th style="width: 45%">Layanan</th>
+                                <th style="width: 20%">Harga</th>
+                                <th style="width: 15%">Sistem</th>
+                                <th style="width: 15%">Kategori</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>SEO Optimasi (Dasar)</strong><br><small>On-page SEO, meta tags, sitemap, basic optimization</small></td>
+                                <td class="price-col">Rp 200.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>SEO</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>SEO Optimasi (Premium)</strong><br><small>Riset keyword, backlink building, competitor analysis, monthly report</small></td>
+                                <td class="price-col">Rp 600.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>SEO</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>Google Ads Management</strong><br><small>Search Ads, Display Ads, Remarketing - Full management</small></td>
+                                <td class="price-col">Rp 400.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>Paid Ads</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>Meta Ads (Facebook & Instagram)</strong><br><small>FB Ads + IG Ads campaign setup & optimization</small></td>
+                                <td class="price-col">Rp 400.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>Paid Ads</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>TikTok Ads Management</strong><br><small>TikTok campaign setup, targeting, optimization</small></td>
+                                <td class="price-col">Rp 400.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>Paid Ads</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>Google My Business (Lokal SEO)</strong><br><small>GMB optimization, review management, local ranking</small></td>
+                                <td class="price-col">Rp 250.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>Local SEO</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>WhatsApp Blast (Broadcast)</strong><br><small>Mass messaging service untuk promosi & notifikasi</small></td>
+                                <td class="price-col">Rp 250.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>Direct Marketing</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><strong>Email Marketing Automation</strong><br><small>Auto email follow-up, newsletter, promo campaign</small></td>
+                                <td class="price-col">Rp 200.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>Email Marketing</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><strong>Retargeting & Remarketing Campaign</strong><br><small>Re-target pengunjung yang belum convert</small></td>
+                                <td class="price-col">Rp 300.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>Conversion</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Strategi & Optimasi -->
+            <div class="service-category">
+                <h3 class="category-title">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    Strategi & Optimasi Traffic (5 Services)
+                </h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 5%">No</th>
+                                <th style="width: 45%">Layanan</th>
+                                <th style="width: 20%">Harga</th>
+                                <th style="width: 15%">Sistem</th>
+                                <th style="width: 15%">Target</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10</td>
+                                <td><strong>Traffic Growth Plan</strong><br><small>Rencana strategis 3 bulan untuk boost traffic website</small></td>
+                                <td class="price-col">Rp 500.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>Growth Strategy</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><strong>Riset Keyword & Kompetitor</strong><br><small>Analisa keyword volume, difficulty & competitor research</small></td>
+                                <td class="price-col">Rp 200.000</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Research</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><strong>AI Audience Targeting</strong><br><small>AI-powered audience segmentation & targeting</small></td>
+                                <td class="price-col">Rp 300.000</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Targeting</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td><strong>Campaign Planning (3 bulan)</strong><br><small>Perencanaan campaign marketing lengkap 3 bulan</small></td>
+                                <td class="price-col">Rp 400.000</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Planning</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td><strong>Brand Awareness Campaign</strong><br><small>Campaign khusus untuk build brand awareness</small></td>
+                                <td class="price-col">Rp 500.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>Branding</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Konten & Brand Support -->
+            <div class="service-category">
+                <h3 class="category-title">
+                    <i class="bi bi-brush"></i>
+                    Konten & Brand Support (5 Services)
+                </h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 5%">No</th>
+                                <th style="width: 45%">Layanan</th>
+                                <th style="width: 20%">Harga</th>
+                                <th style="width: 15%">Sistem</th>
+                                <th style="width: 15%">Deliverable</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15</td>
+                                <td><strong>Landing Page Copywriting</strong><br><small>Penulisan konten sales page yang persuasif</small></td>
+                                <td class="price-col">Rp 150.000</td>
+                                <td><span class="badge-sistem badge-sekali">/halaman</span></td>
+                                <td>Copy 1 halaman</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td><strong>Content Creator Package</strong><br><small>Paket lengkap: foto produk, video reels, caption</small></td>
+                                <td class="price-col">Rp 500rb-1jt</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>10-20 konten</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td><strong>Social Media Management</strong><br><small>Kelola IG, FB, TikTok: posting, engagement, report</small></td>
+                                <td class="price-col">Rp 400.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>12-15 post/bulan</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td><strong>Content Planner (Bulanan)</strong><br><small>Perencanaan konten 1 bulan dengan kalender editorial</small></td>
+                                <td class="price-col">Rp 200.000</td>
+                                <td><span class="badge-sistem badge-bulan">/bulan</span></td>
+                                <td>Content calendar</td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td><strong>Ads Banner & Design Promo</strong><br><small>Desain banner iklan untuk Google, Meta, TikTok</small></td>
+                                <td class="price-col">Rp 100rb-300rb</td>
+                                <td><span class="badge-sistem badge-sekali">/set</span></td>
+                                <td>5-10 design</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Info Box -->
         <div style="background: var(--gradient-primary); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem;">
             <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem;">💬 Butuh Konsultasi?</h3>
