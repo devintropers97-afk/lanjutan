@@ -1639,6 +1639,213 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             </div>
         </div>
 
+        <!-- DIVISI 6: DATA, ANALITIK & OPTIMASI -->
+        <div class="divisi-section" id="divisi-6" data-divisi="divisi-6">
+            <div class="divisi-header">
+                <h2 class="divisi-title">
+                    <span>📊 DIVISI 6: DATA, ANALITIK & OPTIMASI</span>
+                    <span class="divisi-count">20 Layanan</span>
+                </h2>
+                <p class="divisi-subtitle">Analytics, data insights, conversion optimization, dan strategi berbasis data</p>
+            </div>
+
+            <!-- Kategori 1: Setup & Reporting -->
+            <div class="service-category">
+                <h3 class="category-title">📈 Setup & Reporting (6 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Google Analytics 4 Setup & Reporting</strong><br><small>Setup GA4 lengkap dengan custom reporting</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Complete GA4 configuration</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Conversion Tracking (Meta, TikTok, Google)</strong><br><small>Setup pixel tracking untuk semua platform ads</small></td>
+                                <td class="price-col">Rp 200rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Multi-platform tracking setup</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Business Insight Dashboard (Data Studio/Power BI)</strong><br><small>Dashboard interaktif untuk monitoring bisnis real-time</small></td>
+                                <td class="price-col">Rp 500rb-1jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Custom visualization & metrics</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Business Analytics (Prediksi & Trend)</strong><br><small>Analisis bisnis menggunakan AI dan predictive analytics</small></td>
+                                <td class="price-col">Rp 800rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>AI-powered insights & forecasting</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Performance Audit & Optimization</strong><br><small>Audit menyeluruh performa website dan marketing</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Comprehensive performance review</td>
+                            </tr>
+                            <tr>
+                                <td><strong>A/B Testing & Conversion Optimization</strong><br><small>Testing dan optimasi untuk meningkatkan konversi</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Continuous testing & improvement</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 2: Data-Driven Analytics -->
+            <div class="service-category">
+                <h3 class="category-title">🔍 Data-Driven Analytics (5 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Customer Behavior Analysis</strong><br><small>Analisis mendalam perilaku dan preferensi customer</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>User behavior patterns & insights</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sales Funnel Tracking</strong><br><small>Tracking dan analisis sales funnel untuk optimasi</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Funnel visualization & bottleneck analysis</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Heatmap & User Journey Mapping</strong><br><small>Visualisasi interaksi user di website dengan heatmap</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Visual user interaction tracking</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Predictive Analytics</strong><br><small>Prediksi trend dan performa bisnis menggunakan machine learning</small></td>
+                                <td class="price-col">Rp 600rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>ML-based forecasting & predictions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ROI & Cost Efficiency Analysis</strong><br><small>Analisis return on investment dan efisiensi biaya marketing</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>ROI calculation & optimization tips</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Digital Business Optimization -->
+            <div class="service-category">
+                <h3 class="category-title">🚀 Digital Business Optimization (5 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>SEO Optimization (Lanjutan)</strong><br><small>Optimasi SEO advanced untuk ranking lebih tinggi</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Advanced SEO tactics & monitoring</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ads Optimization (Meta, Google, TikTok)</strong><br><small>Optimasi campaign ads untuk ROI maksimal</small></td>
+                                <td class="price-col">Rp 350rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Continuous ads performance tuning</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Website Conversion Optimization</strong><br><small>Optimasi website untuk meningkatkan conversion rate</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>CRO strategies & implementation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Content Performance Analyzer</strong><br><small>Analisis performa content menggunakan AI</small></td>
+                                <td class="price-col">Rp 200rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>AI-driven content insights</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data-Driven Strategy Plan (3 bulan)</strong><br><small>Perencanaan strategi bisnis berbasis data untuk 3 bulan</small></td>
+                                <td class="price-col">Rp 500rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Comprehensive data strategy roadmap</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 4: Paket Kombinasi -->
+            <div class="service-category">
+                <h3 class="category-title">📦 Paket Kombinasi (4 Paket)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Paket</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Paket Basic Data Tracker</strong><br><small>GA4 Setup + Conversion Tracking + Monthly Report</small></td>
+                                <td class="price-col">Rp 500rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Essential tracking & reporting</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Optimization Pro</strong><br><small>A/B Testing + SEO Optimization + Ads Optimization</small></td>
+                                <td class="price-col">Rp 900rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Comprehensive optimization package</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket AI Business Insight</strong><br><small>AI Analytics + Predictive Analytics + Custom Dashboard</small></td>
+                                <td class="price-col">Rp 1,5jt</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>AI-powered business intelligence</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Performance Booster</strong><br><small>Full Optimization + Analytics + Strategy Planning</small></td>
+                                <td class="price-col">Rp 1jt</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Complete performance package</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Info Box -->
         <div style="background: var(--gradient-primary); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem;">
             <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem;">💬 Butuh Konsultasi?</h3>
