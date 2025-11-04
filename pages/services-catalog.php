@@ -1445,6 +1445,200 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             </div>
         </div>
 
+        <!-- DIVISI 5: KONTEN & COPYWRITING -->
+        <div class="divisi-section" id="divisi-5" data-divisi="divisi-5">
+            <div class="divisi-header">
+                <h2 class="divisi-title">
+                    <span>✍️ DIVISI 5: KONTEN & COPYWRITING</span>
+                    <span class="divisi-count">21 Layanan</span>
+                </h2>
+                <p class="divisi-subtitle">Artikel SEO, copywriting profesional, caption social media, dan content creation</p>
+            </div>
+
+            <!-- Kategori 1: Copywriting Layanan -->
+            <div class="service-category">
+                <h3 class="category-title">📝 Copywriting Layanan (11 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Landing Page Copywriting</strong><br><small>Copywriting persuasif untuk landing page yang konversi tinggi</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-sekali">/halaman</span></td>
+                                <td>High-converting copy</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Artikel SEO (500-700 kata)</strong><br><small>Artikel SEO-optimized untuk blog atau website</small></td>
+                                <td class="price-col">Rp 75rb</td>
+                                <td><span class="badge-sistem badge-sekali">/artikel</span></td>
+                                <td>SEO-friendly, engaging content</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Artikel SEO (1000-1500 kata)</strong><br><small>Artikel SEO panjang untuk ranking lebih baik</small></td>
+                                <td class="price-col">Rp 120rb</td>
+                                <td><span class="badge-sistem badge-sekali">/artikel</span></td>
+                                <td>Long-form, detailed content</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Social Media Caption</strong><br><small>Caption menarik untuk Instagram, Facebook, TikTok</small></td>
+                                <td class="price-col">Rp 10rb</td>
+                                <td><span class="badge-sistem badge-sekali">/caption</span></td>
+                                <td>Engaging & creative</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Social Media Caption (30 caption/bulan)</strong><br><small>Paket 30 caption untuk konsistensi posting bulanan</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>30 caption siap pakai</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ads Copywriting (Meta/Google/TikTok)</strong><br><small>Copywriting iklan yang persuasif dan konversi tinggi</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-sekali">/campaign</span></td>
+                                <td>Multiple variations for A/B test</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Deskripsi Produk E-commerce</strong><br><small>Deskripsi produk yang menjual dan informatif</small></td>
+                                <td class="price-col">Rp 15rb</td>
+                                <td><span class="badge-sistem badge-sekali">/produk</span></td>
+                                <td>Clear, persuasive product copy</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Deskripsi Produk (30 produk/bulan)</strong><br><small>Paket deskripsi untuk 30 produk</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Bulk product descriptions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Company Profile Writing</strong><br><small>Penulisan company profile yang profesional</small></td>
+                                <td class="price-col">Rp 300rb-600rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Professional business story</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email Promo Copywriting</strong><br><small>Email marketing yang efektif dan engaging</small></td>
+                                <td class="price-col">Rp 100rb</td>
+                                <td><span class="badge-sistem badge-sekali">/email</span></td>
+                                <td>High open rate & conversion</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email Promo (5 email)</strong><br><small>Paket 5 email untuk campaign lengkap</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Complete email sequence</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 2: Paket Konten -->
+            <div class="service-category">
+                <h3 class="category-title">📦 Paket Konten (5 Paket)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Paket</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Paket Konten Dasar</strong><br><small>4 Artikel SEO (700 kata) + 10 Caption Social Media</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Perfect untuk UMKM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Business Growth</strong><br><small>8 Artikel SEO + 20 Caption + 2 Email Promo</small></td>
+                                <td class="price-col">Rp 700rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Consistent content strategy</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Full Brand Content</strong><br><small>12 Artikel + 30 Caption + 4 Email + Landing Page Copy</small></td>
+                                <td class="price-col">Rp 1,2jt</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Complete content solution</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Premium Content Strategy</strong><br><small>15 Artikel Panjang + 30 Caption + 5 Email + Ads Copy</small></td>
+                                <td class="price-col">Rp 1jt</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Premium content package</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket E-Commerce Copy</strong><br><small>30 Deskripsi Produk + 20 Caption + 3 Email Promo</small></td>
+                                <td class="price-col">Rp 700rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>For online shops & marketplaces</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Add-On -->
+            <div class="service-category">
+                <h3 class="category-title">⚙️ Add-On (5 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>SEO Keyword Research</strong><br><small>Riset keyword untuk optimasi SEO content</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Target keywords & competitor analysis</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SEO On-Page Optimization (10 artikel)</strong><br><small>Optimasi SEO untuk 10 artikel existing</small></td>
+                                <td class="price-col">Rp 100rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Meta tags, headings, internal linking</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Visual Content Design (Canva/IG Feed)</strong><br><small>Desain visual untuk melengkapi content</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Graphics for social media posts</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Content Optimization</strong><br><small>Optimasi content menggunakan AI tools</small></td>
+                                <td class="price-col">Rp 100rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>AI-powered content enhancement</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Editorial Calendar (3 bulan)</strong><br><small>Perencanaan konten untuk 3 bulan ke depan</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Content strategy & planning</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Info Box -->
         <div style="background: var(--gradient-primary); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem;">
             <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem;">💬 Butuh Konsultasi?</h3>
