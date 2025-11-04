@@ -1201,6 +1201,250 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             </div>
         </div>
 
+        <!-- DIVISI 4: BRANDING & DESAIN KREATIF -->
+        <div class="divisi-section" id="divisi-4" data-divisi="divisi-4">
+            <div class="divisi-header">
+                <h2 class="divisi-title">
+                    <span>🎨 DIVISI 4: BRANDING & DESAIN KREATIF</span>
+                    <span class="divisi-count">23 Layanan</span>
+                </h2>
+                <p class="divisi-subtitle">Logo, desain grafis, branding, packaging, dan identitas visual bisnis</p>
+            </div>
+
+            <!-- Kategori 1: Logo & Identitas Brand -->
+            <div class="service-category">
+                <h3 class="category-title">🎯 Logo & Identitas Brand (4 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Desain Logo (Basic)</strong><br><small>Desain logo profesional untuk brand Anda</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>3 konsep, unlimited revisi</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Desain Logo (Premium)</strong><br><small>Logo premium dengan brand guidelines lengkap</small></td>
+                                <td class="price-col">Rp 500rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>5 konsep, file source lengkap</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Brand Guidelines / Brand Book</strong><br><small>Panduan lengkap penggunaan identitas brand</small></td>
+                                <td class="price-col">Rp 600rb-1jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Color, typography, logo usage</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rebranding & Logo Redesign</strong><br><small>Refresh dan modernisasi logo yang sudah ada</small></td>
+                                <td class="price-col">Rp 350rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Update logo, maintain identity</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 2: Stationery & Print Design -->
+            <div class="service-category">
+                <h3 class="category-title">📄 Stationery & Print Design (5 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Business Card, Kop Surat (set)</strong><br><small>Desain kartu nama dan kop surat profesional</small></td>
+                                <td class="price-col">Rp 250rb-400rb</td>
+                                <td><span class="badge-sistem badge-sekali">/set</span></td>
+                                <td>Print-ready files</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Instagram Feed & Story Template</strong><br><small>Template IG Feed & Story untuk konsistensi branding</small></td>
+                                <td class="price-col">Rp 300rb-500rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>30 template editable</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Packaging Design (label, box)</strong><br><small>Desain kemasan produk yang menarik dan marketable</small></td>
+                                <td class="price-col">Rp 350rb-800rb</td>
+                                <td><span class="badge-sistem badge-sekali">/design</span></td>
+                                <td>Label, box, pouch design</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Banner, Brosur, Flyer, Poster</strong><br><small>Desain marketing material untuk promosi offline</small></td>
+                                <td class="price-col">Rp 150rb-400rb</td>
+                                <td><span class="badge-sistem badge-sekali">/design</span></td>
+                                <td>Various sizes available</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Company Profile (PDF/Print)</strong><br><small>Desain company profile profesional dan informatif</small></td>
+                                <td class="price-col">Rp 500rb-1,2jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>8-16 halaman, layout profesional</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Digital & Video -->
+            <div class="service-category">
+                <h3 class="category-title">🎬 Digital & Video (6 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Video Reel / Promo (15-60 detik)</strong><br><small>Video pendek untuk promosi di social media</small></td>
+                                <td class="price-col">Rp 300rb-700rb</td>
+                                <td><span class="badge-sistem badge-sekali">/video</span></td>
+                                <td>Motion graphics, music, subtitle</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Brand Voice & Copywriting Guide</strong><br><small>Panduan tone of voice dan style komunikasi brand</small></td>
+                                <td class="price-col">Rp 200rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Brand personality & messaging</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Product Mockup (3D Preview)</strong><br><small>Mockup 3D produk untuk preview sebelum produksi</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-sekali">/mockup</span></td>
+                                <td>Realistic 3D rendering</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mini Photoshoot (5-10 foto)</strong><br><small>Sesi foto produk atau profile profesional</small></td>
+                                <td class="price-col">Rp 400rb-800rb</td>
+                                <td><span class="badge-sistem badge-sekali">/sesi</span></td>
+                                <td>Edited photos, various angles</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Digital Ads Banner (Google, Meta)</strong><br><small>Banner iklan digital untuk platform online</small></td>
+                                <td class="price-col">Rp 150rb-300rb</td>
+                                <td><span class="badge-sistem badge-sekali">/set</span></td>
+                                <td>Multiple sizes for ads</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Merchandise Design (kaos, tote-bag)</strong><br><small>Desain untuk merchandise dan branded items</small></td>
+                                <td class="price-col">Rp 250rb-400rb</td>
+                                <td><span class="badge-sistem badge-sekali">/design</span></td>
+                                <td>Print-ready artwork</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 4: Konsultasi & Analisis -->
+            <div class="service-category">
+                <h3 class="category-title">💡 Konsultasi & Analisis (3 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Brand Audit & Position Analysis</strong><br><small>Analisis mendalam posisi brand di pasar</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Competitor analysis, positioning</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Branding Consultation (Zoom, 1 jam)</strong><br><small>Konsultasi 1-on-1 dengan branding expert</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-sekali">/sesi</span></td>
+                                <td>Strategy discussion, Q&A</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Brand Strategy Document</strong><br><small>Dokumen strategi branding lengkap untuk bisnis</small></td>
+                                <td class="price-col">Rp 500rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Vision, mission, positioning, roadmap</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 5: Paket Branding -->
+            <div class="service-category">
+                <h3 class="category-title">📦 Paket Branding (5 Paket)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Paket</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Paket Basic Branding</strong><br><small>Logo + Business Card + 5 IG Template</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Hemat Rp 200rb!</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kit Brand Profesional</strong><br><small>Logo Premium + Stationery Set + Brand Guidelines</small></td>
+                                <td class="price-col">Rp 800rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Complete brand identity kit</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Premium Corporate Identity</strong><br><small>Logo + Guidelines + Company Profile + Marketing Kit</small></td>
+                                <td class="price-col">Rp 1,5jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Full corporate branding</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Product Branding</strong><br><small>Logo + Packaging Design + Photoshoot + Marketing Material</small></td>
+                                <td class="price-col">Rp 1jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Perfect untuk product launch</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Rebranding & Brand Refresh</strong><br><small>Logo Redesign + Updated Guidelines + New Marketing Material</small></td>
+                                <td class="price-col">Rp 900rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Modernize your brand</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Info Box -->
         <div style="background: var(--gradient-primary); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem;">
             <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem;">💬 Butuh Konsultasi?</h3>
