@@ -2077,6 +2077,213 @@ $pageTitle = "Katalog Layanan Lengkap - 232+ Layanan Digital";
             </div>
         </div>
 
+        <!-- DIVISI 8: LAYANAN KLIEN & CUSTOMER EXPERIENCE (CX) -->
+        <div class="divisi-section" id="divisi-8" data-divisi="divisi-8">
+            <div class="divisi-header">
+                <h2 class="divisi-title">
+                    <span>💬 DIVISI 8: LAYANAN KLIEN & CUSTOMER EXPERIENCE (CX)</span>
+                    <span class="divisi-count">20 Layanan</span>
+                </h2>
+                <p class="divisi-subtitle">Customer support, ticketing system, CRM, dan customer experience management</p>
+            </div>
+
+            <!-- Kategori 1: Customer Support -->
+            <div class="service-category">
+                <h3 class="category-title">🤝 Customer Support (7 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Customer Support Center (chat & ticketing)</strong><br><small>Sistem customer support dengan live chat dan ticketing</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Multi-channel support system</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Chatbot (support automation)</strong><br><small>Chatbot AI untuk automasi customer support 24/7</small></td>
+                                <td class="price-col">Rp 300rb-700rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Smart FAQ & auto-response</td>
+                            </tr>
+                            <tr>
+                                <td><strong>After Sales Support & Maintenance</strong><br><small>Layanan support dan maintenance setelah pembelian</small></td>
+                                <td class="price-col">Rp 200rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Ongoing support & updates</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ticket System & Client Service Tracking</strong><br><small>Sistem ticketing untuk tracking layanan customer</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Organized ticket management</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Consultation & Digital Business Strategy (1-on-1)</strong><br><small>Konsultasi bisnis digital one-on-one dengan expert</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-sekali">/sesi</span></td>
+                                <td>Personalized business consultation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Client Onboarding Program</strong><br><small>Program onboarding untuk client baru</small></td>
+                                <td class="price-col">Rp 150rb-300rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Smooth client integration</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Loyalty & Reward System (point & cashback)</strong><br><small>Sistem loyalitas pelanggan dengan poin dan cashback</small></td>
+                                <td class="price-col">Rp 500rb-1jt</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Customer retention program</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 2: Automation & Monitoring -->
+            <div class="service-category">
+                <h3 class="category-title">⚙️ Automation & Monitoring (5 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>CRM (Customer Relationship Management)</strong><br><small>Sistem CRM untuk mengelola hubungan customer</small></td>
+                                <td class="price-col">Rp 400rb-800rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Complete customer management</td>
+                            </tr>
+                            <tr>
+                                <td><strong>WhatsApp Blast (Auto Broadcast)</strong><br><small>Broadcast otomatis ke database WhatsApp customer</small></td>
+                                <td class="price-col">Rp 250rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Mass messaging automation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email Automation (Follow-up, Promo, Reminder)</strong><br><small>Automasi email untuk follow-up, promo, dan reminder</small></td>
+                                <td class="price-col">Rp 200rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Automated email sequences</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Response System (Chat + Email)</strong><br><small>Sistem respons otomatis menggunakan AI</small></td>
+                                <td class="price-col">Rp 350rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Smart auto-reply system</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Feedback & Rating System</strong><br><small>Sistem feedback dan rating dari customer</small></td>
+                                <td class="price-col">Rp 150rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Customer feedback collection</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Analytics & Insights -->
+            <div class="service-category">
+                <h3 class="category-title">📊 Analytics & Insights (4 Layanan)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Layanan</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Customer Experience Dashboard</strong><br><small>Dashboard untuk monitoring customer experience</small></td>
+                                <td class="price-col">Rp 500rb-800rb</td>
+                                <td><span class="badge-sistem badge-sekali">Sekali</span></td>
+                                <td>Real-time CX monitoring</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Customer Data Insights (Behavior & Retention)</strong><br><small>Insights mendalam tentang perilaku dan retensi customer</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Customer behavior analytics</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Churn Rate & Loyalty Report</strong><br><small>Laporan churn rate dan loyalitas customer</small></td>
+                                <td class="price-col">Rp 300rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Retention metrics & analysis</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AI Sentiment Analysis</strong><br><small>Analisis sentimen customer menggunakan AI</small></td>
+                                <td class="price-col">Rp 400rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Customer satisfaction tracking</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Kategori 4: Paket CX -->
+            <div class="service-category">
+                <h3 class="category-title">📦 Paket CX (4 Paket)</h3>
+                <div class="table-responsive">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Paket</th>
+                                <th style="width: 20%;">Harga</th>
+                                <th style="width: 15%;">Sistem</th>
+                                <th style="width: 25%;">Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Paket Basic Support</strong><br><small>Customer Support Center + Ticket System + After Sales Support</small></td>
+                                <td class="price-col">Rp 350rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Essential customer support</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket AI Support</strong><br><small>AI Chatbot + WhatsApp Blast + Email Automation + Feedback System</small></td>
+                                <td class="price-col">Rp 800rb</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Automated support solution</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket CX Insights</strong><br><small>CX Dashboard + Customer Data Insights + Churn Report + AI Sentiment</small></td>
+                                <td class="price-col">Rp 1jt</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Data-driven CX management</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Paket Premium Customer</strong><br><small>Complete CX solution dengan CRM, AI Support, Dashboard & Analytics</small></td>
+                                <td class="price-col">Rp 1,8jt</td>
+                                <td><span class="badge-sistem badge-bulanan">/bulan</span></td>
+                                <td>Enterprise customer experience</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Info Box -->
         <div style="background: var(--gradient-primary); border-radius: 20px; padding: 3rem; text-align: center; margin-top: 3rem;">
             <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 1rem;">💬 Butuh Konsultasi?</h3>
