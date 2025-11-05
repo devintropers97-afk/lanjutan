@@ -169,8 +169,14 @@ if (DEMO_MODE) {
 
             <h2 class="hero-subtitle"><?= $t['hero_subtitle'] ?></h2>
 
-            <!-- Search Box -->
-            <div class="services-search-box mt-4" data-aos="fade-up" data-aos-delay="100">
+            <!-- Search Toggle Button -->
+            <button id="searchToggleBtn" class="btn btn-outline-gold mt-4" data-aos="fade-up" data-aos-delay="100">
+                <i class="bi bi-search me-2"></i>
+                <span id="searchToggleText">Tampilkan Pencarian</span>
+            </button>
+
+            <!-- Search Box (hidden by default) -->
+            <div id="servicesSearchBox" class="services-search-box mt-3" style="display: none; max-height: 0; overflow: hidden; transition: all 0.3s ease;" data-aos="fade-up" data-aos-delay="100">
                 <input type="text"
                        id="serviceSearch"
                        class="form-control form-control-lg"
@@ -298,9 +304,43 @@ if (DEMO_MODE) {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('serviceSearch');
+    const searchBox = document.getElementById('servicesSearchBox');
+    const searchToggleBtn = document.getElementById('searchToggleBtn');
+    const searchToggleText = document.getElementById('searchToggleText');
     const filterBtns = document.querySelectorAll('.filter-btn');
     const divisionSections = document.querySelectorAll('.services-division-section');
     const serviceCards = document.querySelectorAll('.service-card');
+
+    // Toggle search bar
+    let searchVisible = false;
+    searchToggleBtn.addEventListener('click', function() {
+        searchVisible = !searchVisible;
+
+        if (searchVisible) {
+            searchBox.style.display = 'block';
+            setTimeout(() => {
+                searchBox.style.maxHeight = '100px';
+                searchBox.style.opacity = '1';
+            }, 10);
+            searchToggleText.textContent = 'Sembunyikan Pencarian';
+            searchToggleBtn.querySelector('i').classList.remove('bi-search');
+            searchToggleBtn.querySelector('i').classList.add('bi-x-lg');
+        } else {
+            searchBox.style.maxHeight = '0';
+            searchBox.style.opacity = '0';
+            setTimeout(() => {
+                searchBox.style.display = 'none';
+            }, 300);
+            searchToggleText.textContent = 'Tampilkan Pencarian';
+            searchToggleBtn.querySelector('i').classList.remove('bi-x-lg');
+            searchToggleBtn.querySelector('i').classList.add('bi-search');
+            // Clear search when hiding
+            searchInput.value = '';
+            // Show all services
+            serviceCards.forEach(card => card.style.display = 'block');
+            divisionSections.forEach(section => section.style.display = 'block');
+        }
+    });
 
     // Search functionality
     searchInput.addEventListener('input', function() {
