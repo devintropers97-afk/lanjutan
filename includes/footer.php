@@ -2,127 +2,203 @@
 <!-- End Main Wrapper -->
 
 <!-- Footer -->
-<footer class="footer-premium">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row g-4">
-                <!-- Company Info -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget">
-                        <img src="<?= ASSETS_URL ?>/images/logo-white.png" alt="SITUNEO" class="footer-logo mb-3" height="50">
-                        <p class="footer-tagline mb-3"><?= SITE_TAGLINE ?></p>
-                        <p class="footer-desc mb-4">
-                            Agency digital terpercaya sejak 2020. Sudah membantu 500+ bisnis sukses online dengan website profesional dan marketing digital.
-                        </p>
-
-                        <!-- Social Media -->
-                        <div class="footer-social">
-                            <a href="<?= SOCIAL_INSTAGRAM ?>" target="_blank" class="social-link">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-                            <a href="<?= SOCIAL_FACEBOOK ?>" target="_blank" class="social-link">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                            <a href="<?= SOCIAL_LINKEDIN ?>" target="_blank" class="social-link">
-                                <i class="bi bi-linkedin"></i>
-                            </a>
-                            <a href="<?= SOCIAL_TIKTOK ?>" target="_blank" class="social-link">
-                                <i class="bi bi-tiktok"></i>
-                            </a>
-                        </div>
+<footer class="py-5" style="background: linear-gradient(135deg, #0F3057 0%, #000000 100%); border-top: 2px solid var(--gold);">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Brand Info -->
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="https://situneo.my.id/logo"
+                         alt="Situneo" width="60" height="60"
+                         style="border-radius: 15px; margin-right: 15px;">
+                    <div>
+                        <h4 style="color: var(--gold); margin: 0; font-weight: 800;">SITUNEO DIGITAL</h4>
+                        <small style="color: var(--text-light);">Digital Harmony</small>
                     </div>
                 </div>
-
-                <!-- Quick Links -->
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget">
-                        <h5 class="footer-widget-title">Navigasi</h5>
-                        <ul class="footer-menu">
-                            <li><a href="/"><i class="bi bi-chevron-right me-2"></i>Beranda</a></li>
-                            <li><a href="/about"><i class="bi bi-chevron-right me-2"></i>Tentang Kami</a></li>
-                            <li><a href="/services"><i class="bi bi-chevron-right me-2"></i>Layanan</a></li>
-                            <li><a href="/portfolio"><i class="bi bi-chevron-right me-2"></i>Portfolio</a></li>
-                            <li><a href="/pricing"><i class="bi bi-chevron-right me-2"></i>Harga</a></li>
-                            <li><a href="/contact"><i class="bi bi-chevron-right me-2"></i>Kontak</a></li>
-                        </ul>
+                <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
+                    Partner digital terpercaya sejak 2020. Udah bantu 500+ bisnis sukses online dengan harga paling terjangkau!
+                </p>
+                <div class="trust-badges">
+                    <div style="background: rgba(255,180,0,0.1); border: 1px solid var(--gold);
+                         padding: 10px 20px; border-radius: 10px; display: inline-block; margin-bottom: 1rem;">
+                        <strong style="color: var(--gold);">NIB:</strong>
+                        <span style="color: var(--text-light); font-size: 0.9rem;"><?= COMPANY_NIB ?? '20250-9261-4570-4515-5453' ?></span>
                     </div>
                 </div>
-
-                <!-- Services -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h5 class="footer-widget-title">Layanan Populer</h5>
-                        <ul class="footer-menu">
-                            <li><a href="/services#website"><i class="bi bi-chevron-right me-2"></i>Jasa Website</a></li>
-                            <li><a href="/services#ecommerce"><i class="bi bi-chevron-right me-2"></i>Toko Online</a></li>
-                            <li><a href="/services#seo"><i class="bi bi-chevron-right me-2"></i>SEO & Google Ads</a></li>
-                            <li><a href="/services#branding"><i class="bi bi-chevron-right me-2"></i>Branding & Desain</a></li>
-                            <li><a href="/services#ai"><i class="bi bi-chevron-right me-2"></i>Chatbot AI</a></li>
-                            <li><a href="/services#digital-marketing"><i class="bi bi-chevron-right me-2"></i>Digital Marketing</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h5 class="footer-widget-title">Hubungi Kami</h5>
-                        <div class="footer-contact">
-                            <div class="contact-item mb-3">
-                                <i class="bi bi-geo-alt-fill text-gold me-2"></i>
-                                <span><?= COMPANY_ADDRESS ?></span>
-                            </div>
-                            <div class="contact-item mb-3">
-                                <i class="bi bi-envelope-fill text-gold me-2"></i>
-                                <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a>
-                            </div>
-                            <div class="contact-item mb-3">
-                                <i class="bi bi-telephone-fill text-gold me-2"></i>
-                                <a href="tel:<?= SITE_PHONE ?>"><?= SITE_PHONE ?></a>
-                            </div>
-                            <div class="contact-item mb-3">
-                                <i class="bi bi-whatsapp text-gold me-2"></i>
-                                <a href="https://wa.me/<?= SITE_WHATSAPP ?>" target="_blank">WhatsApp 24/7</a>
-                            </div>
-                        </div>
-
-                        <!-- Business Hours -->
-                        <div class="mt-4">
-                            <h6 class="text-gold mb-2">Jam Operasional</h6>
-                            <p class="small mb-1">Senin - Jumat: 09:00 - 18:00</p>
-                            <p class="small mb-1">Sabtu: 09:00 - 15:00</p>
-                            <p class="small mb-0">Minggu: Tutup</p>
-                            <p class="small text-gold mt-2"><i class="bi bi-whatsapp me-1"></i>WhatsApp Support 24/7</p>
-                        </div>
+                <div class="social-links mt-3">
+                    <h6 style="color: var(--gold); margin-bottom: 15px;">Follow Kami</h6>
+                    <div class="d-flex gap-2">
+                        <a href="https://facebook.com/situneo" target="_blank" class="social-btn" style="width: 45px; height: 45px; background: rgba(255,180,0,0.15);
+                           border: 1px solid var(--gold); border-radius: 12px; display: flex; align-items: center;
+                           justify-content: center; color: var(--gold); text-decoration: none; transition: all 0.3s;">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/situneo" target="_blank" class="social-btn" style="width: 45px; height: 45px; background: rgba(255,180,0,0.15);
+                           border: 1px solid var(--gold); border-radius: 12px; display: flex; align-items: center;
+                           justify-content: center; color: var(--gold); text-decoration: none; transition: all 0.3s;">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@situneo" target="_blank" class="social-btn" style="width: 45px; height: 45px; background: rgba(255,180,0,0.15);
+                           border: 1px solid var(--gold); border-radius: 12px; display: flex; align-items: center;
+                           justify-content: center; color: var(--gold); text-decoration: none; transition: all 0.3s;">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                        <a href="https://youtube.com/@situneo" target="_blank" class="social-btn" style="width: 45px; height: 45px; background: rgba(255,180,0,0.15);
+                           border: 1px solid var(--gold); border-radius: 12px; display: flex; align-items: center;
+                           justify-content: center; color: var(--gold); text-decoration: none; transition: all 0.3s;">
+                            <i class="bi bi-youtube"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">
-                        &copy; <?= date('Y') ?> <strong><?= COMPANY_NAME ?></strong>. All Rights Reserved.
-                    </p>
-                    <p class="small mb-0 mt-1">
-                        NIB: <?= COMPANY_NIB ?> | NPWP: <?= COMPANY_NPWP ?>
-                    </p>
-                </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                    <ul class="footer-bottom-links">
-                        <li><a href="/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service">Terms of Service</a></li>
-                        <li><a href="/sitemap">Sitemap</a></li>
-                    </ul>
-                </div>
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-4">
+                <h5 style="color: var(--gold); font-weight: 700; margin-bottom: 1.5rem;">Menu Cepat</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="/" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i> Beranda
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/about" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i> Tentang Kami
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/services" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i> Layanan
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/portfolio" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i> Demo Website
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/pricing" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i> Harga Paket
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/contact" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i> Hubungi
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/calculator" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-chevron-right" style="font-size: 0.8rem;"></i> Hitung Harga
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-4">
+                <h5 style="color: var(--gold); font-weight: 700; margin-bottom: 1.5rem;">Layanan Populer</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="/services#website" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-check-circle" style="font-size: 0.9rem;"></i> Bikin Website
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/services#seo" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-check-circle" style="font-size: 0.9rem;"></i> SEO & Digital Marketing
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/services#ecommerce" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-check-circle" style="font-size: 0.9rem;"></i> Toko Online
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/services#design" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-check-circle" style="font-size: 0.9rem;"></i> Design Logo
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/services#chatbot" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-check-circle" style="font-size: 0.9rem;"></i> Robot Chat AI
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/services#custom" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-check-circle" style="font-size: 0.9rem;"></i> Custom Development
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Account & Legal -->
+            <div class="col-lg-3 col-md-4">
+                <h5 style="color: var(--gold); font-weight: 700; margin-bottom: 1.5rem;">Akun</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="/auth/login" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-box-arrow-in-right" style="font-size: 0.9rem;"></i> Login
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/auth/register" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-person-plus" style="font-size: 0.9rem;"></i> Daftar Akun
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/client/dashboard" style="color: var(--text-light); text-decoration: none; transition: color 0.3s;">
+                            <i class="bi bi-speedometer2" style="font-size: 0.9rem;"></i> Dashboard
+                        </a>
+                    </li>
+                </ul>
+
+                <h6 style="color: var(--gold); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600;">Legal</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="/privacy-policy" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;">
+                            <i class="bi bi-shield" style="font-size: 0.8rem;"></i> Privacy Policy
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="/terms-of-service" style="color: var(--text-light); text-decoration: none; font-size: 0.9rem;">
+                            <i class="bi bi-file-text" style="font-size: 0.8rem;"></i> Terms of Service
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr style="border-color: rgba(255,180,0,0.2); margin: 2rem 0;">
+
+        <!-- Copyright -->
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">
+                    &copy; <?= date('Y') ?> <strong style="color: var(--gold);">SITUNEO DIGITAL</strong>. All Rights Reserved.
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p style="color: var(--text-light); margin: 0; font-size: 0.95rem;">
+                    Made with <i class="bi bi-heart-fill" style="color: #FF0000;"></i> in Jakarta, Indonesia
+                </p>
             </div>
         </div>
     </div>
 </footer>
+
+<style>
+    footer a:hover {
+        color: var(--gold) !important;
+        padding-left: 5px;
+    }
+
+    .social-btn:hover {
+        background: var(--gradient-gold) !important;
+        transform: translateY(-3px);
+        color: var(--dark-blue) !important;
+    }
+</style>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

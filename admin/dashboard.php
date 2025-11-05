@@ -276,12 +276,16 @@ if (DEMO_MODE) {
                         <?php
                         $rank = 1;
                         foreach ($top_freelancers as $freelancer):
-                            $tier_badge = match($freelancer['tier']) {
-                                'tier_3' => '<span class="badge bg-success">Tier 3 (50%)</span>',
-                                'tier_2' => '<span class="badge bg-info">Tier 2 (40%)</span>',
-                                'tier_1' => '<span class="badge bg-secondary">Tier 1 (30%)</span>',
-                                default => '<span class="badge bg-secondary">New</span>'
-                            };
+                            // Tier badge (PHP 7.4 compatible)
+                            if ($freelancer['tier'] === 'tier_3') {
+                                $tier_badge = '<span class="badge bg-success">Tier 3 (50%)</span>';
+                            } elseif ($freelancer['tier'] === 'tier_2') {
+                                $tier_badge = '<span class="badge bg-info">Tier 2 (40%)</span>';
+                            } elseif ($freelancer['tier'] === 'tier_1') {
+                                $tier_badge = '<span class="badge bg-secondary">Tier 1 (30%)</span>';
+                            } else {
+                                $tier_badge = '<span class="badge bg-secondary">New</span>';
+                            }
                         ?>
                         <tr>
                             <td>

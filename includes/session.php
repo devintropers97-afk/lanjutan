@@ -54,18 +54,45 @@ function displayFlash() {
     return $html;
 }
 
-function setUserSession($user) {
-    $_SESSION['user_id'] = $user['id'];
-    $_SESSION['user_name'] = $user['name'];
-    $_SESSION['user_email'] = $user['email'];
-    $_SESSION['user_role'] = $user['role'];
+function setUserSession($user, $remember = false) {
+    $_SESSION['user_id'] = $user['user_id'] ?? $user['id'] ?? 1;
+    $_SESSION['user_name'] = $user['full_name'] ?? $user['name'] ?? 'Demo User';
+    $_SESSION['user_email'] = $user['email'] ?? 'demo@situneo.my.id';
+    $_SESSION['user_role'] = $user['role'] ?? 'client';
     $_SESSION['user_avatar'] = $user['avatar'] ?? null;
     $_SESSION['logged_in_at'] = time();
-    logActivity($user['id'], 'User logged in');
+
+    // Set remember me cookie if requested
+    if ($remember) {
+        $token = bin2hex(random_bytes(32));
+        setcookie('remember_token', $token, time() + (86400 * 30), '/', '', true, true);
+    }
+
+    // Log activity only if not in demo mode or if database is available
+    if (!defined('DEMO_MODE') || !DEMO_MODE) {
+        logActivity($user['user_id'] ?? $user['id'], 'User logged in');
+    }
 }
 
 function getCurrentUser() {
     if (!isLoggedIn()) return null;
+
+    // DEMO MODE: Return demo user data
+    if (defined('DEMO_MODE') && DEMO_MODE) {
+        return [
+            'id' => $_SESSION['user_id'] ?? 1,
+            'full_name' => $_SESSION['user_name'] ?? 'Demo User',
+            'email' => $_SESSION['user_email'] ?? 'demo@situneo.my.id',
+            'role' => $_SESSION['user_role'] ?? 'client',
+            'avatar' => $_SESSION['user_avatar'] ?? null,
+            'company_name' => 'Demo Company',
+            'phone' => '+62 812-3456-7890',
+            'is_email_verified' => 1,
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+    }
+
+    // Real database query
     global $pdo;
     $sql = "SELECT u.*, up.company_name FROM users u LEFT JOIN user_profiles up ON u.id = up.user_id WHERE u.id = ?";
     return db_fetch($sql, [$_SESSION['user_id']]);
