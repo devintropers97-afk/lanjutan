@@ -1,4 +1,11 @@
 <?php
+// Load dependencies
+require_once __DIR__ . '/../config/app.php';
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/functions.php';
+require_once __DIR__ . '/security.php';
+require_once __DIR__ . '/session.php';
+
 // Admin-only access
 requireLogin();
 requireAdmin();

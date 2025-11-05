@@ -87,6 +87,36 @@ function checkSessionTimeout() {
     }
 }
 
+/**
+ * Check and handle remember me cookie
+ */
+function checkRememberMe() {
+    if (!isLoggedIn() && isset($_COOKIE['remember_token'])) {
+        global $pdo;
+        $token = $_COOKIE['remember_token'];
+
+        $sql = "SELECT user_id FROM remember_tokens WHERE token = ? AND expires_at > NOW()";
+        $result = db_fetch($sql, [$token]);
+
+        if ($result) {
+            // Auto login user
+            $user = db_fetch("SELECT * FROM users WHERE id = ?", [$result['user_id']]);
+            if ($user) {
+                setUserSession($user);
+            }
+        }
+    }
+}
+
+/**
+ * Update last activity timestamp
+ */
+function updateLastActivity() {
+    if (isLoggedIn()) {
+        $_SESSION['last_activity'] = time();
+    }
+}
+
 checkSessionTimeout();
 checkRememberMe();
 updateLastActivity();
