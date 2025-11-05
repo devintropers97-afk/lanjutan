@@ -70,6 +70,7 @@ $routes = [
 
     // Admin Dashboard
     'admin' => 'admin/dashboard.php',
+    'admin/login' => 'admin/login.php',
     'admin/dashboard' => 'admin/dashboard.php',
     'admin/users' => 'admin/users.php',
     'admin/orders' => 'admin/orders.php',
