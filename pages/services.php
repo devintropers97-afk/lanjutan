@@ -6,6 +6,26 @@ $pageDescription = 'Jasa digital marketing lengkap mulai Rp 350rb. Website, SEO,
 // Include header
 include __DIR__ . '/../includes/header.php';
 
+// Services with detail pages (mapping service name to slug)
+$services_with_details = [
+    'Landing Page' => 'landing-page',
+    'Company Profile' => 'company-profile',
+    'Toko Online / E-Commerce' => 'toko-online',
+    'Website Pinjaman Online (Fintech)' => 'website-pinjol',
+    'Website Sekolah/Kampus' => 'website-sekolah',
+    'Website UMKM' => 'website-umkm'
+];
+
+// Helper function to check if service has detail page
+function hasDetailPage($serviceName, $detailsMap) {
+    return isset($detailsMap[$serviceName]);
+}
+
+// Helper function to get service slug
+function getServiceSlug($serviceName, $detailsMap) {
+    return $detailsMap[$serviceName] ?? null;
+}
+
 // Multi-language text
 $text = [
     'id' => [
@@ -38,17 +58,19 @@ $t = $text[$lang];
 if (DEMO_MODE) {
     $services_by_division = [
         'Website Development' => [
-            ['name' => 'Landing Page', 'price' => 350000, 'icon' => 'file-earmark-text', 'desc' => 'Single page website untuk promosi produk/layanan', 'popular' => false],
-            ['name' => 'Company Profile', 'price' => 1500000, 'icon' => 'building', 'desc' => 'Website profil perusahaan profesional dengan 5+ halaman', 'popular' => true],
-            ['name' => 'Toko Online / E-Commerce', 'price' => 2000000, 'icon' => 'cart', 'desc' => 'Platform jual beli online lengkap dengan cart & payment gateway', 'popular' => true],
+            ['name' => 'Landing Page', 'price' => 150000, 'icon' => 'file-earmark-text', 'desc' => 'Website satu halaman untuk promosi produk/layanan - Sewa 150rb/bln atau Beli 1,5jt', 'popular' => true],
+            ['name' => 'Website UMKM', 'price' => 150000, 'icon' => 'shop', 'desc' => 'Website terjangkau untuk UMKM Go Digital - Sewa 150rb/bln atau Beli 1,8jt', 'popular' => true],
+            ['name' => 'Company Profile', 'price' => 300000, 'icon' => 'building', 'desc' => 'Website profil perusahaan profesional 5-8 halaman - Sewa 300rb/bln atau Beli 3,5jt', 'popular' => true],
+            ['name' => 'Toko Online / E-Commerce', 'price' => 500000, 'icon' => 'cart', 'desc' => 'Platform jual beli online lengkap - Sewa 500rb/bln atau Beli 6jt', 'popular' => true],
+            ['name' => 'Website Sekolah/Kampus', 'price' => 400000, 'icon' => 'mortarboard', 'desc' => 'Website institusi pendidikan lengkap - Sewa 400rb/bln atau Beli 4,5jt', 'popular' => false],
+            ['name' => 'Website Pinjaman Online (Fintech)', 'price' => 2000000, 'icon' => 'cash-coin', 'desc' => 'Platform pinjaman online sesuai regulasi OJK - Sewa 2jt/bln atau Beli 25jt', 'popular' => false],
             ['name' => 'Website Portal Berita', 'price' => 3000000, 'icon' => 'newspaper', 'desc' => 'Portal berita dengan sistem admin dan kategori lengkap', 'popular' => false],
             ['name' => 'Website Membership', 'price' => 2500000, 'icon' => 'people', 'desc' => 'Website dengan sistem member dan login area', 'popular' => false],
             ['name' => 'Blog Personal/Profesional', 'price' => 800000, 'icon' => 'journal-text', 'desc' => 'Blog dengan CMS untuk posting artikel', 'popular' => false],
-            ['name' => 'Website Sekolah/Kampus', 'price' => 2000000, 'icon' => 'mortarboard', 'desc' => 'Website institusi pendidikan lengkap', 'popular' => false],
             ['name' => 'Website Restoran/Cafe', 'price' => 1200000, 'icon' => 'cup-straw', 'desc' => 'Website dengan menu digital dan order online', 'popular' => false],
             ['name' => 'Website Property', 'price' => 2500000, 'icon' => 'house', 'desc' => 'Listing property dengan search dan filter', 'popular' => false],
             ['name' => 'Website Event/Tiket', 'price' => 3000000, 'icon' => 'ticket', 'desc' => 'Platform booking tiket event online', 'popular' => false],
-            ['name' => 'Marketplace Custom', 'price' => 5000000, 'icon' => 'shop', 'desc' => 'Marketplace multi-vendor seperti Tokopedia/Shopee', 'popular' => false],
+            ['name' => 'Marketplace Custom', 'price' => 5000000, 'icon' => 'shop-window', 'desc' => 'Marketplace multi-vendor seperti Tokopedia/Shopee', 'popular' => false],
             ['name' => 'Booking System', 'price' => 2000000, 'icon' => 'calendar-check', 'desc' => 'Sistem booking untuk hotel, salon, klinik, dll', 'popular' => false],
         ],
         'SEO & Digital Marketing' => [
@@ -209,15 +231,33 @@ if (DEMO_MODE) {
                 <h3><?= $service['name'] ?></h3>
                 <p class="text-light"><?= $service['desc'] ?></p>
 
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                    <div>
-                        <small class="text-muted"><?= $t['starting_from'] ?></small>
-                        <div class="text-gold fw-bold fs-5"><?= formatRupiah($service['price']) ?></div>
+                <div class="mt-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div>
+                            <small class="text-muted"><?= $t['starting_from'] ?></small>
+                            <div class="text-gold fw-bold fs-5"><?= formatRupiah($service['price']) ?></div>
+                        </div>
                     </div>
+
+                    <?php if (hasDetailPage($service['name'], $services_with_details)): ?>
+                    <!-- Service has detail page - show both buttons -->
+                    <div class="d-grid gap-2">
+                        <a href="/service/<?= getServiceSlug($service['name'], $services_with_details) ?>"
+                           class="btn btn-sm btn-outline-gold">
+                            <i class="bi bi-info-circle me-1"></i> Lihat Detail & Harga
+                        </a>
+                        <a href="/calculator?service=<?= urlencode($service['name']) ?>"
+                           class="btn btn-sm btn-gold">
+                            <?= $t['btn_request'] ?> <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                    <?php else: ?>
+                    <!-- No detail page - show only request button -->
                     <a href="/calculator?service=<?= urlencode($service['name']) ?>"
-                       class="btn btn-sm btn-gold">
+                       class="btn btn-sm btn-gold w-100">
                         <?= $t['btn_request'] ?> <i class="bi bi-arrow-right ms-1"></i>
                     </a>
+                    <?php endif; ?>
                 </div>
             </div>
             <?php

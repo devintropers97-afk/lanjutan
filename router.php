@@ -89,8 +89,20 @@ $routes = [
     'admin/settings' => 'admin/settings.php',
 ];
 
+// Check for service detail pages (pattern: service/[slug])
+if (preg_match('#^service/([a-z0-9-]+)$#', $uri, $matches)) {
+    $_GET['service'] = $matches[1];
+    $file = __DIR__ . '/pages/service-detail.php';
+
+    if (file_exists($file)) {
+        require_once $file;
+    } else {
+        http_response_code(404);
+        echo "404 - Service detail page not found";
+    }
+}
 // Check if route exists
-if (array_key_exists($uri, $routes)) {
+elseif (array_key_exists($uri, $routes)) {
     $file = __DIR__ . '/' . $routes[$uri];
 
     if (file_exists($file)) {
