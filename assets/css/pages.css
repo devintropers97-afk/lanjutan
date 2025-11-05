@@ -815,3 +815,42 @@
 .cursor-pointer {
     cursor: pointer;
 }
+
+/* ===== AUTH PAGES ===== */
+.auth-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 50px;
+}
+
+.auth-card {
+    background: linear-gradient(135deg, rgba(30, 92, 153, 0.2) 0%, rgba(15, 48, 87, 0.3) 100%);
+    border: 2px solid rgba(255, 180, 0, 0.2);
+    border-radius: var(--radius-2xl);
+    padding: 3rem;
+    box-shadow: var(--shadow-2xl);
+}
+
+.password-strength {
+    margin-top: 0.5rem;
+}
+
+.verification-success .success-icon,
+.verification-error .error-icon {
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
