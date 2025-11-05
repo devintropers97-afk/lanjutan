@@ -1,3 +1,9 @@
+<?php
+// Load reCAPTCHA config if not already loaded
+if (!function_exists('get_recaptcha_html')) {
+    require_once __DIR__ . '/../config/recaptcha.php';
+}
+?>
 <!DOCTYPE html>
 <html lang="<?= $lang ?? 'id' ?>">
 <head>
