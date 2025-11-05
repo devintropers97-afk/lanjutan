@@ -1,154 +1,143 @@
 <?php
+/**
+ * FREELANCER DASHBOARD - V2.0
+ * Affiliate Marketing / Sales Agent Dashboard
+ * Freelancers cari client & dapat komisi via referral
+ */
+
 $page_id = 'dashboard';
 $pageTitle = 'Freelancer Dashboard - SITUNEO DIGITAL';
-$pageDescription = 'Manage your freelance projects and earnings';
+$pageDescription = 'Manage your referrals and track your commission';
 
 include __DIR__ . '/../includes/freelancer-header.php';
 
-$pageHeading = 'Welcome, ' . $current_user['full_name'] . '!';
-
-// Demo data
-$earnings = [
-    'today' => 450000,
-    'this_week' => 2100000,
-    'this_month' => 5000000,
-    'total' => 12500000,
+// Demo data untuk freelancer (akan diganti dengan real data dari database)
+$freelancer_stats = [
+    'tier' => 'tier_2',
+    'tier_name' => 'Tier 2',
+    'commission_rate' => 40,
+    'orders_this_month' => 18,
+    'target_next_tier' => 25,
+    'progress_percentage' => 72, // 18/25
+    'total_referrals' => 42,
+    'total_orders' => 156,
+    'commission_this_month' => 7200000,
+    'total_earnings' => 62400000,
+    'available_balance' => 15400000,
+    'pending_balance' => 2800000,
+    'withdrawn_total' => 44200000,
 ];
 
-$tier_info = [
-    'current' => 2,
-    'name' => 'PRO',
-    'rate' => 40,
-    'monthly_orders' => 15,
-    'next_tier_orders' => 50,
-    'progress' => 30, // 15/50 = 30%
-];
-
-$active_projects = [
+$recent_referrals = [
     [
-        'order_id' => 'ORD-2025-001',
-        'client' => 'John Doe',
-        'service' => 'Company Profile Website',
-        'amount' => 1500000,
-        'commission' => 600000, // 40%
-        'progress' => 65,
-        'deadline' => '2025-01-25',
-        'status' => 'in-progress',
+        'client_name' => 'Budi Santoso',
+        'email' => 'budi@example.com',
+        'phone' => '081234567890',
+        'order' => 'Website UMKM',
+        'status' => 'completed',
+        'commission' => 750000,
+        'date' => '2025-11-01',
     ],
     [
-        'order_id' => 'ORD-2025-012',
-        'client' => 'Jane Smith',
-        'service' => 'Landing Page Design',
-        'amount' => 800000,
-        'commission' => 320000, // 40%
-        'progress' => 40,
-        'deadline' => '2025-01-28',
-        'status' => 'in-progress',
+        'client_name' => 'Ani Lestari',
+        'email' => 'ani@example.com',
+        'phone' => '081345678901',
+        'order' => 'Branding Paket',
+        'status' => 'processing',
+        'commission' => 1600000,
+        'date' => '2025-11-03',
     ],
     [
-        'order_id' => 'ORD-2025-015',
-        'client' => 'ABC Company',
-        'service' => 'SEO Optimization',
-        'amount' => 500000,
-        'commission' => 200000, // 40%
-        'progress' => 20,
-        'deadline' => '2025-02-05',
-        'status' => 'in-progress',
+        'client_name' => 'Toko Jaya',
+        'email' => 'toko@example.com',
+        'phone' => '082134567890',
+        'order' => 'Toko Online',
+        'status' => 'pending',
+        'commission' => 2000000,
+        'date' => '2025-11-05',
     ],
 ];
 
-$recent_payments = [
-    ['order_id' => 'ORD-2025-008', 'service' => 'E-Commerce Website', 'amount' => 2200000, 'date' => '2025-01-12 14:00:00'],
-    ['order_id' => 'ORD-2025-003', 'service' => 'Mobile App UI', 'amount' => 1600000, 'date' => '2025-01-10 16:30:00'],
-    ['order_id' => 'ORD-2024-180', 'service' => 'Logo Design', 'amount' => 200000, 'date' => '2025-01-08 10:00:00'],
-];
-
-$performance_stats = [
-    'projects_completed' => 28,
-    'avg_rating' => 4.8,
-    'on_time_delivery' => 96,
-    'client_satisfaction' => 98,
-];
+$user_referral_code = $current_user['referral_code'] ?? strtoupper(substr($current_user['name'], 0, 4)) . date('Y');
+$referral_link = 'https://situneo.my.id/ref/' . $user_referral_code;
 
 ?>
 
-<!-- Welcome Banner -->
+<!-- Tier Progress Banner -->
 <div class="card-premium mb-4" style="background: var(--gradient-gold); color: var(--dark-blue);">
     <div class="row align-items-center">
         <div class="col-lg-8">
-            <h3 class="mb-3">
-                <i class="bi bi-trophy-fill me-2"></i>
-                You're a PRO Freelancer!
-            </h3>
+            <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-trophy-fill me-2" style="font-size: 2.5rem;"></i>
+                <div>
+                    <h3 class="mb-0">Current Tier: <?= $freelancer_stats['tier_name'] ?></h3>
+                    <p class="mb-0">Komisi: <strong><?= $freelancer_stats['commission_rate'] ?>%</strong> per order</p>
+                </div>
+            </div>
+
             <p class="mb-3">
-                You're earning <strong>40% commission</strong> on all projects. Complete <?= $tier_info['next_tier_orders'] - $tier_info['monthly_orders'] ?> more orders this month to reach EXPERT tier (50% commission)!
+                <strong><?= $freelancer_stats['orders_this_month'] ?> / <?= $freelancer_stats['target_next_tier'] ?> orders</strong> bulan ini
+                - Butuh <strong><?= $freelancer_stats['target_next_tier'] - $freelancer_stats['orders_this_month'] ?> order lagi</strong> untuk naik ke Tier 3 (50% komisi)!
             </p>
-            <div class="progress" style="height: 25px; background: rgba(15, 48, 87, 0.3);">
-                <div class="progress-bar" style="width: <?= $tier_info['progress'] ?>%; background: var(--dark-blue);">
-                    <?= $tier_info['monthly_orders'] ?> / <?= $tier_info['next_tier_orders'] ?> orders
+
+            <div class="progress" style="height: 30px; background: rgba(15, 48, 87, 0.3);">
+                <div class="progress-bar" style="width: <?= $freelancer_stats['progress_percentage'] ?>%; background: var(--dark-blue); font-weight: bold; font-size: 1rem;">
+                    <?= $freelancer_stats['progress_percentage'] ?>%
                 </div>
             </div>
         </div>
         <div class="col-lg-4 text-center">
-            <i class="bi bi-trophy-fill" style="font-size: 6rem; opacity: 0.5;"></i>
+            <i class="bi bi-graph-up-arrow" style="font-size: 8rem; opacity: 0.3;"></i>
         </div>
     </div>
 </div>
 
-<!-- Earnings Cards -->
+<!-- Stats Cards -->
 <div class="row g-3 mb-4">
     <div class="col-lg-3 col-md-6">
-        <div class="stat-card">
-            <div class="d-flex align-items-center">
-                <div class="stat-icon me-3 bg-info bg-opacity-25">
-                    <i class="bi bi-calendar-day text-info"></i>
-                </div>
-                <div>
-                    <div class="stat-label">Today</div>
-                    <div class="stat-value"><?= formatRupiah($earnings['today']) ?></div>
-                </div>
+        <div class="stat-card bg-primary">
+            <div class="stat-icon">
+                <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value"><?= $freelancer_stats['total_referrals'] ?></div>
+                <div class="stat-label">Total Referrals</div>
             </div>
         </div>
     </div>
 
     <div class="col-lg-3 col-md-6">
-        <div class="stat-card">
-            <div class="d-flex align-items-center">
-                <div class="stat-icon me-3 bg-success bg-opacity-25">
-                    <i class="bi bi-calendar-week text-success"></i>
-                </div>
-                <div>
-                    <div class="stat-label">This Week</div>
-                    <div class="stat-value"><?= formatRupiah($earnings['this_week']) ?></div>
-                </div>
+        <div class="stat-card bg-success">
+            <div class="stat-icon">
+                <i class="bi bi-bag-check-fill"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value"><?= $freelancer_stats['total_orders'] ?></div>
+                <div class="stat-label">Total Orders (Lifetime)</div>
             </div>
         </div>
     </div>
 
     <div class="col-lg-3 col-md-6">
-        <div class="stat-card">
-            <div class="d-flex align-items-center">
-                <div class="stat-icon me-3 bg-warning bg-opacity-25">
-                    <i class="bi bi-calendar-month text-warning"></i>
-                </div>
-                <div>
-                    <div class="stat-label">This Month</div>
-                    <div class="stat-value"><?= formatRupiah($earnings['this_month']) ?></div>
-                </div>
+        <div class="stat-card bg-warning">
+            <div class="stat-icon">
+                <i class="bi bi-calendar-month"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value"><?= formatRupiah($freelancer_stats['commission_this_month']) ?></div>
+                <div class="stat-label">Komisi Bulan Ini</div>
             </div>
         </div>
     </div>
 
     <div class="col-lg-3 col-md-6">
-        <div class="stat-card">
-            <div class="d-flex align-items-center">
-                <div class="stat-icon me-3" style="background: var(--gradient-gold);">
-                    <i class="bi bi-cash-stack" style="color: var(--dark-blue);"></i>
-                </div>
-                <div>
-                    <div class="stat-label">Total Earnings</div>
-                    <div class="stat-value"><?= formatRupiah($earnings['total']) ?></div>
-                </div>
+        <div class="stat-card" style="background: var(--gradient-gold); color: var(--dark-blue);">
+            <div class="stat-icon" style="background: rgba(15, 48, 87, 0.2); color: var(--dark-blue);">
+                <i class="bi bi-wallet2"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value" style="color: var(--dark-blue);"><?= formatRupiah($freelancer_stats['available_balance']) ?></div>
+                <div class="stat-label" style="color: var(--dark-blue); opacity: 0.8;">Saldo Tersedia</div>
             </div>
         </div>
     </div>
@@ -156,235 +145,217 @@ $performance_stats = [
 
 <!-- Main Content -->
 <div class="row g-4">
-    <!-- Left: Active Projects -->
+    <!-- Left: Recent Referrals & Quick Actions -->
     <div class="col-lg-8">
-        <div class="card-premium mb-4">
+        <!-- Komisi Balance -->
+        <div class="card-premium mb-4" style="background: linear-gradient(135deg, #198754 0%, #0d5132 100%);">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h5 class="text-white mb-3">
+                        <i class="bi bi-wallet2 me-2"></i>
+                        Saldo Komisi
+                    </h5>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <small class="text-white opacity-75">Available Balance</small>
+                            <h4 class="text-white mb-0"><?= formatRupiah($freelancer_stats['available_balance']) ?></h4>
+                        </div>
+                        <div class="col-6">
+                            <small class="text-white opacity-75">Pending Clearance</small>
+                            <h4 class="text-warning mb-0"><?= formatRupiah($freelancer_stats['pending_balance']) ?></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="/freelancer/withdrawals" class="btn btn-light btn-lg">
+                        <i class="bi bi-cash-coin me-2"></i>
+                        Tarik Komisi
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Referrals -->
+        <div class="card-premium">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h5 class="text-gold mb-0">
-                    <i class="bi bi-kanban me-2"></i>
-                    Active Projects (<?= count($active_projects) ?>)
+                    <i class="bi bi-person-hearts me-2"></i>
+                    Recent Referrals
                 </h5>
-                <a href="/freelancer/projects" class="btn btn-sm btn-outline-gold">
+                <a href="/freelancer/referrals" class="btn btn-sm btn-outline-gold">
                     View All <i class="bi bi-arrow-right ms-1"></i>
                 </a>
             </div>
 
-            <?php if (empty($active_projects)): ?>
+            <?php if (empty($recent_referrals)): ?>
             <div class="text-center py-5">
                 <i class="bi bi-inbox display-4 text-muted mb-3"></i>
-                <p class="text-light">No active projects</p>
-                <small class="text-muted">New projects will appear here when assigned by admin</small>
+                <p class="text-light">Belum ada referral</p>
+                <small class="text-muted">Share link referral Anda untuk mulai dapat komisi!</small>
             </div>
             <?php else: ?>
-            <?php foreach ($active_projects as $project): ?>
-            <div class="card bg-dark mb-3 p-3">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                    <div>
-                        <h6 class="text-light mb-1"><?= htmlspecialchars($project['service']) ?></h6>
-                        <div class="d-flex gap-2 align-items-center">
-                            <code class="text-muted small"><?= $project['order_id'] ?></code>
-                            <span class="badge bg-info">In Progress</span>
-                        </div>
-                    </div>
-                    <div class="text-end">
-                        <div class="text-gold fw-bold"><?= formatRupiah($project['commission']) ?></div>
-                        <small class="text-muted">Your commission (40%)</small>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <small class="text-muted">
-                        <i class="bi bi-person me-1"></i>Client: <strong class="text-light"><?= $project['client'] ?></strong>
-                        <span class="mx-2">|</span>
-                        <i class="bi bi-calendar me-1"></i>Deadline: <strong class="text-light"><?= date('d M Y', strtotime($project['deadline'])) ?></strong>
-                    </small>
-                </div>
-
-                <!-- Progress Bar -->
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between mb-1">
-                        <small class="text-light">Progress</small>
-                        <small class="text-gold"><?= $project['progress'] ?>%</small>
-                    </div>
-                    <div class="progress" style="height: 8px;">
-                        <div class="progress-bar bg-gold" style="width: <?= $project['progress'] ?>%"></div>
-                    </div>
-                </div>
-
-                <div class="d-flex gap-2">
-                    <button class="btn btn-sm btn-gold" onclick="updateProgress('<?= $project['order_id'] ?>')">
-                        <i class="bi bi-arrow-up-circle me-1"></i>
-                        Update Progress
-                    </button>
-                    <button class="btn btn-sm btn-outline-info" onclick="viewProject('<?= $project['order_id'] ?>')">
-                        <i class="bi bi-eye me-1"></i>
-                        Details
-                    </button>
-                    <button class="btn btn-sm btn-outline-success" onclick="contactClient('<?= $project['client'] ?>')">
-                        <i class="bi bi-chat-dots me-1"></i>
-                        Contact Client
-                    </button>
-                </div>
-            </div>
-            <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
-
-        <!-- Recent Payments -->
-        <div class="card-premium">
-            <h5 class="text-gold mb-4">
-                <i class="bi bi-cash-coin me-2"></i>
-                Recent Payments
-            </h5>
-
             <div class="table-responsive">
                 <table class="table table-dark table-hover">
                     <thead>
                         <tr>
-                            <th>Order ID</th>
-                            <th>Service</th>
-                            <th>Commission</th>
-                            <th>Date</th>
+                            <th>Client</th>
+                            <th>Order</th>
+                            <th>Status</th>
+                            <th>Komisi</th>
+                            <th>Tanggal</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($recent_payments as $payment): ?>
+                        <?php foreach ($recent_referrals as $ref): ?>
                         <tr>
-                            <td><code><?= $payment['order_id'] ?></code></td>
-                            <td class="text-light"><?= $payment['service'] ?></td>
-                            <td class="text-gold fw-bold"><?= formatRupiah($payment['amount']) ?></td>
-                            <td class="text-muted small"><?= timeAgo($payment['date']) ?></td>
+                            <td>
+                                <div>
+                                    <strong class="text-light"><?= htmlspecialchars($ref['client_name']) ?></strong><br>
+                                    <small class="text-muted"><?= htmlspecialchars($ref['email']) ?></small>
+                                </div>
+                            </td>
+                            <td class="text-light"><?= htmlspecialchars($ref['order']) ?></td>
+                            <td>
+                                <?php
+                                $badge_class = match($ref['status']) {
+                                    'completed' => 'success',
+                                    'processing' => 'info',
+                                    'pending' => 'warning',
+                                    default => 'secondary'
+                                };
+                                ?>
+                                <span class="badge bg-<?= $badge_class ?>"><?= ucfirst($ref['status']) ?></span>
+                            </td>
+                            <td class="text-gold fw-bold"><?= formatRupiah($ref['commission']) ?></td>
+                            <td class="text-muted small"><?= date('d M Y', strtotime($ref['date'])) ?></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
-
-            <div class="text-end mt-3">
-                <a href="/freelancer/commissions" class="text-gold">
-                    View All Commissions <i class="bi bi-arrow-right ms-1"></i>
-                </a>
-            </div>
+            <?php endif; ?>
         </div>
     </div>
 
-    <!-- Right: Sidebar -->
+    <!-- Right: Referral Tools & Quick Links -->
     <div class="col-lg-4">
-        <!-- Performance Stats -->
+        <!-- Referral Link -->
         <div class="card-premium mb-4">
             <h6 class="text-gold mb-3">
-                <i class="bi bi-graph-up me-2"></i>
-                Performance Stats
+                <i class="bi bi-link-45deg me-2"></i>
+                Your Referral Link
             </h6>
 
-            <div class="stat-item mb-3 pb-3 border-bottom border-gold border-opacity-25">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="text-light">Projects Completed</span>
-                    <strong class="text-gold"><?= $performance_stats['projects_completed'] ?></strong>
-                </div>
-                <div class="progress" style="height: 5px;">
-                    <div class="progress-bar bg-gold" style="width: 100%"></div>
-                </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="referralLink" value="<?= $referral_link ?>" readonly>
             </div>
 
-            <div class="stat-item mb-3 pb-3 border-bottom border-gold border-opacity-25">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="text-light">Average Rating</span>
-                    <strong class="text-warning">
-                        <?= $performance_stats['avg_rating'] ?> <i class="bi bi-star-fill"></i>
-                    </strong>
-                </div>
-                <div class="progress" style="height: 5px;">
-                    <div class="progress-bar bg-warning" style="width: <?= ($performance_stats['avg_rating'] / 5) * 100 ?>%"></div>
-                </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-gold btn-sm" onclick="copyReferralLink()">
+                    <i class="bi bi-clipboard me-2"></i>
+                    Copy Link
+                </button>
+                <a href="/freelancer/tools" class="btn btn-outline-gold btn-sm">
+                    <i class="bi bi-qr-code me-2"></i>
+                    Get QR Code & Materials
+                </a>
             </div>
 
-            <div class="stat-item mb-3 pb-3 border-bottom border-gold border-opacity-25">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="text-light">On-Time Delivery</span>
-                    <strong class="text-success"><?= $performance_stats['on_time_delivery'] ?>%</strong>
-                </div>
-                <div class="progress" style="height: 5px;">
-                    <div class="progress-bar bg-success" style="width: <?= $performance_stats['on_time_delivery'] ?>%"></div>
-                </div>
-            </div>
-
-            <div class="stat-item">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <span class="text-light">Client Satisfaction</span>
-                    <strong class="text-info"><?= $performance_stats['client_satisfaction'] ?>%</strong>
-                </div>
-                <div class="progress" style="height: 5px;">
-                    <div class="progress-bar bg-info" style="width: <?= $performance_stats['client_satisfaction'] ?>%"></div>
-                </div>
+            <div class="mt-3 p-3" style="background: rgba(255, 180, 0, 0.1); border-radius: 8px; border-left: 3px solid var(--gold);">
+                <small class="text-light">
+                    <i class="bi bi-info-circle me-1"></i>
+                    Share link ini ke calon client. Ketika mereka daftar & order, Anda dapat komisi otomatis!
+                </small>
             </div>
         </div>
 
-        <!-- Tier Benefits -->
+        <!-- Tier Info -->
         <div class="card-premium mb-4">
             <h6 class="text-gold mb-3">
                 <i class="bi bi-trophy me-2"></i>
-                Tier Benefits
+                Tier System
             </h6>
 
             <div class="tier-list">
-                <div class="tier-item mb-3 p-3" style="background: rgba(108, 117, 125, 0.2); border-left: 3px solid #6c757d;">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <strong class="text-secondary">STARTER</strong>
+                <div class="tier-item mb-2 p-3" style="background: rgba(108, 117, 125, 0.2); border-left: 3px solid #6c757d;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong class="text-light">Tier 1</strong><br>
+                            <small class="text-muted">0-10 orders/bulan</small>
+                        </div>
                         <span class="badge bg-secondary">30%</span>
                     </div>
-                    <small class="text-muted">0-10 orders/month</small>
                 </div>
 
-                <div class="tier-item mb-3 p-3" style="background: rgba(13, 202, 240, 0.2); border-left: 3px solid #0dcaf0;">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <strong class="text-info">PRO</strong>
+                <div class="tier-item mb-2 p-3" style="background: rgba(13, 202, 240, 0.2); border-left: 3px solid #0dcaf0;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong class="text-info">Tier 2</strong><br>
+                            <small class="text-light">10-25 orders/bulan</small>
+                        </div>
                         <span class="badge bg-info">40%</span>
                     </div>
-                    <small class="text-light">10-50 orders/month</small>
                     <div class="mt-2">
                         <i class="bi bi-check-circle-fill text-success me-1"></i>
                         <small class="text-success">Your current tier</small>
                     </div>
                 </div>
 
-                <div class="tier-item p-3" style="background: rgba(25, 135, 84, 0.2); border-left: 3px solid #198754;">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <strong class="text-success">EXPERT</strong>
-                        <span class="badge bg-success">50% + Bonus</span>
+                <div class="tier-item mb-2 p-3" style="background: rgba(25, 135, 84, 0.2); border-left: 3px solid #198754;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong class="text-success">Tier 3</strong><br>
+                            <small class="text-muted">25-50 orders/bulan</small>
+                        </div>
+                        <span class="badge bg-success">50%</span>
                     </div>
-                    <small class="text-muted">50+ orders/month</small>
+                </div>
+
+                <div class="tier-item p-3" style="background: var(--gradient-gold); border-left: 3px solid var(--gold);">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong style="color: var(--dark-blue);">Tier MAX</strong><br>
+                            <small style="color: var(--dark-blue); opacity: 0.8;">75+ orders/bulan</small>
+                        </div>
+                        <span class="badge bg-dark">55%</span>
+                    </div>
                     <div class="mt-2">
-                        <small class="text-warning">
-                            <i class="bi bi-star me-1"></i>
-                            +5% bonus on all orders!
+                        <small style="color: var(--dark-blue);">
+                            <i class="bi bi-star-fill me-1"></i>
+                            Top Performer Bonus!
                         </small>
                     </div>
                 </div>
+            </div>
+
+            <div class="mt-3">
+                <a href="/freelancer/tier" class="text-gold small">
+                    View Tier Details & History <i class="bi bi-arrow-right ms-1"></i>
+                </a>
             </div>
         </div>
 
         <!-- Quick Actions -->
         <div class="card-premium">
             <h6 class="text-gold mb-3">
-                <i class="bi bi-lightning me-2"></i>
+                <i class="bi bi-lightning-fill me-2"></i>
                 Quick Actions
             </h6>
 
             <div class="d-grid gap-2">
-                <a href="/freelancer/projects" class="btn btn-gold btn-sm">
-                    <i class="bi bi-kanban me-2"></i>
-                    View All Projects
+                <a href="/freelancer/demo-request" class="btn btn-gold btn-sm">
+                    <i class="bi bi-file-earmark-text me-2"></i>
+                    Request Demo untuk Client
                 </a>
-                <a href="/freelancer/withdrawals" class="btn btn-outline-success btn-sm">
-                    <i class="bi bi-cash-coin me-2"></i>
-                    Request Withdrawal
+                <a href="/freelancer/services" class="btn btn-outline-gold btn-sm">
+                    <i class="bi bi-grid-3x3-gap me-2"></i>
+                    Katalog Layanan (232+)
                 </a>
-                <a href="/freelancer/profile" class="btn btn-outline-info btn-sm">
-                    <i class="bi bi-person me-2"></i>
-                    Update Profile
+                <a href="/freelancer/analytics" class="btn btn-outline-info btn-sm">
+                    <i class="bi bi-graph-up me-2"></i>
+                    View Analytics
                 </a>
-                <a href="https://wa.me/6283173868915?text=Hello%20SITUNEO" target="_blank" class="btn btn-outline-success btn-sm">
+                <a href="https://wa.me/6283173868915?text=Halo%20Admin%20SITUNEO%2C%20saya%20freelancer%20<?= urlencode($current_user['name']) ?>" target="_blank" class="btn btn-outline-success btn-sm">
                     <i class="bi bi-whatsapp me-2"></i>
                     Contact Admin
                 </a>
@@ -394,30 +365,39 @@ $performance_stats = [
 </div>
 
 <script>
-function updateProgress(orderId) {
-    const progress = prompt('Enter progress percentage (0-100):');
-    if (progress && progress >= 0 && progress <= 100) {
-        alert(`Progress updated to ${progress}% for ${orderId}`);
-        location.reload();
-    }
-}
+function copyReferralLink() {
+    const linkInput = document.getElementById('referralLink');
+    linkInput.select();
+    linkInput.setSelectionRange(0, 99999); // For mobile devices
 
-function viewProject(orderId) {
-    alert(`Opening project details for ${orderId}...`);
-    window.location.href = `/freelancer/projects?id=${orderId}`;
-}
+    navigator.clipboard.writeText(linkInput.value).then(() => {
+        // Show success message
+        const btn = event.target.closest('button');
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<i class="bi bi-check-circle me-2"></i>Copied!';
+        btn.classList.add('btn-success');
+        btn.classList.remove('btn-gold');
 
-function contactClient(clientName) {
-    alert(`Opening chat with ${clientName}...`);
+        setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.classList.remove('btn-success');
+            btn.classList.add('btn-gold');
+        }, 2000);
+    }).catch(err => {
+        alert('Failed to copy: ' + err);
+    });
 }
 </script>
 
 <style>
 .stat-card {
-    background: var(--gradient-primary);
     padding: 1.5rem;
     border-radius: 12px;
+    color: white;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .stat-card:hover {
@@ -426,24 +406,30 @@ function contactClient(clientName) {
 }
 
 .stat-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 1.8rem;
+}
+
+.stat-content {
+    flex: 1;
 }
 
 .stat-value {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--gold);
+    line-height: 1.2;
 }
 
 .stat-label {
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.7);
+    opacity: 0.9;
+    margin-top: 0.25rem;
 }
 
 .tier-item {
@@ -452,7 +438,7 @@ function contactClient(clientName) {
 }
 
 .tier-item:hover {
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 </style>
 
