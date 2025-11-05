@@ -23,19 +23,50 @@ body {
 }
 
 /* ===== TYPOGRAPHY ===== */
+/* Body text uses Inter */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Headings use Plus Jakarta Sans */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    font-weight: var(--fw-bold);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: var(--fw-extrabold);
     line-height: 1.2;
     margin-bottom: var(--space-md);
 }
 
-h1 { font-size: clamp(2rem, 5vw, 4rem); }
-h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
-h4 { font-size: clamp(1.25rem, 2.5vw, 2rem); }
-h5 { font-size: var(--fs-xl); }
-h6 { font-size: var(--fs-lg); }
+/* Hero Title - Largest, gradient effect */
+h1 {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: var(--fw-black);
+}
+
+/* Section Title - Large, gradient effect */
+h2 {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-weight: var(--fw-extrabold);
+}
+
+/* Card Title */
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: var(--fw-bold);
+}
+
+h4 { font-size: clamp(1.25rem, 2.5vw, 2rem); font-weight: var(--fw-bold); }
+h5 { font-size: var(--fs-xl); font-weight: var(--fw-semibold); }
+h6 { font-size: var(--fs-lg); font-weight: var(--fw-semibold); }
+
+/* Gradient text effect for hero and section titles */
+.hero-title,
+.section-title {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: var(--fw-black);
+}
 
 p { margin-bottom: var(--space-md); }
 
@@ -149,6 +180,12 @@ a:hover {
     padding: 0.5rem 0;
     background: rgba(15, 48, 87, 0.98);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 10px rgba(255, 180, 0, 0.5));
 }
 
 .navbar-brand .brand-text {
@@ -332,7 +369,8 @@ section {
 
 /* ===== FOOTER ===== */
 .footer-premium {
-    background: var(--gradient-primary);
+    background: var(--gradient-dark);
+    border-top: 2px solid var(--gold);
     color: var(--white);
     margin-top: var(--space-4xl);
 }
@@ -368,23 +406,23 @@ section {
 }
 
 .social-link {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255, 180, 0, 0.1);
-    border: 1px solid rgba(255, 180, 0, 0.3);
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: rgba(255, 180, 0, 0.15);
+    border: 1px solid var(--gold);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
     font-size: var(--fs-lg);
-    transition: all var(--transition-base);
+    transition: var(--transition-transform);
 }
 
 .social-link:hover {
     background: var(--gradient-gold);
     color: var(--dark-blue);
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .footer-widget-title {
