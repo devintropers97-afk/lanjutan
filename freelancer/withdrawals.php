@@ -1,8 +1,13 @@
 <?php
+/**
+ * FREELANCER - WITHDRAWALS
+ * Request penarikan komisi yang sudah earned
+ */
+
 $page_id = 'withdrawals';
-$pageTitle = 'Withdrawal Requests - SITUNEO DIGITAL';
-$pageDescription = 'Request withdrawal of your earnings';
-$pageHeading = 'Withdrawal Requests';
+$pageTitle = 'Penarikan Komisi - SITUNEO DIGITAL';
+$pageDescription = 'Request withdrawal of your commission earnings';
+$pageHeading = 'Penarikan Komisi';
 
 include __DIR__ . '/../includes/freelancer-header.php';
 

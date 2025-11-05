@@ -103,39 +103,68 @@ $freelancer_stats = [
                 </li>
 
                 <li class="menu-section">
-                    <span class="text-muted small">PROJECTS & WORK</span>
+                    <span class="text-muted small">REFERRAL & CLIENTS</span>
                 </li>
 
                 <li>
-                    <a href="/freelancer/projects" class="<?= $page_id === 'projects' ? 'active' : '' ?>">
-                        <i class="bi bi-kanban"></i>
-                        <span>Assigned Projects</span>
-                        <?php if ($freelancer_stats['active_projects'] > 0): ?>
-                        <span class="badge bg-gold ms-auto"><?= $freelancer_stats['active_projects'] ?></span>
-                        <?php endif; ?>
+                    <a href="/freelancer/referrals" class="<?= $page_id === 'referrals' ? 'active' : '' ?>">
+                        <i class="bi bi-person-hearts"></i>
+                        <span>My Referrals</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="/freelancer/commissions" class="<?= $page_id === 'commissions' ? 'active' : '' ?>">
-                        <i class="bi bi-percent"></i>
-                        <span>Commission Tracking</span>
+                    <a href="/freelancer/demo-request" class="<?= $page_id === 'demo-request' ? 'active' : '' ?>">
+                        <i class="bi bi-file-earmark-text"></i>
+                        <span>Request Demo</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/freelancer/services" class="<?= $page_id === 'services' ? 'active' : '' ?>">
+                        <i class="bi bi-grid-3x3-gap"></i>
+                        <span>Katalog Layanan</span>
                     </a>
                 </li>
 
                 <li class="menu-section">
-                    <span class="text-muted small">EARNINGS</span>
+                    <span class="text-muted small">KOMISI & EARNINGS</span>
+                </li>
+
+                <li>
+                    <a href="/freelancer/tier" class="<?= $page_id === 'tier' ? 'active' : '' ?>">
+                        <i class="bi bi-trophy"></i>
+                        <span>Tier & Komisi</span>
+                    </a>
                 </li>
 
                 <li>
                     <a href="/freelancer/withdrawals" class="<?= $page_id === 'withdrawals' ? 'active' : '' ?>">
                         <i class="bi bi-cash-coin"></i>
-                        <span>Withdrawal Requests</span>
+                        <span>Penarikan Komisi</span>
                     </a>
                 </li>
 
                 <li class="menu-section">
-                    <span class="text-muted small">PROFILE</span>
+                    <span class="text-muted small">TOOLS & ANALYTICS</span>
+                </li>
+
+                <li>
+                    <a href="/freelancer/tools" class="<?= $page_id === 'tools' ? 'active' : '' ?>">
+                        <i class="bi bi-tools"></i>
+                        <span>Referral Tools</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/freelancer/analytics" class="<?= $page_id === 'analytics' ? 'active' : '' ?>">
+                        <i class="bi bi-graph-up"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+
+                <li class="menu-section">
+                    <span class="text-muted small">ACCOUNT</span>
                 </li>
 
                 <li>
@@ -146,8 +175,8 @@ $freelancer_stats = [
                 </li>
 
                 <li>
-                    <a href="/freelancer/portfolio" class="<?= $page_id === 'portfolio' ? 'active' : '' ?>">
-                        <i class="bi bi-briefcase"></i>
+                    <a href="/services" target="_blank" class="<?= $page_id === 'all-services' ? 'active' : '' ?>">
+                        <i class="bi bi-box-arrow-up-right"></i>
                         <span>My Portfolio</span>
                     </a>
                 </li>
