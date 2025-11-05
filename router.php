@@ -36,6 +36,13 @@ $routes = [
     'calculator' => 'pages/calculator.php',
     'contact' => 'pages/contact.php',
 
+    // Business Selection & Solutions
+    'pilih-bisnis' => 'pages/pilih-bisnis.php',
+    'solutions/toko-online' => 'pages/solutions/toko-online.php',
+    'solutions/resto-online' => 'pages/solutions/resto-online.php',
+    'solutions/company-profile' => 'pages/solutions/company-profile.php',
+    'solutions/klinik-online' => 'pages/solutions/klinik-online.php',
+
     // Authentication Pages
     'auth/login' => 'auth/login.php',
     'login' => 'auth/login.php',
