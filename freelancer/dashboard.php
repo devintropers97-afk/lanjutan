@@ -2,9 +2,10 @@
 $page_id = 'dashboard';
 $pageTitle = 'Freelancer Dashboard - SITUNEO DIGITAL';
 $pageDescription = 'Manage your freelance projects and earnings';
-$pageHeading = 'Welcome, ' . getCurrentUser()['full_name'] . '!';
 
 include __DIR__ . '/../includes/freelancer-header.php';
+
+$pageHeading = 'Welcome, ' . $current_user['full_name'] . '!';
 
 // Demo data
 $earnings = [

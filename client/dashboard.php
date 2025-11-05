@@ -2,9 +2,10 @@
 $page_id = 'dashboard';
 $pageTitle = 'My Dashboard - SITUNEO DIGITAL';
 $pageDescription = 'Client dashboard overview';
-$pageHeading = 'Welcome, ' . getCurrentUser()['full_name'] . '!';
 
 include __DIR__ . '/../includes/client-header.php';
+
+$pageHeading = 'Welcome, ' . $current_user['full_name'] . '!';
 
 // Demo data for client
 $stats = [

@@ -1,7 +1,7 @@
 <?php
 // Set page title
-$pageTitle = 'SITUNEO DIGITAL - Website Agency Terbaik & Termahal Se-Indonesia | FREE DEMO 24 JAM';
-$pageDescription = 'Website profesional mulai Rp 350rb/halaman. FREE DEMO 24 JAM - Lihat dulu, bayar kalau cocok! NIB Resmi. 500+ client puas.';
+$pageTitle = 'SITUNEO DIGITAL - Sewa Website Profesional Mulai 150rb/Bulan | FREE DEMO 24 JAM';
+$pageDescription = 'Sewa website profesional mulai Rp 150rb/bulan. FREE DEMO 24 JAM - Lihat dulu, bayar kalau cocok! NIB Resmi. 500+ client puas.';
 
 // Include header
 include __DIR__ . '/../includes/header.php';
@@ -9,10 +9,10 @@ include __DIR__ . '/../includes/header.php';
 // Multi-language text
 $text = [
     'id' => [
-        'hero_title' => 'Bikin Website Profesional',
-        'hero_title_highlight' => 'Cuma Rp 350rb/Halaman',
+        'hero_title' => 'Sewa Website Profesional',
+        'hero_title_highlight' => 'Mulai Rp 150rb/Bulan',
         'hero_subtitle' => 'FREE DEMO 24 JAM - Lihat Dulu Hasilnya, Bayar Kalau Cocok!',
-        'hero_desc' => 'Partner digital terpercaya sejak 2020. Sudah bantu 500+ bisnis sukses online dengan website profesional dan marketing digital.',
+        'hero_desc' => 'Partner digital terpercaya sejak 2020. Sudah bantu 500+ bisnis sukses online dengan sistem sewa website hemat dan berkualitas. Bisa juga beli putus!',
         'btn_demo' => 'COBA DEMO GRATIS',
         'btn_calculator' => 'HITUNG HARGA',
         'btn_whatsapp' => 'CHAT WHATSAPP',
@@ -25,10 +25,10 @@ $text = [
         'section_cta' => 'Siap Bikin Website Impian Anda?',
     ],
     'en' => [
-        'hero_title' => 'Professional Website',
-        'hero_title_highlight' => 'Only Rp 350k/Page',
+        'hero_title' => 'Rent Professional Website',
+        'hero_title_highlight' => 'Starting Rp 150k/Month',
         'hero_subtitle' => 'FREE 24H DEMO - See First, Pay If You Like!',
-        'hero_desc' => 'Trusted digital partner since 2020. Helped 500+ businesses succeed online!',
+        'hero_desc' => 'Trusted digital partner since 2020. Helped 500+ businesses succeed online with affordable website rental system. Also available for purchase!',
         'btn_demo' => 'TRY FREE DEMO',
         'btn_calculator' => 'CALCULATE PRICE',
         'btn_whatsapp' => 'CHAT WHATSAPP',
@@ -131,8 +131,8 @@ $t = $text[$lang];
                 <div class="about-feature-icon">
                     <i class="bi bi-currency-dollar"></i>
                 </div>
-                <h4>Harga Kompetitif</h4>
-                <p>Mulai Rp 350rb/halaman. Paket bundling lebih hemat!</p>
+                <h4>Harga Terjangkau</h4>
+                <p>Sewa mulai Rp 150rb/bulan. Bisa juga beli putus, paket bundling lebih hemat!</p>
             </div>
 
             <div class="about-feature-item card-premium" data-aos="fade-up" data-aos-delay="400">

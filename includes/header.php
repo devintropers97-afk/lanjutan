@@ -72,8 +72,10 @@ if (!function_exists('get_recaptcha_html')) {
 <!-- Loading Screen -->
 <div class="loading-screen" id="loadingScreen">
     <div class="loader-logo">
-        <img src="<?= ASSETS_URL ?>/images/logo.png" alt="SITUNEO">
+        <img src="https://situneo.my.id/logo" alt="SITUNEO DIGITAL" style="width: 120px; height: 120px; border-radius: 20px; margin-bottom: 20px;">
     </div>
+    <h3 class="loading-text text-gold mb-3" style="font-weight: 700;">SITUNEO DIGITAL</h3>
+    <p class="loading-tagline text-light mb-4" style="font-size: 1.1rem; opacity: 0.9;">Digital Harmony for a Modern World</p>
     <div class="spinner-border text-gold" role="status">
         <span class="visually-hidden">Loading...</span>
     </div>
