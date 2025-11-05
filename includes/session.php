@@ -79,16 +79,24 @@ function getCurrentUser() {
 
     // DEMO MODE: Return demo user data
     if (defined('DEMO_MODE') && DEMO_MODE) {
+        $userId = $_SESSION['user_id'] ?? 1;
+        $userName = $_SESSION['user_name'] ?? 'Demo User';
+        $role = $_SESSION['user_role'] ?? 'client';
+
         return [
-            'id' => $_SESSION['user_id'] ?? 1,
-            'full_name' => $_SESSION['user_name'] ?? 'Demo User',
+            'id' => $userId,
+            'full_name' => $userName,
+            'name' => $userName,
             'email' => $_SESSION['user_email'] ?? 'demo@situneo.my.id',
-            'role' => $_SESSION['user_role'] ?? 'client',
+            'role' => $role,
             'avatar' => $_SESSION['user_avatar'] ?? null,
             'company_name' => 'Demo Company',
             'phone' => '+62 812-3456-7890',
             'is_email_verified' => 1,
-            'created_at' => date('Y-m-d H:i:s')
+            'created_at' => date('Y-m-d H:i:s'),
+            'referral_code' => strtoupper(substr($userName, 0, 4)) . date('Y'),
+            'tier' => 'tier_2',
+            'commission_rate' => 40,
         ];
     }
 

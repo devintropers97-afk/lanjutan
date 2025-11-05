@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="col-lg-8">
         <div class="card-premium">
             <form method="POST" action="/freelancer/demo-request" id="demoRequestForm">
-                <input type="hidden" name="csrf_token" value="<?= generateCsrfToken() ?>">
+                <input type="hidden" name="csrf_token" value="<?= generateCSRFToken() ?>">
                 <input type="hidden" name="freelancer_id" value="<?= $current_user['id'] ?>">
                 <input type="hidden" name="referral_code" value="<?= $current_user['referral_code'] ?>">
 
