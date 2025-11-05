@@ -420,6 +420,85 @@
     width: calc(100% - 250px);
 }
 
+.dashboard-body {
+    background: var(--dark-blue);
+}
+
+.sidebar-header {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(255, 180, 0, 0.2);
+}
+
+.menu-section {
+    padding: 1rem 1rem 0.5rem;
+    margin-top: 1rem;
+}
+
+.sidebar-footer {
+    position: sticky;
+    bottom: 0;
+    padding: 1rem;
+    background: var(--dark-blue);
+    border-top: 2px solid rgba(255, 180, 0, 0.2);
+}
+
+.dashboard-header {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: var(--radius-xl);
+    margin-bottom: 2rem;
+}
+
+.dashboard-page-content {
+    min-height: calc(100vh - 200px);
+}
+
+.dashboard-footer {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 180, 0, 0.1);
+}
+
+.stat-card {
+    background: linear-gradient(135deg, rgba(30, 92, 153, 0.2) 0%, rgba(15, 48, 87, 0.3) 100%);
+    border: 2px solid rgba(255, 180, 0, 0.2);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    transition: all var(--transition-base);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(255, 180, 0, 0.2);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-gold);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--dark-blue);
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: var(--fw-extrabold);
+    color: var(--gold);
+    line-height: 1;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: var(--fs-sm);
+    margin-top: 0.5rem;
+}
+
 /* ===== TEAM CARDS ===== */
 .team-card {
     text-align: center;
