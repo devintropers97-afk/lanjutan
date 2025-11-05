@@ -641,7 +641,8 @@
 }
 
 .services-search-box input {
-    padding-left: 3.5rem;
+    padding-left: 1.5rem;
+    padding-right: 3.5rem;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 180, 0, 0.3);
     color: var(--white);
@@ -660,7 +661,7 @@
 
 .services-search-box i {
     position: absolute;
-    left: 1.5rem;
+    right: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.5rem;
@@ -688,7 +689,7 @@
 }
 
 .service-card-icon {
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: var(--gold);
     margin-bottom: 1rem;
 }
@@ -835,6 +836,16 @@
 .table-comparison td:first-child {
     text-align: left;
     font-weight: var(--fw-semibold);
+    color: var(--white);
+}
+
+.table-comparison td strong {
+    color: var(--white);
+    font-weight: var(--fw-bold);
+}
+
+.table-comparison td i {
+    font-size: 1.25rem;
 }
 
 .table-comparison .highlight {

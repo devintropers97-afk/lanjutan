@@ -156,6 +156,12 @@
 .bg-gradient-gold { background: var(--gradient-gold) !important; }
 .border-gold { border: var(--border-gold) !important; }
 
+/* Override Bootstrap's text-muted for dark theme visibility */
+.text-muted {
+    color: var(--gray-400) !important;
+    opacity: 0.9;
+}
+
 /* ===== DARK THEME (Default) ===== */
 body {
     --bg-primary: var(--dark-blue);
