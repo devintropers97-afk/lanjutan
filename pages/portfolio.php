@@ -1,7 +1,7 @@
 <?php
 // Set page title
 $pageTitle = 'Portfolio 500+ Project | Contoh Website SITUNEO DIGITAL';
-$pageDescription = 'Lihat 50+ contoh website nyata yang kami buat. Toko online, company profile, landing page, dan lainnya. FREE DEMO - coba dulu sebelum pesan!';
+$pageDescription = 'Lihat 60+ contoh website nyata yang kami buat. Toko online, company profile, landing page, fintech, UMKM, dan lainnya. FREE DEMO - coba dulu sebelum pesan!';
 
 // Include header
 include __DIR__ . '/../includes/header.php';
@@ -9,8 +9,8 @@ include __DIR__ . '/../includes/header.php';
 // Multi-language text
 $text = [
     'id' => [
-        'hero_title' => '50+ Demo Website Perfect',
-        'hero_subtitle' => 'Lihat Langsung Kualitas Kerja Kami - Semua Bisa Dicoba!',
+        'hero_title' => '60+ Demo Website Perfect',
+        'hero_subtitle' => 'Lihat Langsung Kualitas Kerja Kami - Semua Kategori Tersedia!',
         'filter_all' => 'Semua',
         'btn_view_demo' => 'Lihat Demo',
         'btn_order_similar' => 'Pesan Serupa',
@@ -18,8 +18,8 @@ $text = [
         'category' => 'Kategori',
     ],
     'en' => [
-        'hero_title' => '50+ Perfect Website Demos',
-        'hero_subtitle' => 'See Our Work Quality - Try Them All!',
+        'hero_title' => '60+ Perfect Website Demos',
+        'hero_subtitle' => 'See Our Work Quality - All Categories Available!',
         'filter_all' => 'All',
         'btn_view_demo' => 'View Demo',
         'btn_order_similar' => 'Order Similar',
@@ -96,12 +96,28 @@ if (DEMO_MODE) {
         ['id' => 44, 'name' => 'Homestay "Cozy Home"', 'category' => 'Hotel', 'image' => 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800', 'views' => 720, 'desc' => 'Homestay murah dan nyaman'],
         ['id' => 45, 'name' => 'Tour Guide "Explorer ID"', 'category' => 'Travel', 'image' => 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800', 'views' => 850, 'desc' => 'Jasa tour guide profesional'],
 
+        // Fintech / Pinjaman Online
+        ['id' => 46, 'name' => 'Pinjol "DanaCepat"', 'category' => 'Fintech', 'image' => 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800', 'views' => 2150, 'desc' => 'Platform pinjaman online sesuai regulasi OJK dengan sistem kredit scoring'],
+        ['id' => 47, 'name' => 'Fintech "KoperasiDigital"', 'category' => 'Fintech', 'image' => 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800', 'views' => 1840, 'desc' => 'Koperasi digital dengan sistem pinjaman anggota online'],
+        ['id' => 48, 'name' => 'P2P Lending "InvestasiKu"', 'category' => 'Fintech', 'image' => 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800', 'views' => 1670, 'desc' => 'Platform peer-to-peer lending untuk UMKM'],
+
+        // UMKM / Usaha Kecil
+        ['id' => 49, 'name' => 'Warung Kelontong "Bu Ani"', 'category' => 'UMKM', 'image' => 'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800', 'views' => 1450, 'desc' => 'Website warung kelontong dengan katalog produk dan WhatsApp order'],
+        ['id' => 50, 'name' => 'Toko Sembako "Sumber Rezeki"', 'category' => 'UMKM', 'image' => 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800', 'views' => 1320, 'desc' => 'Toko sembako dengan sistem online order dan delivery'],
+        ['id' => 51, 'name' => 'Jasa Laundry "Bersih Wangi"', 'category' => 'UMKM', 'image' => 'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=800', 'views' => 1180, 'desc' => 'Laundry UMKM dengan price list dan layanan antar jemput'],
+        ['id' => 52, 'name' => 'Catering Rumahan "Mama Cook"', 'category' => 'UMKM', 'image' => 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800', 'views' => 1540, 'desc' => 'Catering rumahan dengan menu paket lengkap'],
+        ['id' => 53, 'name' => 'Bengkel Motor "Jaya Teknik"', 'category' => 'UMKM', 'image' => 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800', 'views' => 990, 'desc' => 'Bengkel motor dengan price list dan booking service'],
+        ['id' => 54, 'name' => 'Toko Bangunan "Mandiri"', 'category' => 'UMKM', 'image' => 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800', 'views' => 870, 'desc' => 'Toko material bangunan dengan katalog produk'],
+
+        // Landing Page
+        ['id' => 55, 'name' => 'Landing Page Kursus "BelajarDesign"', 'category' => 'Landing Page', 'image' => 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800', 'views' => 1890, 'desc' => 'Landing page kursus desain grafis dengan lead capture'],
+        ['id' => 56, 'name' => 'Landing Page Properti "RumahIdaman"', 'category' => 'Landing Page', 'image' => 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800', 'views' => 1650, 'desc' => 'Landing page marketing properti perumahan'],
+        ['id' => 57, 'name' => 'Landing Page Event "TechConf 2025"', 'category' => 'Landing Page', 'image' => 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800', 'views' => 1420, 'desc' => 'Landing page event conference dengan tiket online'],
+
         // Others
-        ['id' => 46, 'name' => 'Wedding Organizer "DreamWedding"', 'category' => 'Event', 'image' => 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800', 'views' => 1340, 'desc' => 'Jasa wedding organizer lengkap'],
-        ['id' => 47, 'name' => 'Photography "PixelShot"', 'category' => 'Creative', 'image' => 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800', 'views' => 980, 'desc' => 'Jasa fotografi profesional dengan portfolio'],
-        ['id' => 48, 'name' => 'Florist "Bloom Garden"', 'category' => 'Retail', 'image' => 'https://images.unsplash.com/photo-1487070183336-b863922373d4?w=800', 'views' => 760, 'desc' => 'Toko bunga dengan delivery service'],
-        ['id' => 49, 'name' => 'Pet Shop "Happy Pets"', 'category' => 'Retail', 'image' => 'https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800', 'views' => 890, 'desc' => 'Toko hewan peliharaan dan grooming'],
-        ['id' => 50, 'name' => 'Barbershop "Gentlemen Cut"', 'category' => 'Service', 'image' => 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800', 'views' => 1050, 'desc' => 'Barbershop modern dengan booking online'],
+        ['id' => 58, 'name' => 'Wedding Organizer "DreamWedding"', 'category' => 'Event', 'image' => 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800', 'views' => 1340, 'desc' => 'Jasa wedding organizer lengkap'],
+        ['id' => 59, 'name' => 'Photography "PixelShot"', 'category' => 'Creative', 'image' => 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800', 'views' => 980, 'desc' => 'Jasa fotografi profesional dengan portfolio'],
+        ['id' => 60, 'name' => 'Florist "Bloom Garden"', 'category' => 'Retail', 'image' => 'https://images.unsplash.com/photo-1487070183336-b863922373d4?w=800', 'views' => 760, 'desc' => 'Toko bunga dengan delivery service'],
     ];
 
     // Get unique categories
