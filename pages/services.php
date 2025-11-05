@@ -187,19 +187,21 @@ if (DEMO_MODE) {
     </div>
 </section>
 
-<!-- FILTER TABS -->
+<!-- FILTER DROPDOWN -->
 <section class="services-filter-section">
     <div class="container">
-        <div class="services-filter" data-aos="fade-up">
-            <button class="filter-btn active" data-filter="all">
-                <i class="bi bi-grid-3x3-gap me-2"></i>
-                <?= $t['filter_all'] ?>
-            </button>
-            <?php foreach (array_keys($services_by_division) as $division): ?>
-            <button class="filter-btn" data-filter="<?= slugify($division) ?>">
-                <?= $division ?>
-            </button>
-            <?php endforeach; ?>
+        <div class="row justify-content-center" data-aos="fade-up">
+            <div class="col-md-6 col-lg-4">
+                <label for="categoryFilter" class="form-label text-light mb-2">
+                    <i class="bi bi-funnel-fill me-2"></i>Filter Kategori:
+                </label>
+                <select id="categoryFilter" class="form-select form-select-lg">
+                    <option value="all"><?= $t['filter_all'] ?></option>
+                    <?php foreach (array_keys($services_by_division) as $division): ?>
+                    <option value="<?= slugify($division) ?>"><?= $division ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
         </div>
     </div>
 </section>
@@ -367,16 +369,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Filter functionality
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remove active from all
-            filterBtns.forEach(b => b.classList.remove('active'));
-
-            // Add active to clicked
-            this.classList.add('active');
-
-            const filter = this.getAttribute('data-filter');
+    // Filter functionality with dropdown
+    const categoryFilter = document.getElementById('categoryFilter');
+    if (categoryFilter) {
+        categoryFilter.addEventListener('change', function() {
+            const filter = this.value;
 
             if (filter === 'all') {
                 divisionSections.forEach(section => {
@@ -389,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 divisionSections.forEach(section => {
                     if (section.getAttribute('data-division') === filter) {
                         section.style.display = 'block';
-                        // Scroll to section
+                        // Scroll to section smoothly
                         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     } else {
                         section.style.display = 'none';
@@ -397,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-    });
+    }
 });
 </script>
 

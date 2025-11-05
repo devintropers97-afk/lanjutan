@@ -38,13 +38,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Additional validation for freelancer
         if ($role === 'freelancer') {
             $ktp = $_FILES['ktp'] ?? null;
-            $domisili = $_FILES['domisili'] ?? null;
+            $address = trim($_POST['address'] ?? '');
             $cv = $_FILES['cv'] ?? null;
 
             if (!$ktp || $ktp['error'] !== UPLOAD_ERR_OK) {
                 $register_error = 'Upload KTP wajib untuk freelancer.';
-            } elseif (!$domisili || $domisili['error'] !== UPLOAD_ERR_OK) {
-                $register_error = 'Upload Surat Domisili wajib untuk freelancer.';
+            } elseif (empty($address)) {
+                $register_error = 'Alamat tempat tinggal wajib diisi untuk freelancer.';
+            } elseif (strlen($address) < 20) {
+                $register_error = 'Alamat terlalu pendek. Mohon tulis alamat lengkap Anda.';
             } elseif (!$cv || $cv['error'] !== UPLOAD_ERR_OK) {
                 $register_error = 'Upload CV wajib untuk freelancer.';
             }
@@ -357,16 +359,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label"><i class="bi bi-house-door me-1"></i>Surat Domisili *</label>
-                            <div class="file-upload">
-                                <div class="file-upload-label">
-                                    <i class="bi bi-cloud-upload fs-3 text-gold"></i>
-                                    <p class="mb-0 mt-2">Klik untuk upload Surat Domisili</p>
-                                    <small class="text-muted">JPG, PNG, PDF (Max 2MB)</small>
-                                </div>
-                                <input type="file" name="domisili" id="domisiliFile" accept=".jpg,.jpeg,.png,.pdf" onchange="showFileName(this, 'domisiliName')">
-                            </div>
-                            <div class="file-name" id="domisiliName"></div>
+                            <label class="form-label"><i class="bi bi-geo-alt me-1"></i>Alamat Tempat Tinggal *</label>
+                            <textarea
+                                name="address"
+                                id="addressField"
+                                class="form-control"
+                                rows="3"
+                                placeholder="Masukkan alamat lengkap tempat tinggal Anda..."
+                                style="resize: vertical;"
+                            ></textarea>
+                            <small class="text-muted">Tuliskan alamat lengkap termasuk RT/RW, Kelurahan, Kecamatan, Kota, dan Kode Pos</small>
                         </div>
 
                         <div class="form-group">
@@ -418,13 +420,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     freelancerFields.classList.add('active');
                     // Make file inputs required
                     document.getElementById('ktpFile').required = true;
-                    document.getElementById('domisiliFile').required = true;
+                    document.getElementById('addressField').required = true;
                     document.getElementById('cvFile').required = true;
                 } else {
                     freelancerFields.classList.remove('active');
                     // Make file inputs not required
                     document.getElementById('ktpFile').required = false;
-                    document.getElementById('domisiliFile').required = false;
+                    document.getElementById('addressField').required = false;
                     document.getElementById('cvFile').required = false;
                 }
             });

@@ -91,7 +91,7 @@ if (!function_exists('get_recaptcha_html')) {
 <nav class="navbar navbar-expand-lg navbar-premium fixed-top" id="mainNavbar">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <img src="<?= ASSETS_URL ?>/images/logo-white.png" alt="SITUNEO" height="40">
+            <img src="https://situneo.my.id/logo" alt="SITUNEO" height="40" style="border-radius: 8px;">
             <span class="brand-text ms-2">SITUNEO</span>
         </a>
 

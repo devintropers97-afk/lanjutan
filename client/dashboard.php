@@ -145,13 +145,16 @@ $pending_invoices = [
                         <code class="text-muted"><?= $order['order_id'] ?></code>
                     </div>
                     <?php
-                    $status_badge = match($order['status']) {
-                        'completed' => '<span class="badge bg-success">Completed</span>',
-                        'processing' => '<span class="badge bg-info">Processing</span>',
-                        'pending' => '<span class="badge bg-warning">Pending</span>',
-                        default => '<span class="badge bg-secondary">Unknown</span>'
-                    };
-                    echo $status_badge;
+                    // Status badge (PHP 7.4 compatible)
+                    if ($order['status'] === 'completed') {
+                        echo '<span class="badge bg-success">Completed</span>';
+                    } elseif ($order['status'] === 'processing') {
+                        echo '<span class="badge bg-info">Processing</span>';
+                    } elseif ($order['status'] === 'pending') {
+                        echo '<span class="badge bg-warning">Pending</span>';
+                    } else {
+                        echo '<span class="badge bg-secondary">Unknown</span>';
+                    }
                     ?>
                 </div>
 

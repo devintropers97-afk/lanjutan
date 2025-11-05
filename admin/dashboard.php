@@ -184,12 +184,16 @@ if (DEMO_MODE) {
                             <td><?= formatRupiah($order['amount']) ?></td>
                             <td>
                                 <?php
-                                $badge_class = match($order['status']) {
-                                    'completed' => 'bg-success',
-                                    'processing' => 'bg-warning',
-                                    'pending' => 'bg-secondary',
-                                    default => 'bg-secondary'
-                                };
+                                // Status badge class (PHP 7.4 compatible)
+                                if ($order['status'] === 'completed') {
+                                    $badge_class = 'bg-success';
+                                } elseif ($order['status'] === 'processing') {
+                                    $badge_class = 'bg-warning';
+                                } elseif ($order['status'] === 'pending') {
+                                    $badge_class = 'bg-secondary';
+                                } else {
+                                    $badge_class = 'bg-secondary';
+                                }
                                 ?>
                                 <span class="badge <?= $badge_class ?>"><?= ucfirst($order['status']) ?></span>
                             </td>

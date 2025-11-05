@@ -671,17 +671,7 @@
 .services-filter-section {
     padding: 2rem 0;
     background: rgba(30, 92, 153, 0.05);
-    position: sticky;
-    top: 80px;
-    z-index: 10;
-    backdrop-filter: blur(10px);
-}
-
-.services-filter {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    /* Removed sticky positioning - no longer covering screen */
 }
 
 .services-division-section {
@@ -711,10 +701,7 @@
 .portfolio-filter-section {
     padding: 2rem 0;
     background: rgba(30, 92, 153, 0.05);
-    position: sticky;
-    top: 80px;
-    z-index: 10;
-    backdrop-filter: blur(10px);
+    /* Removed sticky positioning */
 }
 
 .portfolio-section {

@@ -71,13 +71,16 @@ $freelancer_stats = [
             <div class="card bg-dark p-3 mb-3 mx-3">
                 <div class="text-center">
                     <?php
-                    $tier_badge = match($freelancer_stats['tier']) {
-                        1 => '<span class="badge bg-secondary">STARTER</span>',
-                        2 => '<span class="badge bg-info">PRO</span>',
-                        3 => '<span class="badge bg-success">EXPERT</span>',
-                        default => '<span class="badge bg-secondary">-</span>'
-                    };
-                    echo $tier_badge;
+                    // Tier badge (PHP 7.4 compatible)
+                    if ($freelancer_stats['tier'] == 1) {
+                        echo '<span class="badge bg-secondary">STARTER</span>';
+                    } elseif ($freelancer_stats['tier'] == 2) {
+                        echo '<span class="badge bg-info">PRO</span>';
+                    } elseif ($freelancer_stats['tier'] == 3) {
+                        echo '<span class="badge bg-success">EXPERT</span>';
+                    } else {
+                        echo '<span class="badge bg-secondary">-</span>';
+                    }
                     ?>
                     <h4 class="text-gold my-2"><?= $freelancer_stats['commission_rate'] ?>%</h4>
                     <small class="text-muted">Commission Rate</small>
