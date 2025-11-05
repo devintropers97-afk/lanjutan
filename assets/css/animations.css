@@ -1,0 +1,499 @@
+/**
+ * SITUNEO DIGITAL - Animations
+ * Custom animations & effects
+ */
+
+/* ===== FADE IN ANIMATIONS ===== */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-down {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.8s ease-out;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.8s ease-out;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== SCALE ANIMATIONS ===== */
+.scale-in {
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Pulse animation for badges (with shadow effect) */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 180, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(255, 180, 0, 0);
+    }
+}
+
+/* ===== BOUNCE ANIMATION ===== */
+.bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ===== SHAKE ANIMATION ===== */
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* ===== ROTATE ANIMATION ===== */
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ===== FLOAT ANIMATION ===== */
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ===== GLOW ANIMATION ===== */
+.glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 180, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 180, 0, 0.8);
+    }
+}
+
+/* ===== SLIDE IN ANIMATIONS ===== */
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ===== TYPING ANIMATION ===== */
+.typing {
+    overflow: hidden;
+    border-right: 3px solid var(--gold);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--gold); }
+}
+
+/* ===== FLIP ANIMATION ===== */
+.flip {
+    animation: flip 1s;
+}
+
+@keyframes flip {
+    0% { transform: perspective(400px) rotateY(0); }
+    40% { transform: perspective(400px) rotateY(170deg); }
+    50% { transform: perspective(400px) rotateY(190deg); }
+    80% { transform: perspective(400px) rotateY(360deg); }
+    100% { transform: perspective(400px) rotateY(360deg); }
+}
+
+/* ===== BACKGROUND GRADIENT ANIMATION ===== */
+.gradient-animation {
+    background: linear-gradient(-45deg, #1E5C99, #0F3057, #FFB400, #FFD700);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== TEXT SHIMMER ANIMATION ===== */
+.shimmer {
+    background: linear-gradient(90deg, var(--gold) 0%, var(--bright-gold) 50%, var(--gold) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 200% center;
+    }
+}
+
+/* ===== PROGRESS BAR ANIMATION ===== */
+.progress-bar-animated {
+    animation: progressBar 2s ease-out;
+}
+
+@keyframes progressBar {
+    from { width: 0%; }
+}
+
+/* ===== COUNT UP ANIMATION ===== */
+.count-up {
+    animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===== REVEAL ANIMATION (untuk scroll) ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== HOVER EFFECTS ===== */
+.hover-lift {
+    transition: transform var(--transition-base);
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+}
+
+.hover-scale {
+    transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow {
+    transition: all var(--transition-base);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 10px 40px rgba(255, 180, 0, 0.5);
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 180, 0, 0.2);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.dots-loading {
+    display: inline-flex;
+    gap: 5px;
+}
+
+.dots-loading span {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: dotsLoading 1.4s infinite ease-in-out both;
+}
+
+.dots-loading span:nth-child(1) { animation-delay: -0.32s; }
+.dots-loading span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes dotsLoading {
+    0%, 80%, 100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ===== PARTICLE ANIMATION ===== */
+@keyframes particle-float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(-10px, -20px);
+    }
+    75% {
+        transform: translate(-10px, 10px);
+    }
+}
+
+.particle {
+    animation: particle-float 6s ease-in-out infinite;
+}
+
+/* ===== PULSE GLOW (for loading logo) ===== */
+.pulse-glow {
+    animation: pulse-glow var(--anim-pulse) ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 20px rgba(255, 180, 0, 0.5));
+    }
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 40px rgba(255, 180, 0, 0.8));
+    }
+}
+
+/* ===== PULSE WA (for WhatsApp button) ===== */
+.pulse-wa {
+    animation: pulse-wa var(--anim-pulse) ease-in-out infinite;
+}
+
+@keyframes pulse-wa {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    }
+}
+
+/* ===== FLOAT BADGE (for price tags) ===== */
+.float-badge {
+    animation: float-badge var(--anim-float) ease-in-out infinite;
+}
+
+@keyframes float-badge {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+}
+
+/* ===== BUTTON SHIMMER (for CTA buttons) ===== */
+.btn-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left var(--anim-shimmer) ease;
+}
+
+.btn-shimmer:hover::before {
+    left: 100%;
+}
+
+@keyframes btn-shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* ===== BORDER SPINNING (for loading screen) ===== */
+.border-spin {
+    position: relative;
+}
+
+.border-spin::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: inherit;
+    padding: 3px;
+    background: linear-gradient(45deg, var(--gold), var(--bright-gold), var(--gold));
+    background-size: 200% 200%;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: spin var(--anim-spin) linear infinite;
+}
+
+@keyframes spin-border {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== NIB BADGE PULSE (red pulse) ===== */
+.pulse-nib {
+    animation: pulse-nib var(--anim-pulse) ease-in-out infinite;
+}
+
+@keyframes pulse-nib {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+    }
+}
