@@ -253,13 +253,18 @@ $stats = [
                     <div>
                         <code class="text-gold"><?= $withdrawal['withdrawal_id'] ?></code>
                         <?php
-                        $status_badge = match($withdrawal['status']) {
-                            'completed' => '<span class="badge bg-success ms-2">Completed</span>',
-                            'pending' => '<span class="badge bg-warning ms-2">Pending</span>',
-                            'approved' => '<span class="badge bg-info ms-2">Approved</span>',
-                            'rejected' => '<span class="badge bg-danger ms-2">Rejected</span>',
-                            default => '<span class="badge bg-secondary ms-2">Unknown</span>'
-                        };
+                        // PHP 7.4 compatible
+                        if ($withdrawal['status'] === 'completed') {
+                            $status_badge = '<span class="badge bg-success ms-2">Completed</span>';
+                        } elseif ($withdrawal['status'] === 'pending') {
+                            $status_badge = '<span class="badge bg-warning ms-2">Pending</span>';
+                        } elseif ($withdrawal['status'] === 'approved') {
+                            $status_badge = '<span class="badge bg-info ms-2">Approved</span>';
+                        } elseif ($withdrawal['status'] === 'rejected') {
+                            $status_badge = '<span class="badge bg-danger ms-2">Rejected</span>';
+                        } else {
+                            $status_badge = '<span class="badge bg-secondary ms-2">Unknown</span>';
+                        }
                         echo $status_badge;
                         ?>
                     </div>

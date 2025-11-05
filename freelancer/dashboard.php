@@ -217,12 +217,16 @@ $referral_link = 'https://situneo.my.id/ref/' . $user_referral_code;
                             <td class="text-light"><?= htmlspecialchars($ref['order']) ?></td>
                             <td>
                                 <?php
-                                $badge_class = match($ref['status']) {
-                                    'completed' => 'success',
-                                    'processing' => 'info',
-                                    'pending' => 'warning',
-                                    default => 'secondary'
-                                };
+                                // PHP 7.4 compatible
+                                if ($ref['status'] === 'completed') {
+                                    $badge_class = 'success';
+                                } elseif ($ref['status'] === 'processing') {
+                                    $badge_class = 'info';
+                                } elseif ($ref['status'] === 'pending') {
+                                    $badge_class = 'warning';
+                                } else {
+                                    $badge_class = 'secondary';
+                                }
                                 ?>
                                 <span class="badge bg-<?= $badge_class ?>"><?= ucfirst($ref['status']) ?></span>
                             </td>
