@@ -195,7 +195,7 @@ if (!function_exists('get_recaptcha_html')) {
 <div class="order-notification" id="orderNotification">
     <div class="d-flex align-items-start">
         <div class="notification-icon me-3">
-            <i class="bi bi-check-circle-fill text-gold fs-3"></i>
+            <img src="https://situneo.my.id/logo" alt="SITUNEO" style="width: 45px; height: 45px; border-radius: 10px; box-shadow: 0 3px 10px rgba(255, 180, 0, 0.3);">
         </div>
         <div class="notification-content flex-grow-1">
             <div class="notification-title fw-bold mb-1">Pesanan Baru!</div>
