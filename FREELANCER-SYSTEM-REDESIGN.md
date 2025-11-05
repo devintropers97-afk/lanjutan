@@ -44,9 +44,38 @@ Mereka adalah orang yang:
 **Cara Kerja:**
 1. **Freelancer** promosi jasa Situneo pakai link referral
 2. **Calon client** klik link referral freelancer
-3. **Client** order jasa Situneo (via referral)
-4. **Freelancer** dapat komisi otomatis
+3. **Client** daftar akun menggunakan referral code freelancer
+4. **Client** order jasa Situneo (via referral)
 5. **Situneo** yang ngerjain project untuk client
+6. **Client** bayar 100% + approve hasil project (DEAL selesai)
+7. **Freelancer** dapat komisi otomatis masuk ke balance
+
+---
+
+## ⚠️ ATURAN KOMISI - PENTING!
+
+**Freelancer HANYA dapat komisi ketika:**
+
+✅ **Client sudah PAYMENT 100%** (bayar lunas semua tagihan)
+✅ **Order sudah COMPLETED** (project selesai & client approved/OK)
+✅ **Status order = "completed"** (sudah deal dari segi semuanya)
+
+**Freelancer TIDAK dapat komisi jika:**
+
+❌ Client baru daftar akun (belum order)
+❌ Client sudah order tapi belum bayar
+❌ Client bayar DP saja (belum lunas 100%)
+❌ Project masih on-progress (belum completed)
+❌ Client belum approve hasil (belum deal OK)
+
+**Status Komisi:**
+- **Pending:** Order masih dikerjakan atau belum lunas 100%
+- **Available:** Order completed + payment 100% → bisa ditarik
+- **Withdrawn:** Sudah ditarik ke rekening freelancer
+
+**Tier Calculation:**
+- Hanya order yang **completed + paid 100%** yang dihitung untuk tier
+- Order yang masih pending/processing TIDAK dihitung untuk naik tier
 
 ---
 
@@ -89,9 +118,16 @@ Mereka adalah orang yang:
 ┌─────────────────────────────────────────────────────┐
 │  💸 KOMISI TERSEDIA                                 │
 │  Available Balance: Rp 15.400.000                   │
+│    (dari order completed + payment 100%)            │
 │  Pending Clearance: Rp 2.800.000                    │
+│    (order on-progress / belum lunas 100%)           │
 │  [Tarik Komisi]                                     │
 └─────────────────────────────────────────────────────┘
+
+NOTE:
+- Available Balance = komisi dari order COMPLETED + PAID 100% → BISA DITARIK
+- Pending Clearance = komisi dari order masih on-progress → BELUM BISA DITARIK
+- Tier dihitung hanya dari order yang COMPLETED + PAID 100%
 ```
 
 **Quick Actions:**
