@@ -60,13 +60,18 @@ $routes = [
     'client/support' => 'client/support.php',
     'client/profile' => 'client/profile.php',
 
-    // Freelancer Dashboard
+    // Freelancer Dashboard (Affiliate/Sales Agent)
     'freelancer' => 'freelancer/dashboard.php',
     'freelance' => 'freelancer/dashboard.php',
     'freelancer/dashboard' => 'freelancer/dashboard.php',
-    'freelancer/projects' => 'freelancer/projects.php',
-    'freelancer/commissions' => 'freelancer/commissions.php',
+    'freelancer/referrals' => 'freelancer/referrals.php',
+    'freelancer/demo-request' => 'freelancer/demo-request.php',
+    'freelancer/services' => 'freelancer/services.php',
+    'freelancer/tier' => 'freelancer/tier.php',
     'freelancer/withdrawals' => 'freelancer/withdrawals.php',
+    'freelancer/tools' => 'freelancer/tools.php',
+    'freelancer/analytics' => 'freelancer/analytics.php',
+    'freelancer/profile' => 'client/profile.php', // Reuse client profile
 
     // Admin Dashboard
     'admin' => 'admin/dashboard.php',
