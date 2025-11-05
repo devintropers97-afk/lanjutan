@@ -1,7 +1,7 @@
 <?php
 /**
  * HOMEPAGE - SITUNEO DIGITAL
- * Bahasa simpel, fokus manfaat, kategori berdasarkan BISNIS
+ * Redesigned dengan branding konsisten: Gold + Dark Blue Theme
  */
 
 $pageTitle = 'Mau Bikin Website? Bingung Mulai Dari Mana? - SITUNEO DIGITAL';
@@ -10,67 +10,416 @@ $pageDescription = 'Ceritain aja bisnis Anda apa, nanti kita kasih tau website y
 include __DIR__ . '/../includes/header.php';
 ?>
 
-<!-- HERO SECTION - BAHASA SIMPEL -->
-<section class="hero-section-new" id="home">
+<style>
+/* ========== BRAND COLORS ========== */
+:root {
+    --brand-gold: #FFD700;
+    --brand-dark-blue: #0F3057;
+    --brand-primary-blue: #1E5C99;
+}
+
+/* ========== HERO SECTION ========== */
+.hero-section-branded {
+    background: linear-gradient(135deg, var(--brand-dark-blue) 0%, var(--brand-primary-blue) 100%);
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section-branded::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23FFD700" fill-opacity="0.1"/></svg>') no-repeat bottom;
+    background-size: 100% 120px;
+    opacity: 0.1;
+}
+
+.hero-badge {
+    background: rgba(255, 215, 0, 0.15);
+    border: 2px solid var(--brand-gold);
+    color: var(--brand-gold);
+    padding: 8px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.hero-title .highlight {
+    color: var(--brand-gold);
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-brand-gold {
+    background: linear-gradient(135deg, #FFD700 0%, #FFB400 100%);
+    color: var(--brand-dark-blue);
+    font-weight: 700;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.btn-brand-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+    color: var(--brand-dark-blue);
+}
+
+.btn-brand-outline {
+    background: transparent;
+    color: var(--brand-gold);
+    border: 2px solid var(--brand-gold);
+    font-weight: 700;
+    padding: 15px 40px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-brand-outline:hover {
+    background: var(--brand-gold);
+    color: var(--brand-dark-blue);
+    transform: translateY(-3px);
+}
+
+.trust-indicators {
+    margin-top: 30px;
+}
+
+.trust-badge {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.trust-badge i {
+    color: var(--brand-gold);
+    margin-right: 8px;
+}
+
+/* ========== BUSINESS CATEGORIES ========== */
+.business-categories {
+    background: #0a0a0a;
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.business-card {
+    background: linear-gradient(135deg, rgba(15, 48, 87, 0.5) 0%, rgba(30, 92, 153, 0.3) 100%);
+    border: 2px solid rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+}
+
+.business-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--brand-gold);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+}
+
+.business-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.business-title {
+    color: var(--brand-gold);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.business-desc {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.business-examples {
+    color: rgba(255, 215, 0, 0.7);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* ========== VALUE PROPOSITION ========== */
+.value-section {
+    background: linear-gradient(135deg, var(--brand-primary-blue) 0%, var(--brand-dark-blue) 100%);
+    padding: 80px 0;
+}
+
+.value-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+}
+
+.value-box i {
+    font-size: 3rem;
+    color: var(--brand-gold);
+    margin-bottom: 20px;
+}
+
+.value-box h4 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.value-box p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* ========== TESTIMONIALS ========== */
+.testimonials-section {
+    background: #0a0a0a;
+    padding: 80px 0;
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, rgba(15, 48, 87, 0.5) 0%, rgba(30, 92, 153, 0.3) 100%);
+    border: 2px solid rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    padding: 35px;
+    height: 100%;
+}
+
+.testimonial-text {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.testimonial-author {
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
+    padding-top: 20px;
+}
+
+.testimonial-name {
+    color: var(--brand-gold);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.testimonial-business {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.testimonial-rating {
+    color: var(--brand-gold);
+    margin-top: 10px;
+}
+
+/* ========== FAQ ========== */
+.faq-section {
+    background: linear-gradient(135deg, var(--brand-dark-blue) 0%, #000000 100%);
+    padding: 80px 0;
+}
+
+.accordion-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 215, 0, 0.2);
+    margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 20px 25px;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #FFD700 0%, #FFB400 100%);
+    color: var(--brand-dark-blue);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--brand-gold);
+}
+
+.accordion-body {
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* ========== CTA FINAL ========== */
+.cta-final {
+    background: linear-gradient(135deg, var(--brand-primary-blue) 0%, var(--brand-dark-blue) 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.cta-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-brand-gold, .btn-brand-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+}
+</style>
+
+<!-- HERO SECTION -->
+<section class="hero-section-branded" id="home">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7">
-                <div class="hero-content-new" data-aos="fade-right">
-                    <div class="hero-badge-new">
+                <div class="hero-content" data-aos="fade-right">
+                    <div class="hero-badge">
                         <i class="bi bi-patch-check-fill me-2"></i>
                         NIB Resmi <?= COMPANY_NIB ?>
                     </div>
 
-                    <h1 class="hero-title-new">
+                    <h1 class="hero-title">
                         Mau Bikin Website?<br>
-                        <span class="text-warning">BINGUNG MULAI DARI MANA?</span>
+                        <span class="highlight">BINGUNG MULAI DARI MANA?</span>
                     </h1>
 
-                    <p class="hero-subtitle-new">
+                    <p class="hero-subtitle">
                         Tenang... Ceritain aja bisnis Anda apa,<br>
                         nanti kita kasih tau website yang cocok + berapa harganya!
                     </p>
 
-                    <div class="hero-buttons-new">
-                        <a href="/pilih-bisnis" class="btn btn-warning btn-lg px-5">
+                    <div class="hero-buttons">
+                        <a href="/pilih-bisnis" class="btn btn-brand-gold">
                             <i class="bi bi-hand-index me-2"></i>
                             PILIH BISNIS SAYA
                         </a>
                         <a href="https://wa.me/<?= SITE_WHATSAPP ?>?text=Halo%20SITUNEO,%20saya%20mau%20konsultasi"
-                           class="btn btn-success btn-lg px-5" target="_blank">
+                           class="btn btn-brand-outline" target="_blank">
                             <i class="bi bi-whatsapp me-2"></i>
                             LANGSUNG TANYA ADMIN
                         </a>
                     </div>
 
-                    <div class="trust-indicators mt-4">
-                        <span class="badge bg-light text-dark me-2 mb-2 p-2">
-                            <i class="bi bi-people-fill text-primary me-1"></i> 500+ Client
+                    <div class="trust-indicators">
+                        <span class="trust-badge">
+                            <i class="bi bi-people-fill"></i> 500+ Client
                         </span>
-                        <span class="badge bg-light text-dark me-2 mb-2 p-2">
-                            <i class="bi bi-cash-coin text-success me-1"></i> Harga Mulai 150rb
+                        <span class="trust-badge">
+                            <i class="bi bi-cash-coin"></i> Mulai 150rb
                         </span>
-                        <span class="badge bg-light text-dark me-2 mb-2 p-2">
-                            <i class="bi bi-clock-fill text-warning me-1"></i> Bisa Selesai 5 Jam
+                        <span class="trust-badge">
+                            <i class="bi bi-clock-fill"></i> Selesai 5 Jam
                         </span>
-                        <span class="badge bg-light text-dark me-2 mb-2 p-2">
-                            <i class="bi bi-shield-check text-info me-1"></i> Garansi 100%
+                        <span class="trust-badge">
+                            <i class="bi bi-shield-check"></i> Garansi 100%
                         </span>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-5" data-aos="fade-left">
-                <div class="hero-illustration">
-                    <img src="/assets/images/hero-illustration.svg" alt="Website Development" class="img-fluid">
+                <div class="hero-illustration text-center">
+                    <i class="bi bi-laptop" style="font-size: 15rem; color: var(--brand-gold); opacity: 0.8;"></i>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- KATEGORI BISNIS - PILIH SESUAI BISNIS ANDA -->
-<section class="business-categories py-5">
+<!-- BUSINESS CATEGORIES -->
+<section class="business-categories">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
             <h2 class="section-title">Kita Bisa Bantu Siapa Aja!</h2>
@@ -99,271 +448,108 @@ include __DIR__ . '/../includes/header.php';
                     'title' => 'Punya Kantor',
                     'desc' => 'Company profile pro',
                     'link' => '/solutions/company-profile',
-                    'examples' => 'PT, CV, Kontraktor'
+                    'examples' => 'Kontraktor, Konsultan, CV'
                 ],
                 [
-                    'icon' => '💊',
+                    'icon' => '🏥',
                     'title' => 'Punya Klinik',
-                    'desc' => 'Appointment system',
+                    'desc' => 'Sistem pendaftaran online',
                     'link' => '/solutions/klinik-online',
-                    'examples' => 'Dokter, Klinik, Apotek'
+                    'examples' => 'Klinik, Praktek Dokter, Apotek'
                 ],
                 [
-                    'icon' => '🎮',
+                    'icon' => '💼',
                     'title' => 'Bisnis Digital',
-                    'desc' => 'Autopilot system',
-                    'link' => '/solutions/bisnis-digital',
-                    'examples' => 'Top-up, Pulsa, Game'
+                    'desc' => 'Platform digital service',
+                    'link' => '/services',
+                    'examples' => 'Startup, SaaS, Marketplace'
                 ],
                 [
-                    'icon' => '🏠',
-                    'title' => 'Property',
-                    'desc' => 'Listing & virtual tour',
-                    'link' => '/solutions/property',
-                    'examples' => 'Rumah, Mobil, Rental'
+                    'icon' => '🏡',
+                    'title' => 'Jual Property',
+                    'desc' => 'Katalog rumah/tanah',
+                    'link' => '/services',
+                    'examples' => 'Developer, Agen Property'
                 ],
                 [
-                    'icon' => '📚',
-                    'title' => 'Sekolah',
-                    'desc' => 'E-learning & PPDB',
-                    'link' => '/solutions/education',
-                    'examples' => 'Sekolah, Bimbel, Kursus'
+                    'icon' => '🎓',
+                    'title' => 'Punya Kursus',
+                    'desc' => 'E-learning platform',
+                    'link' => '/services',
+                    'examples' => 'Bimbel, LMS, Training'
                 ],
                 [
-                    'icon' => '❓',
-                    'title' => 'Lainnya',
-                    'desc' => 'Konsultasi gratis',
-                    'link' => '/consultation',
-                    'examples' => 'Belum tau? Tanya kami'
+                    'icon' => '🤝',
+                    'title' => 'Masih Bingung?',
+                    'desc' => 'Konsultasi GRATIS',
+                    'link' => 'https://wa.me/' . SITE_WHATSAPP . '?text=Halo%20SITUNEO,%20saya%20mau%20konsultasi',
+                    'examples' => 'Chat admin via WhatsApp'
                 ]
             ];
 
-            foreach ($business_types as $index => $type):
-            ?>
-            <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="<?= $index * 100 ?>">
-                <a href="<?= $type['link'] ?>" class="business-type-card">
-                    <div class="business-icon"><?= $type['icon'] ?></div>
-                    <h5><?= $type['title'] ?></h5>
-                    <p class="text-muted small"><?= $type['desc'] ?></p>
-                    <small class="text-primary"><?= $type['examples'] ?></small>
-                </a>
-            </div>
+            foreach ($business_types as $idx => $type): ?>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="<?= $idx * 100 ?>">
+                    <a href="<?= $type['link'] ?>" class="text-decoration-none" <?= strpos($type['link'], 'wa.me') !== false ? 'target="_blank"' : '' ?>>
+                        <div class="business-card">
+                            <span class="business-icon"><?= $type['icon'] ?></span>
+                            <h3 class="business-title"><?= $type['title'] ?></h3>
+                            <p class="business-desc"><?= $type['desc'] ?></p>
+                            <small class="business-examples"><?= $type['examples'] ?></small>
+                        </div>
+                    </a>
+                </div>
             <?php endforeach; ?>
         </div>
     </div>
 </section>
 
-<!-- VALUE PROPOSITION - KENAPA SITUNEO? -->
-<section class="why-us py-5 bg-light">
+<!-- VALUE PROPOSITION -->
+<section class="value-section">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="section-title">Kenapa Memilih SITUNEO?</h2>
-            <p class="section-subtitle">Bukan tentang murah, tapi tentang TEPAT</p>
+            <h2 class="section-title">Kenapa Pilih SITUNEO?</h2>
+            <p class="section-subtitle">Bukan cuma bikin website, tapi solusi digital lengkap!</p>
         </div>
 
         <div class="row g-4">
-            <div class="col-lg-3 col-md-6" data-aos="fade-up">
-                <div class="value-card text-center">
-                    <div class="value-icon">
-                        <i class="bi bi-bullseye fs-1 text-primary"></i>
-                    </div>
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+                <div class="value-box">
+                    <i class="bi bi-lightbulb-fill"></i>
                     <h4>Solusi Tepat</h4>
-                    <p class="text-muted">
-                        Analisa kebutuhan Anda dulu, baru rekomendasikan solusi yang pas.
-                        Tidak overselling, tidak underpromise.
-                    </p>
+                    <p>Analisa kebutuhan Anda dulu, baru rekomendasikan solusi yang pas. Tidak overselling, tidak underpromise.</p>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="value-card text-center">
-                    <div class="value-icon">
-                        <i class="bi bi-lightning-charge fs-1 text-warning"></i>
-                    </div>
-                    <h4>Eksekusi Cepat</h4>
-                    <p class="text-muted">
-                        Tim lengkap siap eksekusi dengan SOP jelas.
-                        Website bisa selesai dalam 5 jam - 14 hari tergantung kompleksitas.
-                    </p>
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="value-box">
+                    <i class="bi bi-cash-stack"></i>
+                    <h4>Harga Jelas</h4>
+                    <p>Harga PASTI, tanpa biaya tersembunyi. Bisa sewa (murah) atau beli (hemat jangka panjang).</p>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="value-card text-center">
-                    <div class="value-icon">
-                        <i class="bi bi-headset fs-1 text-success"></i>
-                    </div>
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="value-box">
+                    <i class="bi bi-rocket-takeoff-fill"></i>
+                    <h4>Cepat Jadi</h4>
+                    <p>Gak pakai lama! Website sederhana bisa selesai 5 jam. Yang kompleks max 2 minggu sudah live.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                <div class="value-box">
+                    <i class="bi bi-headset"></i>
                     <h4>Support 24/7</h4>
-                    <p class="text-muted">
-                        Tim support siap 24/7 via WhatsApp.
-                        Maintenance rutin, update security, backup otomatis.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="value-card text-center">
-                    <div class="value-icon">
-                        <i class="bi bi-credit-card fs-1 text-info"></i>
-                    </div>
-                    <h4>Fleksibel</h4>
-                    <p class="text-muted">
-                        SEWA untuk coba dulu, BELI untuk permanent,
-                        CICILAN untuk project >10jt. Anda yang tentukan!
-                    </p>
+                    <p>Butuh bantuan? Chat aja via WhatsApp. Tim kami siap bantu kapan aja (response max 15 menit).</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- LAYANAN POPULER -->
-<section class="popular-services py-5">
-    <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="section-title">Layanan Paling Laris</h2>
-            <p class="section-subtitle">Ini yang paling sering dipesan client kami</p>
-        </div>
-
-        <div class="row g-4">
-            <?php
-            $popular_services = [
-                [
-                    'name' => 'Website Toko Online',
-                    'icon' => 'bi-shop',
-                    'desc' => 'Persis kayak Tokopedia, tapi khusus untuk toko Anda',
-                    'price_sewa' => '350rb/bulan',
-                    'price_beli' => '5 juta',
-                    'features' => ['Unlimited produk', 'Payment gateway', 'Ongkir otomatis', 'Laporan penjualan'],
-                    'link' => '/solutions/toko-online'
-                ],
-                [
-                    'name' => 'Website Company Profile',
-                    'icon' => 'bi-building',
-                    'desc' => 'Website profesional yang bikin perusahaan Anda keliatan besar',
-                    'price_sewa' => '150rb/bulan',
-                    'price_beli' => '2.5 juta',
-                    'features' => ['Design modern', 'Portfolio showcase', 'SEO friendly', 'Mobile responsive'],
-                    'link' => '/solutions/company-profile'
-                ],
-                [
-                    'name' => 'Website Resto + Order',
-                    'icon' => 'bi-cup-hot',
-                    'desc' => 'Customer pesan dari rumah, Anda tinggal kirim',
-                    'price_sewa' => '250rb/bulan',
-                    'price_beli' => '3.5 juta',
-                    'features' => ['Menu digital', 'Order system', 'Notif WhatsApp', 'Delivery management'],
-                    'link' => '/solutions/resto-online'
-                ]
-            ];
-
-            foreach ($popular_services as $index => $service):
-            ?>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="<?= $index * 100 ?>">
-                <div class="service-card-new h-100">
-                    <div class="service-header">
-                        <div class="service-icon-large">
-                            <i class="<?= $service['icon'] ?>"></i>
-                        </div>
-                        <h4><?= $service['name'] ?></h4>
-                        <p class="text-muted"><?= $service['desc'] ?></p>
-                    </div>
-
-                    <div class="service-features mb-3">
-                        <ul class="list-unstyled">
-                            <?php foreach ($service['features'] as $feature): ?>
-                            <li class="mb-2">
-                                <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                <?= $feature ?>
-                            </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-
-                    <div class="service-pricing">
-                        <div class="price-option mb-2">
-                            <small class="text-muted">SEWA:</small>
-                            <strong class="text-primary"><?= $service['price_sewa'] ?></strong>
-                        </div>
-                        <div class="price-option mb-3">
-                            <small class="text-muted">BELI:</small>
-                            <strong class="text-success"><?= $service['price_beli'] ?></strong>
-                        </div>
-                    </div>
-
-                    <div class="service-actions">
-                        <a href="<?= $service['link'] ?>" class="btn btn-outline-primary btn-sm me-2">
-                            Lihat Detail
-                        </a>
-                        <a href="https://wa.me/<?= SITE_WHATSAPP ?>?text=Halo%20SITUNEO,%20saya%20tertarik%20dengan%20<?= urlencode($service['name']) ?>"
-                           class="btn btn-success btn-sm" target="_blank">
-                            <i class="bi bi-whatsapp me-1"></i> Order
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <?php endforeach; ?>
-        </div>
-
-        <div class="text-center mt-5">
-            <a href="/services" class="btn btn-warning btn-lg">
-                <i class="bi bi-grid-3x3 me-2"></i>
-                Lihat 232+ Layanan Lainnya
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- PROSES KERJA SIMPLE -->
-<section class="how-it-works py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="section-title">Gampang Kok Prosesnya!</h2>
-            <p class="section-subtitle">Cuma 5 langkah, website Anda sudah online</p>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="process-steps">
-                    <?php
-                    $steps = [
-                        ['icon' => 'bi-chat-dots', 'title' => 'Cerita Kebutuhan', 'desc' => 'Chat/call dengan kami, ceritain bisnis Anda'],
-                        ['icon' => 'bi-laptop', 'title' => 'Lihat Demo', 'desc' => 'Kami tunjukin contoh yang mirip'],
-                        ['icon' => 'bi-handshake', 'title' => 'Deal Harga', 'desc' => 'Setuju fitur & harga, mulai kerja'],
-                        ['icon' => 'bi-tools', 'title' => 'Kami Kerjakan', 'desc' => '5 jam - 14 hari tergantung kompleksitas'],
-                        ['icon' => 'bi-rocket-takeoff', 'title' => 'Website Online!', 'desc' => 'Bayar setelah puas, website langsung aktif']
-                    ];
-
-                    foreach ($steps as $index => $step):
-                    ?>
-                    <div class="process-step" data-aos="fade-up" data-aos-delay="<?= $index * 100 ?>">
-                        <div class="step-number"><?= $index + 1 ?></div>
-                        <div class="step-content">
-                            <div class="step-icon">
-                                <i class="<?= $step['icon'] ?>"></i>
-                            </div>
-                            <h5><?= $step['title'] ?></h5>
-                            <p class="text-muted"><?= $step['desc'] ?></p>
-                        </div>
-                        <?php if ($index < count($steps) - 1): ?>
-                        <div class="step-arrow">
-                            <i class="bi bi-arrow-right"></i>
-                        </div>
-                        <?php endif; ?>
-                    </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- TESTIMONI -->
-<section class="testimonials py-5">
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
             <h2 class="section-title">Kata Mereka Yang Sudah Pakai</h2>
-            <p class="section-subtitle">Bukan janji muluk, ini testimoni real</p>
+            <p class="section-subtitle">Real testimonials, bukan settingan!</p>
         </div>
 
         <div class="row g-4">
@@ -372,99 +558,135 @@ include __DIR__ . '/../includes/header.php';
                 [
                     'name' => 'Pak Budi',
                     'business' => 'Toko Elektronik Jakarta',
-                    'text' => 'DULU jualan cuma 5-10 pembeli per hari. SEKARANG punya website, 30-50 order per hari! Omset naik 5x lipat. Yang paling enak, order masuk pas lagi tidur. Bangun-bangun tinggal packing!',
+                    'text' => 'DULU jualan cuma 5-10 pembeli per hari. SEKARANG punya website, 30-50 order per hari! Omset naik 5x lipat. Worth it banget!',
                     'rating' => 5
                 ],
                 [
                     'name' => 'Bu Siti',
-                    'business' => 'Warteg Berkah Bekasi',
-                    'text' => 'Awalnya ragu, warteg kok pake website. Eh ternyata banyak yang order online! Ibu-ibu komplek pada order untuk lunch suami di kantor. Sekarang online lebih laris dari offline! Omset dari 1.5 juta jadi 8 juta per bulan!',
+                    'business' => 'Warteg Berkah Depok',
+                    'text' => 'Awalnya ragu, apa warteg butuh website? Ternyata PERLU! Sekarang banyak anak kosan pesen online. Omset naik 3x!',
                     'rating' => 5
                 ],
                 [
-                    'name' => 'PT Maju Jaya',
-                    'business' => 'Kontraktor Surabaya',
-                    'text' => 'Tender/lelak jadi gampang karena ada portfolio online. Client juga lebih percaya. Website profesional = perusahaan serius. Worth it banget investasinya!',
+                    'name' => 'Pak Rudi',
+                    'business' => 'CV Karya Mandiri Jogja',
+                    'text' => 'Website company profile bikin kami menang tender Rp 1 miliar! Panitia langsung percaya lihat portfolio lengkap di website.',
                     'rating' => 5
                 ]
             ];
 
-            foreach ($testimonials as $index => $testi):
-            ?>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="<?= $index * 100 ?>">
-                <div class="testimonial-card">
-                    <div class="rating mb-3">
-                        <?php for ($i = 0; $i < $testi['rating']; $i++): ?>
-                        <i class="bi bi-star-fill text-warning"></i>
-                        <?php endfor; ?>
-                    </div>
-                    <p class="testimonial-text">"<?= $testi['text'] ?>"</p>
-                    <div class="testimonial-author">
-                        <strong><?= $testi['name'] ?></strong><br>
-                        <small class="text-muted"><?= $testi['business'] ?></small>
+            foreach ($testimonials as $idx => $testi): ?>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="<?= $idx * 100 ?>">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "<?= $testi['text'] ?>"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-name"><?= $testi['name'] ?></div>
+                            <div class="testimonial-business"><?= $testi['business'] ?></div>
+                            <div class="testimonial-rating">
+                                <?php for ($i = 0; $i < $testi['rating']; $i++): ?>
+                                    <i class="bi bi-star-fill"></i>
+                                <?php endfor; ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php endforeach; ?>
         </div>
     </div>
 </section>
 
 <!-- FAQ -->
-<section class="faq-section py-5 bg-light">
+<section class="faq-section">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
             <h2 class="section-title">Pertanyaan Yang Sering Ditanya</h2>
-            <p class="section-subtitle">Mungkin Anda juga mau tanya ini</p>
+            <p class="section-subtitle">Cari jawaban disini dulu, gak ketemu baru tanya admin</p>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="accordion" id="faqAccordion">
-                    <?php
-                    $faqs = [
-                        [
-                            'q' => 'Bedanya sewa dan beli apa?',
-                            'a' => '<strong>SEWA:</strong> Bayar bulanan, cocok untuk yang mau coba dulu atau budget terbatas. Bisa stop kapan saja kalau tidak cocok.<br><br><strong>BELI:</strong> Bayar sekali, website jadi milik Anda selamanya. Lebih hemat untuk jangka panjang.'
-                        ],
-                        [
-                            'q' => 'Berapa lama website jadi?',
-                            'a' => 'Tergantung kompleksitas:<br>• Website simple (5 halaman): <strong>5 jam - 1 hari</strong><br>• Website standard (10 halaman): <strong>3-7 hari</strong><br>• Toko online: <strong>7-14 hari</strong><br>• Custom system: <strong>14-60 hari</strong>'
-                        ],
-                        [
-                            'q' => 'Saya gaptek, bisa gak ya?',
-                            'a' => '<strong>BISA BANGET!</strong> Kita design supaya gampang, semudah pakai Facebook. Plus kita training sampai bisa, ada video tutorial, dan support WA 24 jam kalau bingung. Client kita ada yang umur 60 tahun aja bisa kok!'
-                        ],
-                        [
-                            'q' => 'Apakah ada garansi?',
-                            'a' => 'Ya, kami berikan:<br>• Garansi bug fixing <strong>3 bulan</strong><br>• Garansi kepuasan <strong>7 hari</strong> (uang kembali jika tidak puas)<br>• Support teknis selama berlangganan<br>• Free minor revision selama <strong>1 bulan</strong>'
-                        ],
-                        [
-                            'q' => 'Bisa ketemu langsung?',
-                            'a' => 'Bisa! Untuk project di atas 10 juta kami siap visit ke lokasi Anda (Jabodetabek). Atau Anda bisa datang ke office kami di <strong>Jakarta Timur</strong>.'
-                        ]
-                    ];
-
-                    foreach ($faqs as $index => $faq):
-                    ?>
-                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="<?= $index * 50 ?>">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button <?= $index > 0 ? 'collapsed' : '' ?>"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#faq<?= $index ?>">
-                                <?= $faq['q'] ?>
-                            </button>
-                        </h3>
-                        <div id="faq<?= $index ?>"
-                             class="accordion-collapse collapse <?= $index == 0 ? 'show' : '' ?>"
-                             data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                <?= $faq['a'] ?>
-                            </div>
-                        </div>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item" data-aos="fade-up">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        <i class="bi bi-question-circle me-3"></i>
+                        Berapa harga bikin website?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <strong>Tergantung jenis website!</strong> Landing page simpel mulai <strong>Rp 150rb/bulan</strong> (sewa) atau <strong>Rp 2 juta</strong> (beli putus). Toko online mulai <strong>Rp 350rb/bulan</strong> atau <strong>Rp 5 juta</strong> (beli). Klik "Pilih Bisnis Saya" di atas untuk lihat harga lengkap!
                     </div>
-                    <?php endforeach; ?>
+                </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        <i class="bi bi-question-circle me-3"></i>
+                        Bedanya sewa vs beli apa?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <strong>SEWA:</strong> Bayar tiap bulan (kayak ngontrak). Domain, hosting, maintenance kami yang urus. Cocok buat yang baru mulai.<br><br>
+                        <strong>BELI:</strong> Bayar sekali, punya selamanya. Source code jadi milik Anda. Bisa edit/jual ke orang lain. Hemat jangka panjang!
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        <i class="bi bi-question-circle me-3"></i>
+                        Berapa lama prosesnya?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <strong>Tergantung kompleksitas:</strong><br>
+                        • Landing page simpel: <strong>5-24 jam</strong><br>
+                        • Company profile: <strong>7-10 hari kerja</strong><br>
+                        • Toko online: <strong>3-5 hari kerja</strong><br>
+                        • Custom kompleks: <strong>2-4 minggu</strong><br><br>
+                        Setelah data lengkap, langsung kami kerjakan dan update progress setiap hari!
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        <i class="bi bi-question-circle me-3"></i>
+                        Apa jaminan website gak error?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <strong>GARANSI 100% uang kembali</strong> kalau:<br>
+                        • Website tidak sesuai hasil demo yang disepakati<br>
+                        • Banyak bug/error yang tidak bisa diperbaiki<br>
+                        • Kami tidak deliver tepat waktu (tanpa alasan jelas)<br><br>
+                        Plus <strong>FREE support 6 bulan</strong> untuk paket BELI. Kalau ada error, kami perbaiki gratis!
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        <i class="bi bi-question-circle me-3"></i>
+                        Saya gak ngerti teknis, bisa dibantu?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <strong>BISA BANGET!</strong> Makanya kami pakai bahasa yang simpel. Anda cukup:<br>
+                        • Jelasin bisnis Anda apa<br>
+                        • Kasih tau mau fitur apa<br>
+                        • Kami yang translate ke bahasa teknis!<br><br>
+                        Nanti kami kasih <strong>training video step-by-step</strong> cara pakai website. Gampang kok, kayak pakai Instagram!
+                    </div>
                 </div>
             </div>
         </div>
@@ -472,220 +694,25 @@ include __DIR__ . '/../includes/header.php';
 </section>
 
 <!-- CTA FINAL -->
-<section class="final-cta py-5">
+<section class="cta-final">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8" data-aos="fade-right">
-                <h2 class="text-white mb-3">Tunggu Apa Lagi?</h2>
-                <p class="text-white-50 mb-4">
-                    Setiap hari Anda delay = kompetitor makin jauh!<br>
-                    Mulai sekarang, 5 jam lagi website Anda sudah bisa online!
-                </p>
-            </div>
-            <div class="col-lg-4 text-lg-end" data-aos="fade-left">
-                <a href="/pilih-bisnis" class="btn btn-warning btn-lg mb-2 w-100">
-                    <i class="bi bi-hand-index me-2"></i>
-                    PILIH BISNIS SAYA
-                </a>
-                <a href="https://wa.me/<?= SITE_WHATSAPP ?>?text=Halo%20SITUNEO,%20saya%20mau%20konsultasi"
-                   class="btn btn-success btn-lg w-100" target="_blank">
-                    <i class="bi bi-whatsapp me-2"></i>
-                    KONSULTASI GRATIS
-                </a>
-            </div>
+        <div data-aos="zoom-in">
+            <h2 class="cta-title">Siap Mulai?</h2>
+            <p class="cta-subtitle">
+                Konsultasi GRATIS dulu gak papa! Jelasin bisnis Anda,<br>
+                nanti kita bantu carikan solusi yang pas.
+            </p>
+            <a href="/pilih-bisnis" class="btn btn-brand-gold btn-lg me-3 mb-3">
+                <i class="bi bi-hand-index me-2"></i>
+                PILIH BISNIS SAYA
+            </a>
+            <a href="https://wa.me/<?= SITE_WHATSAPP ?>?text=Halo%20SITUNEO,%20saya%20mau%20konsultasi"
+               class="btn btn-brand-outline btn-lg mb-3" target="_blank">
+                <i class="bi bi-whatsapp me-2"></i>
+                CHAT WHATSAPP
+            </a>
         </div>
     </div>
 </section>
-
-<style>
-/* HERO SECTION STYLING */
-.hero-section-new {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-.hero-badge-new {
-    display: inline-block;
-    background: rgba(255,255,255,0.2);
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-}
-
-.hero-title-new {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.hero-subtitle-new {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-.hero-buttons-new {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.trust-indicators .badge {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-/* BUSINESS CATEGORIES */
-.business-type-card {
-    display: block;
-    background: white;
-    padding: 30px 20px;
-    border-radius: 15px;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    height: 100%;
-}
-
-.business-type-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    color: inherit;
-}
-
-.business-icon {
-    font-size: 48px;
-    margin-bottom: 15px;
-    display: block;
-}
-
-/* VALUE CARDS */
-.value-card {
-    padding: 30px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    height: 100%;
-}
-
-.value-icon {
-    margin-bottom: 20px;
-}
-
-/* SERVICE CARDS */
-.service-card-new {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s;
-}
-
-.service-card-new:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.service-icon-large {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 2rem;
-    color: white;
-}
-
-/* PROCESS STEPS */
-.process-steps {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.process-step {
-    text-align: center;
-    flex: 1;
-}
-
-.step-number {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.step-icon {
-    font-size: 2rem;
-    color: #667eea;
-    margin-bottom: 10px;
-}
-
-.step-arrow {
-    font-size: 2rem;
-    color: #ccc;
-}
-
-/* TESTIMONIAL CARDS */
-.testimonial-card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    height: 100%;
-}
-
-.testimonial-text {
-    font-style: italic;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-/* FINAL CTA */
-.final-cta {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .hero-title-new {
-        font-size: 2rem;
-    }
-
-    .hero-buttons-new {
-        flex-direction: column;
-    }
-
-    .hero-buttons-new .btn {
-        width: 100%;
-    }
-
-    .process-steps {
-        flex-direction: column;
-    }
-
-    .step-arrow {
-        transform: rotate(90deg);
-        margin: 10px 0;
-    }
-}
-</style>
 
 <?php include __DIR__ . '/../includes/footer.php'; ?>
