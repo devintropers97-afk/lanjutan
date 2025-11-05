@@ -689,3 +689,129 @@
     margin-bottom: 0.5rem;
     color: var(--gold);
 }
+
+/* ===== PRICING PAGE ===== */
+.pricing-hero {
+    min-height: 60vh;
+}
+
+.pricing-section {
+    padding: var(--space-4xl) 0;
+}
+
+.pricing-table-extended {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pricing-card-extended {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-header {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba(255, 180, 0, 0.2);
+}
+
+.pricing-amount {
+    margin-top: 1.5rem;
+}
+
+.pricing-features {
+    flex: 1;
+    margin-top: 2rem;
+}
+
+.pricing-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-features ul li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 180, 0, 0.1);
+}
+
+.pricing-features ul.not-included li {
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+/* Comparison Table */
+.table-comparison {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.table-comparison thead {
+    background: var(--gradient-primary);
+}
+
+.table-comparison th {
+    color: var(--white);
+    font-weight: var(--fw-bold);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border: none;
+}
+
+.table-comparison td {
+    color: var(--text-light);
+    padding: 1rem;
+    text-align: center;
+    border-color: rgba(255, 180, 0, 0.1);
+}
+
+.table-comparison td:first-child {
+    text-align: left;
+    font-weight: var(--fw-semibold);
+}
+
+.table-comparison .highlight {
+    background: rgba(255, 180, 0, 0.1);
+    border-left: 3px solid var(--gold);
+    border-right: 3px solid var(--gold);
+}
+
+#custom-package {
+    background: linear-gradient(135deg, rgba(30, 92, 153, 0.2) 0%, rgba(15, 48, 87, 0.3) 100%);
+    padding: var(--space-4xl) 0;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-hero {
+    min-height: 60vh;
+}
+
+.contact-info-section {
+    padding: var(--space-4xl) 0;
+}
+
+.contact-card-icon {
+    font-size: 4rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.map-section {
+    padding: var(--space-4xl) 0;
+}
+
+/* ===== CALCULATOR PAGE ===== */
+.calculator-hero {
+    min-height: 60vh;
+}
+
+.calculator-filter {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
