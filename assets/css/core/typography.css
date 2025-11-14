@@ -1,0 +1,43 @@
+/**
+ * SITUNEO DIGITAL - Typography
+ */
+
+/* Headings */
+h1 { font-size: var(--font-size-5xl); margin-bottom: var(--spacing-lg); }
+h2 { font-size: var(--font-size-4xl); margin-bottom: var(--spacing-md); }
+h3 { font-size: var(--font-size-3xl); margin-bottom: var(--spacing-md); }
+h4 { font-size: var(--font-size-2xl); margin-bottom: var(--spacing-sm); }
+h5 { font-size: var(--font-size-xl); margin-bottom: var(--spacing-sm); }
+h6 { font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm); }
+
+/* Paragraphs */
+p { margin-bottom: var(--spacing-md); line-height: var(--line-height-relaxed); }
+
+/* Text Utilities */
+.text-primary { color: var(--color-primary); }
+.text-gold { color: var(--color-gold); }
+.text-muted { color: var(--color-text-muted); }
+.text-white { color: var(--color-white); }
+
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+
+.text-light { font-weight: var(--font-weight-light); }
+.text-normal { font-weight: var(--font-weight-normal); }
+.text-medium { font-weight: var(--font-weight-medium); }
+.text-semibold { font-weight: var(--font-weight-semibold); }
+.text-bold { font-weight: var(--font-weight-bold); }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Gradient Text */
+.text-gradient {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

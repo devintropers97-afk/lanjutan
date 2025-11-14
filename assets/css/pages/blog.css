@@ -1,0 +1,79 @@
+/**
+ * SITUNEO DIGITAL - Blog Page
+ */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.blog-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-all);
+}
+
+.blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+
+.blog-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.blog-content { padding: var(--spacing-lg); }
+
+.blog-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.blog-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+    line-height: var(--line-height-tight);
+}
+
+.blog-excerpt {
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.blog-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+}
+
+.blog-tag {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--color-bg-light);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-xs);
+    color: var(--color-primary);
+}
+
+.blog-sidebar {
+    background: var(--color-bg-light);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+}
+
+.sidebar-widget {
+    margin-bottom: var(--spacing-xl);
+}
+
+.sidebar-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-primary);
+}
