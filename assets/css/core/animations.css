@@ -1,0 +1,79 @@
+/**
+ * SITUNEO DIGITAL - Animations
+ */
+
+/* Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in { animation: fadeIn var(--transition-base); }
+
+/* Slide Up */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up { animation: slideUp var(--transition-base); }
+
+/* Scale In */
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.scale-in { animation: scaleIn var(--transition-base); }
+
+/* Pulse */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.pulse { animation: pulse 2s ease-in-out infinite; }
+
+/* Bounce */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.bounce { animation: bounce 1s ease-in-out infinite; }
+
+/* Spin */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spin { animation: spin 1s linear infinite; }
+
+/* Gradient Animation */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.bg-gradient-animated {
+    background: linear-gradient(270deg, #1E5C99, #FFD700, #0F3057);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+/* Transition Classes */
+.transition-all { transition: var(--transition-all); }
+.transition-colors { transition: var(--transition-colors); }
+.transition-transform { transition: var(--transition-transform); }
+
+/* Hover Effects */
+.hover-lift { transition: var(--transition-all); }
+.hover-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+
+.hover-scale { transition: var(--transition-transform); }
+.hover-scale:hover { transform: scale(1.05); }
+
+.hover-gold { transition: var(--transition-colors); }
+.hover-gold:hover { color: var(--color-gold); }

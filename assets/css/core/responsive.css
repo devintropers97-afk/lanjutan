@@ -1,0 +1,49 @@
+/**
+ * SITUNEO DIGITAL - Responsive
+ */
+
+/* Mobile First Breakpoints */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .container { max-width: var(--container-sm); }
+    h1 { font-size: var(--font-size-6xl); }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container { max-width: var(--container-md); }
+    .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-md-4 { flex: 0 0 33.333%; max-width: 33.333%; }
+    .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+
+    .d-md-none { display: none; }
+    .d-md-block { display: block; }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container { max-width: var(--container-lg); }
+    .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-lg-4 { flex: 0 0 33.333%; max-width: 33.333%; }
+    .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container { max-width: var(--container-xl); }
+}
+
+/* XXL devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container { max-width: var(--container-xxl); }
+}
+
+/* Mobile Specific */
+@media (max-width: 767px) {
+    .col, .col-6, .col-4, .col-3 { flex: 0 0 100%; max-width: 100%; }
+    .section { padding: var(--spacing-2xl) 0; }
+    h1 { font-size: var(--font-size-4xl); }
+    h2 { font-size: var(--font-size-3xl); }
+    .mobile-center { text-align: center; }
+}
